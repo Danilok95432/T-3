@@ -5,10 +5,10 @@
   margin-right: 12px;
 
   li {
-    &:not(:last-child) {
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #646262;
+    &:not(:first-child) {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #646262;
     }
 
     a {
@@ -20,6 +20,51 @@
 
       svg {
         margin-right: 12px;
+      }
+    }
+
+    &._active {
+      padding: 11px 0;
+      position: relative;
+      border: none;
+      z-index: 2;
+
+      & + li {
+        margin-top: 0;
+        border-top: none;
+
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: calc(33px + 100% + 35px);
+        height: 100%;
+        left: -33px;
+        top: 0;
+        background-color: #FFF3F3;
+        border-left: 4px solid #B7212E;
+        z-index: -1;
+      }
+
+      a {
+        color: #B7212E;
+      }
+
+      &:not(:nth-child(4)) {
+        svg {
+          path {
+            fill: #B7212E;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        svg {
+          path {
+            stroke: #B7212E;
+          }
+        }
       }
     }
   }
