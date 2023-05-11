@@ -1,0 +1,31 @@
+@import "vars";
+@import "fonts";
+@import "settings";
+
+//Страницы
+@import "./pages/profile-professor";
+
+
+//Модалки
+
+
+
+//Компоненты
+@import "./components/main-menu";
+@import "./components/edit-btn";
+@import "./components/customSelect";
+@import "./components/button-delete";
+@import "./components/main-checkbox";
+@import "./components/info-modal";
+
+@import "./components/footer";
+
+//Медиа запросы
+
+@import "./media/media-profile-professor";
+
+
+
+
+
+
