@@ -3,7 +3,7 @@
 @import "settings";
 
 //Страницы
-@import "./pages/profile-professor";
+@import "./pages/profile-data";
 
 
 //Модалки
@@ -12,6 +12,9 @@
 
 //Компоненты
 @import "./components/main-menu";
+@import "./components/profile-info";
+@import "./components/profile-menu";
+@import "./components/profile-data";
 @import "./components/edit-btn";
 @import "./components/customSelect";
 @import "./components/button-delete";
@@ -22,7 +25,6 @@
 
 //Медиа запросы
 
-@import "./media/media-profile-professor";
 
 
 

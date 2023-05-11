@@ -1,0 +1,64 @@
+.profile-info {
+  padding: 73px 0 12px;
+  background: url("../img/profile-info-bg.jpg") no-repeat 0 -110px;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 296px;
+    height: 296px;
+    border: 34px solid #D9D8E0;
+    margin-right: 50px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__inner {
+    flex-grow: 1;
+  }
+
+  &__name {
+    @include montserrat-semibold;
+    font-size: 35px;
+    line-height: 43px;
+    color: #FFFFFF;
+    max-width: 450px;
+    margin-bottom: 15px;
+  }
+
+  &__desc {
+    @include montserrat-semibold;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin-bottom: 80px;
+  }
+
+  &__stat {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+      @include montserrat-regular;
+      font-size: 14px;
+      line-height: 17px;
+      display: flex;
+      align-items: center;
+
+      span {
+        @include montserrat-semibold;
+        font-size: 35px;
+        line-height: 43px;
+        margin-right: 7px;
+      }
+    }
+
+  }
+
+}

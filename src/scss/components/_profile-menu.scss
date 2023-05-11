@@ -1,0 +1,26 @@
+.profile-menu {
+  background-color: $white;
+  width: 296px;
+  padding: 26px 35px 35px 33px;
+  margin-right: 12px;
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #646262;
+    }
+
+    a {
+      @include montserrat-medium;
+      font-size: 15px;
+      line-height: 18px;
+      color: #000000;
+      display: flex;
+
+      svg {
+        margin-right: 12px;
+      }
+    }
+  }
+}

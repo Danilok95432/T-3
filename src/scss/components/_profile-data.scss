@@ -1,0 +1,20 @@
+.profile-data {
+  padding: 37px 110px 92px 40px;
+  background-color: #ffffff;
+  flex-grow: 1;
+  position: relative;
+
+  &._edit-active {
+    .edit-btn {
+      display: none;
+    }
+  }
+
+  h2 {
+    @include montserrat-semibold;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 35px;
+  }
+
+}
