@@ -2,10 +2,10 @@
 <html lang="ru" class="page">
 
 @include('partials/head.html', {
-'title': 'Профиль преподавателя'
+'title': 'Курсы и уроки'
 })
 
-<body class="page__body profile-teacher-page">
+<body class="page__body courses-teacher-page">
 
 <div class="site-container">
   <header class="header">
@@ -15,10 +15,10 @@
 
   <main class="main">
 
-    <section class="section profile-teacher-page__inner">
+    <section class="section courses-teacher-page__inner">
       <div class="container">
         <ul class="profile-menu">
-          <li class="_active">
+          <li>
             <a href="index.html">
               <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@
               Профиль преподавателя
             </a>
           </li>
-          <li>
+          <li class="_active">
             <a href="courses-teacher.html">
               <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +44,7 @@
             </a>
           </li>
           <li>
-            <a href="list-students.html">
+            <a href="#">
               <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -63,7 +63,8 @@
                    xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M8.86583 13.3803L4.447 15.7031C4.37957 15.7386 4.30355 15.7545 4.22753 15.7491C4.15151 15.7436 4.07854 15.717 4.01686 15.6723C3.95518 15.6275 3.90726 15.5664 3.87853 15.4958C3.84979 15.4252 3.84138 15.348 3.85425 15.2729L4.6986 10.3523L1.12314 6.86735C1.06864 6.81411 1.0301 6.7467 1.01187 6.67272C0.993642 6.59873 0.996453 6.52113 1.01999 6.44866C1.04352 6.3762 1.08683 6.31175 1.14505 6.26259C1.20326 6.21343 1.27405 6.18152 1.34944 6.17046L6.29045 5.45264L8.49986 0.975414C8.53381 0.907701 8.58593 0.850768 8.65039 0.810981C8.71485 0.771194 8.7891 0.750122 8.86485 0.750122C8.9406 0.750122 9.01486 0.771194 9.07931 0.810981C9.14377 0.850768 9.19589 0.907701 9.22984 0.975414L11.4393 5.45264L16.3798 6.17046C16.4553 6.18135 16.5262 6.21317 16.5845 6.2623C16.6429 6.31144 16.6863 6.37593 16.7098 6.44847C16.7334 6.52102 16.7361 6.5987 16.7178 6.67274C16.6995 6.74677 16.6608 6.81419 16.6061 6.86735L13.0311 10.3523L13.875 15.2729C13.8878 15.3479 13.8793 15.425 13.8506 15.4956C13.8219 15.5661 13.774 15.6271 13.7124 15.6719C13.6508 15.7166 13.578 15.7433 13.502 15.7488C13.4261 15.7543 13.3501 15.7384 13.2827 15.7031L8.86583 13.3803Z"
-                  stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                  stroke="black" stroke-linecap="round"
+                  stroke-linejoin="round"/>
               </svg>
               Список заданий
             </a>
@@ -102,74 +103,21 @@
             </a>
           </li>
         </ul>
-        <div class="profile-data">
-          <button class="edit-btn" type="button">
-            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M22.7706 2.26166C22.9173 2.40882 22.9997 2.60814 22.9997 2.81593C22.9997 3.02372 22.9173 3.22304 22.7706 3.3702L21.1329 5.00946L17.9926 1.86912L19.6302 0.229862C19.7775 0.0826816 19.9771 0 20.1853 0C20.3935 0 20.5931 0.0826816 20.7404 0.229862L22.7706 2.26009V2.26166ZM20.0228 6.118L16.8824 2.97766L6.18488 13.6768C6.09846 13.7632 6.03341 13.8686 5.99489 13.9845L4.7309 17.7749C4.70798 17.844 4.70473 17.9182 4.7215 17.989C4.73828 18.0598 4.77443 18.1246 4.82591 18.1761C4.87739 18.2276 4.94217 18.2637 5.01302 18.2805C5.08386 18.2973 5.15798 18.294 5.22708 18.2711L9.01747 17.0071C9.13329 16.9691 9.23866 16.9046 9.32522 16.8187L20.0228 6.118Z"
-                fill="#D2D2D2"/>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M0 20.4128C0 21.0374 0.248142 21.6365 0.689838 22.0782C1.13153 22.5199 1.7306 22.768 2.35525 22.768H19.6271C20.2518 22.768 20.8508 22.5199 21.2925 22.0782C21.7342 21.6365 21.9824 21.0374 21.9824 20.4128V10.9918C21.9824 10.7835 21.8997 10.5839 21.7524 10.4366C21.6052 10.2894 21.4055 10.2067 21.1973 10.2067C20.9891 10.2067 20.7894 10.2894 20.6422 10.4366C20.4949 10.5839 20.4122 10.7835 20.4122 10.9918V20.4128C20.4122 20.621 20.3295 20.8207 20.1823 20.9679C20.035 21.1152 19.8353 21.1979 19.6271 21.1979H2.35525C2.14704 21.1979 1.94735 21.1152 1.80012 20.9679C1.65288 20.8207 1.57017 20.621 1.57017 20.4128V3.14091C1.57017 2.9327 1.65288 2.73301 1.80012 2.58578C1.94735 2.43854 2.14704 2.35583 2.35525 2.35583H12.5614C12.7696 2.35583 12.9693 2.27312 13.1165 2.12588C13.2637 1.97865 13.3464 1.77896 13.3464 1.57074C13.3464 1.36253 13.2637 1.16284 13.1165 1.01561C12.9693 0.868374 12.7696 0.78566 12.5614 0.78566H2.35525C1.7306 0.78566 1.13153 1.0338 0.689838 1.4755C0.248142 1.91719 0 2.51626 0 3.14091V20.4128Z"
-                    fill="#D2D2D2"/>
-            </svg>
-          </button>
-          <h2>Данные профиля</h2>
-          <form class="profile-form" action="" name="profileTeacher">
-            <div class="profile-form__row">
-              <p class="profile-form__label">Фамилия, Имя, Отчество:</p>
-              <input class="profile-form__disabled" type="text" name="profileName"
-                     value="Константинопольский Константин Константинович"
-                     disabled/>
-            </div>
-            <div class="profile-form__row">
-              <p class="profile-form__label">Электронная почта (логин):</p>
-              <div class="profile-form__email-wrapper">
-                <div class="profile-form__email-row">
-                  <p class="profile-form__email">konstantin@konstantin.ko</p>
-                  <p class="profile-form__description">Сменить логин самостоятельно нельзя. Для того, чтобы сделать это,
-                                                       обратитесь к администратору.</p>
-                </div>
-                <div class="profile-form__email-row">
-                  <button type="button" class="profile-form__btn profile-form__btn-change-pass">Сменить пароль</button>
-                  <p class="profile-form__description">Рекомендуем менять пароль не реже одного раза в месяц.</p>
-                </div>
+        <div class="owned-courses">
+          <h2>Ваши курсы и уроки</h2>
+          <div class="owned-courses__stats">
+            <p>Всего ваших курсов: <span>5</span></p>
+            <p>В них уроков: <span>55</span></p>
+          </div>
+          <ul class="owned-courses__list main-accordion">
+            <li class="owned-courses__list-item">
+              <div class="accordion-btn">
+                <h3>Боевые аспекты русских народных плясок, все такое и почему
+                  это все не так, как кажется идиотам</h3>
 
               </div>
-            </div>
-            <div class="profile-form__row">
-              <p class="profile-form__label">Город и регион:</p>
-              <input class="profile-form__disabled" type="text" name="profileCity"
-                     value="Пушкин, Санкт-Петербург"
-                     disabled/>
-            </div>
-            <div class="profile-form__row">
-              <p class="profile-form__label">Мобильный телефон:</p>
-              <input class="profile-form__disabled main-mask" type="text" name="profilePhone"
-                     value="9999999999"
-                     data-mask-template="+{7} (000) 000-00-00"
-                     disabled/>
-            </div>
-            <div class="profile-form__row">
-              <p class="profile-form__label">Научное звание:</p>
-              <input class="profile-form__disabled" type="text" name="profileRank"
-                     value="доцент кафедры космонавтики РГГУ"
-                     disabled/>
-            </div>
-            <div class="profile-form__row">
-              <p class="profile-form__label">Ученая степень:</p>
-              <input class="profile-form__disabled" type="text" name="profileLevel"
-                     value="кандидат физико-математических наук" disabled/>
-            </div>
-            <div class="profile-form__row">
-              <p class="profile-form__label">Немного о себе:</p>
-              <textarea class="profile-form__disabled" name="profileLevel" disabled> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
-            </div>
-            <div class="profile-form__row profile-form__row-btn">
-              <button class="profile-form__btn profile-form__btn-save" type="submit">Сохранить изменения</button>
-              <button class="profile-form__btn profile-form__btn-cancel" type="button">Отменить</button>
-
-            </div>
-          </form>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

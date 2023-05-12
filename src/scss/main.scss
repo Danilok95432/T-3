@@ -4,6 +4,7 @@
 
 //Страницы
 @import "pages/profile-teacher";
+@import "pages/courses-teacher";
 
 
 //Модалки
@@ -15,6 +16,7 @@
 @import "./components/profile-info";
 @import "./components/profile-menu";
 @import "./components/profile-data";
+@import "./components/owned-courses";
 @import "./components/edit-btn";
 @import "./components/customSelect";
 @import "./components/button-delete";
