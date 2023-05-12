@@ -1,5 +1,116 @@
- .footer {
-   height: 226px;
-   background-color: $main-red;
-   padding: 40px 0 30px;
+.footer {
+  background-color: $main-red;
+  padding: 40px 0 25px;
+  color: #FFFFFF;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 27px;
+    border-bottom: 1px solid #FFFFFF;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__block {
+    min-width: 305px;
+    width: 305px;
+
+    &:first-child {
+      @media (max-width: 768px) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__link-main {
+    display: block;
+    max-width: max-content;
+    margin-bottom: 28px;
+    @include montserrat-semibold;
+    font-size: 25px;
+    line-height: 22px;
+    color: #FFFFFF;
+  }
+
+  &__description {
+    line-height: 22px;
+  }
+
+  &__subtitle {
+    margin-bottom: 28px;
+    @include montserrat-semibold;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 992px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  &__left {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 992px) {
+      width: 305px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__copyright {
+    margin-right: 20px;
+    line-height: 18px;
+    text-transform: uppercase;
+    @media (max-width: 992px) {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__link {
+    display: block;
+    @include montserrat-medium;
+    color: #FFFFFF;
+    line-height: 18px;
+
+    &:first-child {
+      margin-right: 66px;
+    }
+  }
+
+  &__right {
+    min-width: 305px;
+    width: 305px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 992px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__link-socials {
+    &:first-child {
+      margin-right: 40px;
+    }
+  }
+
+  &__btn-top {
+    margin-right: 20px;
+    line-height: 18px;
+    color: #FFFFFF;
+  }
 }
