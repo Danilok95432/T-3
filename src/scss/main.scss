@@ -5,6 +5,8 @@
 //Страницы
 @import "pages/profile-teacher";
 @import "pages/courses-teacher";
+@import "pages/list-students";
+@import "pages/list-tasks";
 
 
 //Модалки
@@ -21,7 +23,9 @@
 @import "./components/customSelect";
 @import "./components/button-delete";
 @import "./components/main-checkbox";
-@import "./components/info-modal";
+@import "./components/all-students";
+@import "./components/tasks";
+
 
 @import "./components/footer";
 
