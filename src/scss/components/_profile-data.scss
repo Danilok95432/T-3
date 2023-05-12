@@ -1,12 +1,140 @@
 .profile-data {
-  padding: 37px 110px 92px 40px;
+  margin-bottom: 80px;
+  padding: 37px 84px 92px 40px;
   background-color: #ffffff;
   flex-grow: 1;
   position: relative;
+  .profile-form {
+    &__row {
+      display: flex;
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
 
+      input {
+        width: 100%;
+        height: 35px;
+        padding-left: 14px;
+        border: 1px solid #A9AEBA;
+
+        &:disabled {
+          color: #000000;
+          background: none;
+          border-color: transparent;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        height: 215px;
+        padding: 11px 14px;
+        line-height: 25px;
+        border: 1px solid #A9AEBA;
+
+        &:disabled {
+          color: #000000;
+          background: none;
+          border-color: transparent;
+        }
+      }
+    }
+
+
+    &__label {
+      min-width: 230px;
+      width: 230px;
+      margin-right: 5px;
+      padding-top: 5px;
+      @include montserrat-light;
+    }
+
+    &__email-wrapper {
+      padding-left: 14px;
+    }
+
+    &__email-row {
+      display: flex;
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    &__description {
+      max-width: 328px;
+      font-size: 12px;
+      line-height: 15px;
+      display: none;
+    }
+
+    &__btn-change-pass {
+      min-width: 205px;
+      width: 205px;
+      margin-right: 17px;
+      background: #B7212E;
+      color: #FFFFFF;
+    }
+
+    &__email {
+      min-width: 205px;
+      width: 205px;
+      margin-right: 17px;
+    }
+
+    &__row-btn {
+      display: none;
+    }
+
+    &__btn {
+      @include montserrat-medium;
+      height: 40px;
+      padding: 0 26px;
+      line-height: 22px;
+      text-align: center;
+
+    }
+
+    &__btn-save {
+      margin-right: 12px;
+      margin-left: 235px;
+      background: #B7212E;
+      color: #FFFFFF;
+    }
+
+    &__btn-cancel {
+      background: #D9D8E0;
+    }
+  }
   &._edit-active {
+    padding-bottom: 60px;
+
     .edit-btn {
       display: none;
+    }
+
+    .profile-form__label {
+      padding-top: 0;
+    }
+
+    .profile-form__email-row:first-child {
+      margin-bottom: 10px;
+    }
+
+    .profile-form__row-btn,
+    .profile-form__email-row:last-child {
+      display: flex;
+    }
+
+    .profile-form__description {
+      display: block;
+    }
+
+    .profile-form__email-wrapper {
+      padding-left: 0;
+    }
+
+    .profile-form__email {
+      @include montserrat-medium;
     }
   }
 
