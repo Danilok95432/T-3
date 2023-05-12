@@ -87,3 +87,17 @@ export {
   updateChangeableListId,
   limitationChangeableElements
 }
+
+//Прокрутка вверх
+
+const scrollBtn = document.querySelector('#scrollTop')
+
+if (scrollBtn) {
+  scrollBtn.addEventListener('click', e => {
+    e.preventDefault()
+    window.scrollBy({
+      top: -99999,
+      behavior: 'smooth',
+    })
+  })
+}
