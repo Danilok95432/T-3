@@ -79,6 +79,9 @@
       min-width: 205px;
       width: 205px;
       margin-right: 17px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     &__row-btn {

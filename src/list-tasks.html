@@ -5,7 +5,7 @@
 'title': 'Профиль преподавателя'
 })
 
-<body class="page__body profile-list-student-page ">
+<body class="page__body profile-list-tasks-page ">
 
 <div class="site-container">
   <header class="header">
@@ -15,7 +15,7 @@
 
   <main class="main">
 
-    <section class="section profile-list-student-page__inner">
+    <section class="section profile-list-tasks-page__inner">
       <div class="container">
         <ul class="profile-menu">
           <li>
@@ -43,7 +43,7 @@
               Курсы и уроки
             </a>
           </li>
-          <li class="_active">
+          <li>
             <a href="list-students.html">
               <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +57,7 @@
               Список студентов
             </a>
           </li>
-          <li>
+          <li class="_active">
             <a href="list-tasks.html">
               <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
@@ -102,67 +102,66 @@
             </a>
           </li>
         </ul>
-        <div class="all-students">
-          <h2>Все студенты Ваших курсов</h2>
-          <div class="all-students__stats">
-            <p>Всего студентов: <span>23</span></p>
-            <p>В архиве: <span>22</span></p>
+        <div class="tasks">
+          <h2>Задания, выполненные студентами</h2>
+          <div class="tasks__stats">
+            <p>На проверке: <span>3</span></p>
+            <p>Принято: <span>22</span></p>
+            <p>Возвращено на доработку: <span>20</span></p>
           </div>
-          <form action="" name="allStudentsSearch" class="all-students__search">
-            <div class="all-students__search-wrapper">
-              <p>Фамилия студента</p>
-              <input type="text" name="allStudentsLastname"/>
+          <form action="" name="tasksSearch" class="tasks__search">
+            <div class="tasks__search-row">
+              <button class="tasks__search-btn-filter _active" type="submit">На проверке</button>
+              <button class="tasks__search-btn-filter" type="submit">Принято</button>
+              <button class="tasks__search-btn-filter" type="submit">На доработке</button>
             </div>
-            <button class="all-students__search-btn" type="submit">Искать</button>
+            <div class="tasks__search-row">
+              <div class="tasks__search-wrapper">
+                <p>Название урока</p>
+                <input type="text" name="tasksLesson"/>
+              </div>
+              <div class="tasks__search-wrapper">
+                <p>Фамилия студента</p>
+                <input type="text" name="tasksLastname"/>
+              </div>
+              <button class="tasks__search-btn" type="submit">Искать</button>
+            </div>
           </form>
-          <ul class="all-students__list">
-            <li class="all-students__item">
-              <p class="all-students__col-1">Студентовишвили С.С.</p>
-              <p class="all-students__col-2">Всего курсов: 2</p>
-              <p class="all-students__col-3">Всего уроков: 22</p>
-              <p class="all-students__col-4">Средний балл: 4.5</p>
+          <ul class="tasks__list">
+            <li class="tasks__item">
+              <p class="tasks__col-1">Здесь указано название урока, задание которого надо проверить</p>
+              <p class="tasks__col-2">Студентовишвили С.С.</p>
+              <button class="tasks__btn-check" type="button">Проверить</button>
             </li>
-            <li class="all-students__item">
-              <p class="all-students__col-1">Студентовишвили С.С.</p>
-              <p class="all-students__col-2">Всего курсов: 2</p>
-              <p class="all-students__col-3">Всего уроков: 22</p>
-              <p class="all-students__col-4">Средний балл: 4.5</p>
+            <li class="tasks__item">
+              <p class="tasks__col-1">Здесь указано название урока, задание которого надо проверить</p>
+              <p class="tasks__col-2">Студентовишвили С.С.</p>
+              <button class="tasks__btn-check" type="button">Проверить</button>
             </li>
-            <li class="all-students__item">
-              <p class="all-students__col-1">Студентовишвили С.С.</p>
-              <p class="all-students__col-2">Всего курсов: 2</p>
-              <p class="all-students__col-3">Всего уроков: 22</p>
-              <p class="all-students__col-4">Средний балл: 4.5</p>
+            <li class="tasks__item">
+              <p class="tasks__col-1">Здесь указано название урока, задание которого надо проверить</p>
+              <p class="tasks__col-2">Студентовишвили С.С.</p>
+              <button class="tasks__btn-check" type="button">Проверить</button>
             </li>
-            <li class="all-students__item">
-              <p class="all-students__col-1">Студентовишвили С.С.</p>
-              <p class="all-students__col-2">Всего курсов: 2</p>
-              <p class="all-students__col-3">Всего уроков: 22</p>
-              <p class="all-students__col-4">Средний балл: 4.5</p>
+            <li class="tasks__item">
+              <p class="tasks__col-1">Здесь указано название урока, задание которого надо проверить</p>
+              <p class="tasks__col-2">Студентовишвили С.С.</p>
+              <button class="tasks__btn-check" type="button">Проверить</button>
             </li>
-            <li class="all-students__item">
-              <p class="all-students__col-1">Студентовишвили С.С.</p>
-              <p class="all-students__col-2">Всего курсов: 2</p>
-              <p class="all-students__col-3">Всего уроков: 22</p>
-              <p class="all-students__col-4">Средний балл: 4.5</p>
+            <li class="tasks__item">
+              <p class="tasks__col-1">Здесь указано название урока, задание которого надо проверить</p>
+              <p class="tasks__col-2">Студентовишвили С.С.</p>
+              <button class="tasks__btn-check" type="button">Проверить</button>
             </li>
-            <li class="all-students__item">
-              <p class="all-students__col-1">Студентовишвили С.С.</p>
-              <p class="all-students__col-2">Всего курсов: 2</p>
-              <p class="all-students__col-3">Всего уроков: 22</p>
-              <p class="all-students__col-4">Средний балл: 4.5</p>
+            <li class="tasks__item">
+              <p class="tasks__col-1">Здесь указано название урока, задание которого надо проверить</p>
+              <p class="tasks__col-2">Студентовишвили С.С.</p>
+              <button class="tasks__btn-check" type="button">Проверить</button>
             </li>
-            <li class="all-students__item">
-              <p class="all-students__col-1">Студентовишвили С.С.</p>
-              <p class="all-students__col-2">Всего курсов: 2</p>
-              <p class="all-students__col-3">Всего уроков: 22</p>
-              <p class="all-students__col-4">Средний балл: 4.5</p>
-            </li>
-            <li class="all-students__item">
-              <p class="all-students__col-1">Студентовишвили С.С.</p>
-              <p class="all-students__col-2">Всего курсов: 2</p>
-              <p class="all-students__col-3">Всего уроков: 22</p>
-              <p class="all-students__col-4">Средний балл: 4.5</p>
+            <li class="tasks__item">
+              <p class="tasks__col-1">Здесь указано название урока, задание которого надо проверить</p>
+              <p class="tasks__col-2">Студентовишвили С.С.</p>
+              <button class="tasks__btn-check" type="button">Проверить</button>
             </li>
           </ul>
         </div>
