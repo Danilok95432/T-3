@@ -106,7 +106,9 @@
 
   &__nav-search {
     position: relative;
-
+    svg path {
+      transition: all .3s;
+    }
     &:hover {
       svg path {
         fill-opacity: 1;
