@@ -8,6 +8,7 @@ import './components/customDate'
 import './components/manageModal'
 import './components/profileEditable'
 import './components/accordions'
+import './components/searchMenu'
 
 
 

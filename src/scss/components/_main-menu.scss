@@ -2,6 +2,18 @@
   padding: 14px 0;
   background-color: $main-red;
 
+  &._search-active {
+    padding: 6.5px 0;
+
+    .main-menu__nav-list {
+      display: none;
+    }
+
+    .search-form {
+      display: flex;
+    }
+  }
+
   .container {
     display: flex;
     align-items: center;
@@ -29,8 +41,57 @@
     }
   }
 
+  .search-form {
+    display: none;
+
+    &__input {
+      padding: 9px;
+      width: 350px;
+      @include montserrat-regular;
+      font-size: 15px;
+      line-height: 18px;
+      color: #000000;
+      outline: none;
+
+      &::placeholder {
+        @include montserrat-regular;
+        font-size: 15px;
+        line-height: 18px;
+        color: #000000;
+      }
+    }
+
+    &__search-btn {
+      background-color: #B7212E;
+      @include montserrat-regular;
+      font-size: 15px;
+      line-height: 22px;
+      text-align: center;
+      color: #FFFFFF;
+      padding: 7px 22px;
+      margin-right: 13px;
+    }
+
+    &__search-close {
+      svg path {
+        transition: all .3s;
+      }
+
+      &:hover svg path {
+        fill-opacity: 1;
+      }
+    }
+
+  }
+
   &__nav-search {
     position: relative;
+
+    &:hover {
+      svg path {
+        fill-opacity: 1;
+      }
+    }
 
     &::before {
       content: '';
@@ -43,9 +104,10 @@
       transform: translateY(-50%);
     }
 
-    a {
+    button {
       position: relative;
       padding-right: 25px;
+      color: $white;
 
       svg {
         position: absolute;
@@ -56,11 +118,54 @@
     }
   }
 
+
+  &__personal-in {
+    svg path {
+      transition: all .3s;
+    }
+    &:hover {
+      svg path {
+        fill-opacity: 1;
+      }
+    }
+  }
+
+  &__personal-out {
+    position: relative;
+    svg path {
+      transition: all .3s;
+    }
+    &:hover {
+      svg path {
+        fill-opacity: 1;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      height: 22px;
+      width: 1px;
+      background-color: #A3A3A3;
+      left: -22px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__personal-name {
+    svg path {
+      transition: all .3s;
+    }
+    &:hover {
+      svg path {
+        fill-opacity: 1;
+      }
+    }
+  }
+
   &__personal {
     margin-left: auto;
     display: flex;
     align-items: center;
-
     a {
       @include montserrat-medium;
       font-size: 14px;
@@ -68,6 +173,7 @@
       color: $white;
       position: relative;
       padding-right: 30px;
+
       &:not(:last-child) {
         margin-right: 45px;
       }
@@ -80,21 +186,19 @@
       }
 
     }
-  }
-
-  &__personal-out {
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      height: 22px;
-      width: 1px;
-      background-color: #A3A3A3;
-      left: -22px;
-      top: 50%;
-      transform: translateY(-50%);
+    &._authorized {
+      .main-menu__personal_authorized {
+        display: block;
+      }
+      .main-menu__personal-in {
+        display: none;
+      }
     }
+
+
   }
 
+  &__personal_authorized {
+    display: none;
+  }
 }
