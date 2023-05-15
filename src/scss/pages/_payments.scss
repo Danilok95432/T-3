@@ -1,0 +1,12 @@
+.payments-page {
+  &__inner {
+    .container {
+      display: flex;
+      align-items: flex-start;
+    }
+    .profile-menu li a{
+      align-items: center;
+    }
+  }
+
+}
