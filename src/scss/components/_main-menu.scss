@@ -18,16 +18,26 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__logo {
     line-height: 0;
     margin-right: 40px;
+    @media (max-width: 768px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
 
   &__nav-list {
     display: flex;
     align-items: center;
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+    }
 
     li:not(:last-child) {
       margin-right: 40px;
@@ -43,6 +53,9 @@
 
   .search-form {
     display: none;
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+    }
 
     &__input {
       padding: 9px;
@@ -52,6 +65,13 @@
       line-height: 18px;
       color: #000000;
       outline: none;
+      @media (max-width: 768px) {
+        width: 180px;
+        font-size: 12px;
+        &::placeholder {
+          font-size: 12px;
+        }
+      }
 
       &::placeholder {
         @include montserrat-regular;
@@ -166,6 +186,9 @@
     margin-left: auto;
     display: flex;
     align-items: center;
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
     a {
       @include montserrat-medium;
       font-size: 14px;
