@@ -1,0 +1,12 @@
+.lessons-student-page {
+  &__inner {
+    margin-bottom: 80px;
+    .container {
+      display: flex;
+      align-items: flex-start;
+    }
+    .profile-menu li a{
+      align-items: center;
+    }
+  }
+}

@@ -9,6 +9,8 @@
 @import "pages/list-students";
 @import "pages/list-tasks";
 @import "pages/payments";
+@import "pages/courses-student";
+@import "pages/lessons-student";
 
 
 //Модалки
@@ -31,6 +33,8 @@
 @import "./components/main-accordion";
 @import "./components/pagination";
 @import "./components/payment-budges";
+@import "./components/student-courses";
+@import "./components/student-lessons";
 
 @import "./components/footer";
 
