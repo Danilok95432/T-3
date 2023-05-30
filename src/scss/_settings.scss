@@ -215,6 +215,33 @@ main {
   }
 }
 
+
+// стили для флекс-таблиц
+
+.flex-table {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__row {
+    display: flex;
+  }
+
+  &__cell {
+    width: 100%;
+    flex: 1 1 auto;
+    @include montserrat-regular;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+
+    &:not(:last-child) {
+      padding-right: 20px;
+    }
+  }
+}
+
+
 .close-modal-btn {
   position: absolute;
   right: 16px;

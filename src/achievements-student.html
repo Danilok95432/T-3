@@ -2,10 +2,10 @@
 <html lang="ru" class="page">
 
 @include('partials/head.html', {
-'title': 'Оплаты и бюджет'
+'title': 'Активные уроки'
 })
 
-<body class="page__body payments-page">
+<body class="page__body achievements-student-page">
 
 <div class="site-container">
   <header class="header">
@@ -15,7 +15,7 @@
 
   <main class="main">
 
-    <section class="section payments-page__inner">
+    <section class="section achievements-student-page__inner">
       <div class="container">
         <ul class="profile-menu">
           <li class="padding-item">
@@ -57,20 +57,22 @@
               Активные уроки
             </a>
           </li>
-          <li class="border-bottom">
+          <li class="border-bottom _active">
             <a href="achievements-student.html">
               <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M8.86583 13.3803L4.447 15.7031C4.37957 15.7386 4.30355 15.7545 4.22753 15.7491C4.15151 15.7436 4.07854 15.717 4.01686 15.6723C3.95518 15.6275 3.90726 15.5664 3.87853 15.4958C3.84979 15.4252 3.84138 15.348 3.85425 15.2729L4.6986 10.3523L1.12314 6.86735C1.06864 6.81411 1.0301 6.7467 1.01187 6.67272C0.993642 6.59873 0.996453 6.52113 1.01999 6.44866C1.04352 6.3762 1.08683 6.31175 1.14505 6.26259C1.20326 6.21343 1.27405 6.18152 1.34944 6.17046L6.29045 5.45264L8.49986 0.975414C8.53381 0.907701 8.58593 0.850768 8.65039 0.810981C8.71485 0.771194 8.7891 0.750122 8.86485 0.750122C8.9406 0.750122 9.01486 0.771194 9.07931 0.810981C9.14377 0.850768 9.19589 0.907701 9.22984 0.975414L11.4393 5.45264L16.3798 6.17046C16.4553 6.18135 16.5262 6.21317 16.5845 6.2623C16.6429 6.31144 16.6863 6.37593 16.7098 6.44847C16.7334 6.52102 16.7361 6.5987 16.7178 6.67274C16.6995 6.74677 16.6608 6.81419 16.6061 6.86735L13.0311 10.3523L13.875 15.2729C13.8878 15.3479 13.8793 15.425 13.8506 15.4956C13.8219 15.5661 13.774 15.6271 13.7124 15.6719C13.6508 15.7166 13.578 15.7433 13.502 15.7488C13.4261 15.7543 13.3501 15.7384 13.2827 15.7031L8.86583 13.3803Z"
-                  stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                  stroke="black" stroke-linecap="round"
+                  stroke-linejoin="round"/>
               </svg>
               Оценки и достижения
             </a>
           </li>
-          <li class="border-bottom _active">
-            <a href="">
-              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <li class="border-bottom">
+            <a href="payment-budget.html">
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M11 3.5C11 3.36739 11.0527 3.24021 11.1464 3.14645C11.2402 3.05268 11.3674 3 11.5 3H13.5C13.6326 3 13.7598 3.05268 13.8536 3.14645C13.9473 3.24021 14 3.36739 14 3.5V4.5C14 4.63261 13.9473 4.75979 13.8536 4.85355C13.7598 4.94732 13.6326 5 13.5 5H11.5C11.3674 5 11.2402 4.94732 11.1464 4.85355C11.0527 4.75979 11 4.63261 11 4.5V3.5Z"
                   fill="black"/>
@@ -103,7 +105,6 @@
               Статистика студента
             </a>
           </li>
-
           <li>
             <a href="#">
               <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
@@ -116,47 +117,152 @@
             </a>
           </li>
         </ul>
-
-        <div class="payment-budges">
-          <h2>Оплаты и бюджет</h2>
-          <div class="payment-budges__stats">
-            <p>Всего оплат: <span>3</span></p>
-
+        <div class="student-achievements">
+          <h2>Оценки</h2>
+          <p class="student-achievements__desc">Всего оценок: <span
+            class="grade-count">8</span></p>
+          <div class="flex-table student-achievements-table">
+            <div class="flex-table__row student-achievements-table__title">
+              <p class="flex-table__cell">
+                Номер и название урока
+              </p>
+              <p class="flex-table__cell">
+                Название и ссылка на курс
+              </p>
+              <p class="flex-table__cell">
+                Дата и время
+              </p>
+              <p class="flex-table__cell student-achievements-table__grade-cell">
+                <span>Оценка</span>
+              </p>
+              <p class="flex-table__cell">
+                Оценка получена
+              </p>
+            </div>
+            <div class="flex-table__row">
+              <p class="flex-table__cell">
+                <span>2 / 23:</span> <span class="trim-string">Защитные подпрыгивания</span>
+              </p>
+              <p class="flex-table__cell trim-string">
+                Боевые аспекты русских народных танцев
+              </p>
+              <p class="flex-table__cell">
+                27.02.2023 в 23:08
+              </p>
+              <p class="flex-table__cell student-achievements-table__grade-cell">
+                <span class="student-achievements-table__grade _grade-5">5</span>
+              </p>
+              <p class="flex-table__cell">
+                с первого раза
+              </p>
+            </div>
+            <div class="flex-table__row">
+              <p class="flex-table__cell">
+                <span>22 / 23:</span> <span class="trim-string">Защитные подпрыгивания</span>
+              </p>
+              <p class="flex-table__cell trim-string">
+                Боевые аспекты русских народных танцев
+              </p>
+              <p class="flex-table__cell">
+                27.02.2023 в 23:08
+              </p>
+              <p class="flex-table__cell student-achievements-table__grade-cell">
+                <span class="student-achievements-table__grade _grade-4">4</span>
+              </p>
+              <p class="flex-table__cell">
+                с первого раза
+              </p>
+            </div>
+            <div class="flex-table__row">
+              <p class="flex-table__cell">
+                <span>2 / 23:</span> <span class="trim-string">Защитные подпрыгивания</span>
+              </p>
+              <p class="flex-table__cell trim-string">
+                Боевые аспекты русских народных танцев
+              </p>
+              <p class="flex-table__cell">
+                27.02.2023 в 23:08
+              </p>
+              <p class="flex-table__cell student-achievements-table__grade-cell">
+                <span class="student-achievements-table__grade _grade-3">3</span>
+              </p>
+              <p class="flex-table__cell">
+                пересдача
+              </p>
+            </div>
+            <div class="flex-table__row">
+              <p class="flex-table__cell">
+                <span>2 / 23:</span> <span class="trim-string">Защитные подпрыгивания</span>
+              </p>
+              <p class="flex-table__cell trim-string">
+                Боевые аспекты русских народных танцев
+              </p>
+              <p class="flex-table__cell">
+                27.02.2023 в 23:08
+              </p>
+              <p class="flex-table__cell student-achievements-table__grade-cell">
+                <span class="student-achievements-table__grade _grade-5">5</span>
+              </p>
+              <p class="flex-table__cell">
+                с первого раза
+              </p>
+            </div>
+            <div class="flex-table__row">
+              <p class="flex-table__cell">
+                <span>2 / 23:</span> <span class="trim-string">Защитные подпрыгивания</span>
+              </p>
+              <p class="flex-table__cell trim-string">
+                Боевые аспекты русских народных танцев
+              </p>
+              <p class="flex-table__cell">
+                27.02.2023 в 23:08
+              </p>
+              <p class="flex-table__cell student-achievements-table__grade-cell">
+                <span class="student-achievements-table__grade _grade-5">5</span>
+              </p>
+              <p class="flex-table__cell">
+                с первого раза
+              </p>
+            </div>
           </div>
-          <ul class="payment-budges__list">
-            <li class="payment-budges__item">
-              <p class="payment-budges__col-1">Дата и время</p>
-              <p class="payment-budges__col-2">Основание</p>
-              <p class="payment-budges__col-3">Название услуги или курса</p>
-              <p class="payment-budges__col-4">Сумма, ₽</p>
-              <p class="payment-budges__col-5">Метод оплаты</p>
+          <h2>Достижения</h2>
+          <p class="student-achievements__desc _border">Всего достижений: <span
+            class="grade-count">8</span></p>
+          <ul class="student-achievements__list">
+            <li>
+              <img src="./img/achievement-icon.png" alt="достижение">
+              <h4>Название</h4>
             </li>
-            <li class="payment-budges__item">
-              <p class="payment-budges__col-1">27.02.2023 в 23:08</p>
-              <p class="payment-budges__col-2">Оплата подписки на курс</p>
-              <a href="#" class="payment-budges__col-3">Боевые аспекты русских н 454545</a>
-              <p class="payment-budges__col-4">28 000</p>
-              <p class="payment-budges__col-5">Карта *0580</p>
+            <li>
+              <img src="./img/achievement-icon.png" alt="достижение">
+              <h4>Название</h4>
             </li>
-            <li class="payment-budges__item">
-              <p class="payment-budges__col-1">27.02.2023 в 23:08</p>
-              <p class="payment-budges__col-2">Продление подписки</p>
-              <a href="#" class="payment-budges__col-3">Боевые аспекты русских н 454545</a>
-              <p class="payment-budges__col-4">17 900</p>
-              <p class="payment-budges__col-5">Оплата по счёту</p>
+            <li>
+              <img src="./img/achievement-icon.png" alt="достижение">
+              <h4>Название</h4>
             </li>
-            <li class="payment-budges__item">
-              <p class="payment-budges__col-1">27.02.2023 в 23:08</p>
-              <p class="payment-budges__col-2">Оплата дополнительных услуг</p>
-              <a href="#" class="payment-budges__col-3">Репетитор (Туниманов П.Е.)</a>
-              <p class="payment-budges__col-4">5 500</p>
-              <p class="payment-budges__col-5">Карта *0580</p>
+            <li>
+              <img src="./img/achievement-icon.png" alt="достижение">
+              <h4>Название</h4>
             </li>
-
+            <li>
+              <img src="./img/achievement-icon.png" alt="достижение">
+              <h4>Название</h4>
+            </li>
+            <li>
+              <img src="./img/achievement-icon.png" alt="достижение">
+              <h4>Название</h4>
+            </li>
+            <li>
+              <img src="./img/achievement-icon.png" alt="достижение">
+              <h4>Название</h4>
+            </li>
+            <li>
+              <img src="./img/achievement-icon.png" alt="достижение">
+              <h4>Название</h4>
+            </li>
           </ul>
-          @include('partials/pagination.html')
         </div>
-
       </div>
     </section>
   </main>

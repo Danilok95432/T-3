@@ -1,0 +1,160 @@
+.student-achievements {
+  padding: 32px 40px 50px 34px;
+  background-color: #ffffff;
+  flex-grow: 1;
+
+  h2 {
+    @include montserrat-semibold;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 23px;
+  }
+
+  &__desc {
+    @include montserrat-light;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    margin-bottom: 30px;
+
+    &._border {
+      border-bottom: 1px solid #A3A3A3;
+      padding-bottom: 20px;
+    }
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  .student-achievements-table {
+    margin-bottom: 40px;
+
+    .flex-table__cell {
+      &:not(:last-child) {
+        padding-right: 15px;
+      }
+
+      span {
+        font-weight: 500;
+      }
+
+      &:first-child {
+        display: flex;
+        align-items: flex-start;
+
+        span {
+          min-width: 50px;
+        }
+
+        .trim-string {
+          max-width: 175px;
+          font-weight: 400;
+        }
+
+        width: 28%;
+      }
+
+      &:nth-child(2) {
+        width: 27%;
+      }
+
+      &:nth-child(3) {
+        width: 17%;
+      }
+
+      &:nth-child(4) {
+        width: 10%;
+      }
+
+      &:nth-child(5) {
+        width: 17%;
+      }
+
+    }
+
+    .flex-table__row {
+      padding: 15px 0;
+      border-bottom: 1px solid #9C9C9C;
+
+      &.student-achievements-table__title {
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+
+        p {
+          @include montserrat-medium;
+          font-size: 14px;
+          line-height: 17px;
+          color: #C2C2C2;
+
+          span {
+            font-weight: 700;
+          }
+        }
+      }
+
+    }
+
+    &__grade-cell {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__grade {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      color: #ffffff;
+      font-weight: 600;
+
+      &._grade-5 {
+        background: #149B11;
+      }
+
+      &._grade-4 {
+        background: #9DC91F;
+      }
+
+      &._grade-3 {
+        background: #FC9700;
+      }
+
+      &._grade-2 {
+        background: #B7212E;
+      }
+    }
+
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr) );
+    grid-column-gap: 35px;
+    grid-row-gap: 28px;
+    justify-items: center;
+
+    li {
+      border: 1px solid #A3A3A3;
+      box-shadow: 0 4px 0 #E9EAED;
+      border-radius: 5px;
+      padding: 17px 31px;
+      img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+      }
+
+      h4 {
+        text-align: center;
+        @include montserrat-medium;
+        font-size: 15px;
+        line-height: 18px;
+        color: #000000;
+      }
+
+    }
+  }
+}

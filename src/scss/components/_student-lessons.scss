@@ -58,16 +58,21 @@
     .student-lessons__list-items {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
+
+      .main-button {
+        margin-left: auto;
+      }
+
     }
 
     .student-lessons__list-info {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      width: 34%;
 
       &:not(:last-child) {
-        margin-right: 35px;
+        margin-right: 80px;
       }
 
       svg {
