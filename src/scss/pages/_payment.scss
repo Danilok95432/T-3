@@ -1,0 +1,156 @@
+.payment-page {
+
+  &__inner {
+    padding-bottom: 75px;
+  }
+
+  h1 {
+    margin-bottom: 25px;
+  }
+
+  h3 {
+    @include montserrat-semibold;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    padding: 30px 25px 50px 30px;
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content-img {
+    width: 140px;
+    height: 140px;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+
+  &__content-text {
+    max-width: 635px;
+    margin-right: 20px;
+
+    h6 {
+      @include montserrat-regular;
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 10px;
+    }
+
+    .payment-page__content-teacher {
+      font-size: 14px;
+      line-height: 17px;
+      color: #B7212E;
+      margin-bottom: 13px;
+    }
+
+
+  }
+
+
+  &__content-sign {
+    width: 322px;
+    min-width: 322px;
+    padding: 22px 18px 23px 18px;
+    border: 1px solid #AEAEAE;
+    border-radius: 5px;
+    box-shadow: 0 4px 0 #E9EAED;
+
+    .payment-page__content-sign-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      margin-bottom: 15px;
+    }
+
+    h4 {
+      @include montserrat-medium;
+      font-size: 18px;
+      line-height: 22px;
+
+      &:first-child {
+        margin-right: 15px;
+      }
+
+      span {
+        @include montserrat-semibold;
+        font-size: 25px;
+        line-height: 22px;
+        color: #B7212E;
+      }
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 15px;
+      margin-bottom: 10px;
+
+      a {
+        color: #B7212E;
+      }
+
+      &._marked {
+        position: relative;
+        padding-left: 10px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          background-color: #000000;
+          border-radius: 50%;
+          left: 0;
+          top: 5px;
+        }
+      }
+    }
+
+    .main-input {
+      margin-bottom: 20px;
+    }
+
+    .main-button {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__warning {
+    padding: 37px 25px;
+    background-color: #B7212E;
+  }
+
+  &__warning-content {
+    padding: 15px 28px 20px 50px;
+    background-color: #ffffff;
+
+    h5 {
+      @include montserrat-semibold;
+      font-size: 14px;
+      line-height: 25px;
+      position: relative;
+      margin-bottom: 5px;
+      svg {
+        position: absolute;
+        top: 4px;
+        left: -30px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+
+      a {
+        color: #B7212E;
+      }
+    }
+  }
+
+}

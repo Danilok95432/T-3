@@ -84,6 +84,13 @@ textarea {
   resize: none;
 }
 
+h1 {
+  @include montserrat-semibold;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+
 main {
   min-height: calc(100vh - 226px);
 }
@@ -170,6 +177,12 @@ main {
     background: #B7212E;
     height: auto;
     padding: 13px 50px;
+  }
+
+  &._outline {
+    color: #B7212E;
+    background-color: #fff;
+    border: 1px solid #B7212E;
   }
 
 }
@@ -267,15 +280,50 @@ main {
   display: flex;
   max-width: 100%;
   width: 100%;
+
   &__el {
     width: 28px;
     height: 7px;
     background-color: #ECECEC;
+
     &:not(:last-child) {
       margin-right: 2px;
     }
+
     &._completed {
       background-color: #78D281;
     }
+  }
+}
+
+.main-input {
+  @include montserrat-regular;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  padding: 13px 14px;
+  background: #FFFFFF;
+  border: 1px solid #AEAEAE;
+  border-radius: 3px;
+  width: 100%;
+
+  &::placeholder {
+    color: #AEAEAE;
+  }
+}
+.main-textarea {
+  @include montserrat-regular;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  padding: 13px 14px;
+  background: #FFFFFF;
+  border: 1px solid #AEAEAE;
+  border-radius: 5px;
+  height: 145px;
+  width: 100%;
+
+  &::placeholder {
+    color: #AEAEAE;
   }
 }

@@ -1,0 +1,121 @@
+.paid-course-page {
+
+  &__inner {
+    padding-bottom: 80px;
+  }
+
+  h1 {
+    margin-bottom: 25px;
+  }
+
+  h3 {
+    @include montserrat-semibold;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    padding: 35px 110px 50px 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    .accordion-btn {
+      @include montserrat-medium;
+      font-size: 14px;
+      line-height: 17px;
+      color: #8E0C18;
+    }
+  }
+
+  &__content-img {
+    width: 140px;
+    height: 140px;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+
+  &__content-text {
+    max-width: 760px;
+    margin-right: 20px;
+  }
+
+  &__content-text-desc {
+    margin-bottom: 45px;
+  }
+
+  &__content-progress {
+    width: 115px;
+    min-width: 115px;
+    padding-top: 36px;
+
+    h5 {
+      @include montserrat-light;
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 5px;
+    }
+
+    .main-button {
+      padding: 6px 14px;
+    }
+
+  }
+
+  &__progress-wrapper {
+    margin-bottom: 121px;
+  }
+
+  &__content-progress-grade {
+    @include montserrat-semibold;
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 45px;
+  }
+
+  &__content-list {
+    &:first-child {
+      margin-top: 30px;
+    }
+
+    li {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+
+      &._disabled {
+        opacity: 0.2;
+
+        svg path {
+          fill: #000000;
+        }
+      }
+
+      svg {
+        margin-top: 3px;
+        margin-right: 15px;
+      }
+
+      h6 {
+        @include montserrat-semibold;
+        font-size: 14px;
+        line-height: 25px;
+        margin-right: 15px;
+        min-width: 63px;
+      }
+
+      p {
+        width: 100%;
+        font-size: 14px;
+        line-height: 25px;
+      }
+    }
+
+
+
+  }
+
+
+}
