@@ -1,5 +1,5 @@
 // Обрезка длинного текста на определенную длину
-import { infoModal } from './_vars'
+import { bigImgModal, infoModal, modalOverlay } from './_vars'
 
 const cutString = (stringArray, stringLength) => {
   stringArray.forEach(str => {
@@ -9,6 +9,18 @@ const cutString = (stringArray, stringLength) => {
     if (cutLength && cutLength < str.textContent.length) {
       str.textContent = `${str.textContent.substring(0, cutLength)}...`
     }
+  })
+}
+
+// Функция показа модалки большой картинки
+
+export const showBigImgModal = (path) => {
+  bigImgModal.classList.add('big-img-modal_active')
+  bigImgModal.querySelector('img').src = path
+  modalOverlay.classList.add('modal-overlay_active')
+  modalOverlay.addEventListener('click', () => {
+    modalOverlay.classList.remove('modal-overlay_active')
+    bigImgModal.classList.remove('big-img-modal_active')
   })
 }
 

@@ -18,7 +18,14 @@
     top: 20px;
   }
 
+  &__lesson-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__lesson {
+    width: 100%;
     position: relative;
     padding: 40px 15px 65px;
     flex-grow: 1;
@@ -26,6 +33,40 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &._file {
+      .lesson-status {
+        display: none;
+      }
+
+      .lecture-page__lesson-file {
+        display: block;
+      }
+
+      .lecture-page__lesson-image {
+        display: none;
+      }
+
+      .lecture-page__lesson-top {
+        width: 100%;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 45px;
+          background-color: #1F1F1F;
+          bottom: -45px;
+          left: 0;
+        }
+      }
+
+      .lecture-page__lesson-desc {
+        margin-bottom: 0;
+      }
+    }
+
 
     h3 {
       @include montserrat-semibold;
@@ -78,6 +119,11 @@
       margin-bottom: 20px;
       max-width: 620px;
     }
+  }
+
+  &__lesson-file {
+    width: 100%;
+    display: none;
   }
 
   &__form {
@@ -168,5 +214,57 @@
     }
 
   }
+
+  .general-dropzone {
+    display: flex;
+    flex-wrap: wrap;
+
+    .dz-message {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      align-self: center;
+      flex-grow: 1;
+    }
+
+    .dz-preview {
+      width: 110px;
+      height: 110px;
+      margin: 0;
+      position: relative;
+
+      &:hover {
+        .dz-remove {
+          display: block;
+        }
+      }
+
+      img {
+        border-radius: 5px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 7px;
+      }
+    }
+
+    .dz-message {
+      order: 1;
+    }
+
+    .dz-remove {
+      position: absolute;
+      display: none;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+      background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.8'%3e%3cpath d='M20.6 41.2C31.9771 41.2 41.2001 31.9773 41.2001 20.6002C41.2001 9.22313 31.9771 0 20.6 0C9.2229 0 0 9.22313 0 20.6002C0 31.9773 9.2229 41.2 20.6 41.2Z' fill='white'/%3e%3cpath d='M20.5998 23.1264C19.4338 24.2925 18.4621 25.2646 17.296 26.4306C15.9357 27.791 14.5753 29.1511 13.2149 30.5115C12.4376 31.2888 11.4659 31.2888 10.6886 30.5115C9.9112 29.7341 9.9112 28.7623 10.6886 27.9849C13.0206 25.6529 15.3527 23.3208 17.4904 21.183C17.6848 20.9887 17.6848 20.9888 17.8792 20.7945C17.6848 20.6001 17.6848 20.6002 17.4904 20.4059C15.1584 18.0738 12.8263 15.7415 10.6886 13.4095C9.71686 12.4378 9.91122 11.0774 11.0773 10.4944C11.8546 10.1057 12.4376 10.3004 13.0207 10.8834C15.3527 13.2155 17.4905 15.3532 19.8226 17.6853C20.0169 17.8796 20.0168 17.8796 20.2111 18.0739C20.4055 17.8796 20.4055 17.8796 20.5998 17.6853C22.9319 15.3532 25.2641 13.021 27.5961 10.6889C28.5678 9.71718 29.9282 10.106 30.5112 11.272C30.8999 12.0494 30.7056 12.6324 30.1225 13.2154C27.7905 15.5475 25.4584 17.8796 23.3206 20.0173C23.1263 20.2116 23.1263 20.2115 22.9319 20.4059C23.1263 20.6002 23.3206 20.7945 23.3206 20.7945C25.6527 23.1265 27.9848 25.4588 30.1225 27.7909C30.7056 28.3739 30.8999 29.151 30.5112 29.9283C30.1226 30.5114 29.3452 30.9003 28.7621 30.706C28.3735 30.5116 27.9848 30.3172 27.7904 30.1229C25.4584 27.7908 23.3206 25.6531 20.9885 23.321C20.7942 23.321 20.7942 23.3208 20.5998 23.1264Z' fill='%23969696'/%3e%3c/g%3e%3c/svg%3e") no-repeat;
+    }
+
+  }
+
 
 }

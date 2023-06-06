@@ -33,7 +33,7 @@
         </div>
         <h1>Рисунок черепа анфас, лекция П.П. Преподавательского</h1>
         <div class="lecture-page__wrapper">
-          <div class="lecture-page__lesson">
+          <div class="lecture-page__lesson _file">
             <button class="lecture-burger-btn" type="button">
               <svg width="32" height="24" viewBox="0 0 32 24" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
@@ -46,11 +46,21 @@
               </svg>
 
             </button>
-            <h3>Обучающая лекция</h3>
-            <p class="lecture-page__lesson-desc">Рисунок черепа анфас,
-              построение, изучение формы, компоновка в листе</p>
+
+            <div class="lecture-page__lesson-top">
+              <h3>Обучающая лекция</h3>
+              <p class="lecture-page__lesson-desc">Рисунок черепа анфас,
+                построение, изучение формы, компоновка в листе</p>
+            </div>
             <span class="lesson-status"></span>
-            <img src="./img/lecture-img.jpg" alt="урок">
+
+            <div class="lecture-page__lesson-file">
+              <object data="./data/test-pdf.pdf" width="100%"
+                      height="810px">
+              </object>
+            </div>
+
+            <img class="lecture-page__lesson-image" src="./img/lecture-img.jpg" alt="урок">
             <span>Лекцию читает</span>
             <p class="lecture-page__lesson-desc">Преподавательский Преподаватель
               Преподавателевич</p>
@@ -74,11 +84,20 @@
             <h3>
               Задание: загрузите работу
             </h3>
+            <div class="general-dropzone-wrapper">
+              <div class="dropzone general-dropzone"
+                   id="lecture-dropzone"
+                   data-show-preview="true"
+                   data-general-info='{"url": "./data/test.txt", "removeUrl": "./data/test.txt", "width": "110", "height": "110", "acceptedFiles": ".png, .jpeg, .jpg", "type": "task", "filesCount": "3", "additional": "доп.контент"}'>
+                <div class="dz-message">
+                  <button class="main-button _outline general-dropzone__add-btn"
+                          id="task-add" type="button">Добавить
+                    изображение
+                  </button>
+                </div>
+              </div>
+            </div>
 
-
-            <button class="main-button _outline" type="button">Добавить
-              изображение
-            </button>
 
             <p>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -141,6 +160,8 @@
         </div>
       </div>
     </section>
+    @include('partials/info-modal.html')
+    @include('partials/loader.html')
   </main>
   @include('partials/footer.html')
 </div>
