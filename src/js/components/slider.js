@@ -35,3 +35,13 @@ new Swiper(".prospects-swiper", {
     clickable: true,
   },
 });
+new Swiper(".teachers-swiper", {
+  loop: true,
+  spaceBetween: 0,
+  slidesPerView: 1,
+  grabCursor: true,
+  pagination: {
+    el: ".teachers-swiper-pagination",
+    clickable: true,
+  },
+});
