@@ -3,7 +3,10 @@
 @import "settings";
 
 //Страницы
+
 @import "pages/home";
+
+@import "pages/main-sdo";
 @import "pages/profile-teacher";
 @import "pages/profile-student";
 @import "pages/courses-teacher";
@@ -19,11 +22,18 @@
 @import "pages/lecture";
 
 
+
 //Модалки
 
 
 
 //Компоненты
+
+@import "./components/home-menu";
+@import "./components/home-lang-switcher";
+@import "./components/home-header";
+@import "./components/home-footer";
+
 @import "./components/main-menu";
 @import "./components/profile-info";
 @import "./components/profile-menu";
@@ -45,6 +55,7 @@
 @import "./components/bread-crumbs";
 @import "./components/loader";
 @import "./components/big-img-modal";
+
 
 
 @import "./components/footer";

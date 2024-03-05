@@ -11,6 +11,7 @@ import './components/accordions'
 import './components/searchMenu'
 import './components/initProgressBars'
 import './components/courses-controller'
+import './components/homeLangSwitcher'
 
 
 

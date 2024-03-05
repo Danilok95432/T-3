@@ -1,0 +1,16 @@
+.home-lang-switcher {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  width: 95px;
+  button {
+    font-size: 14px;
+    @include montserrat-medium;
+    color: #CAC2C2;
+    &._active {
+      @include montserrat-bold;
+      color: #ffffff;
+      border-bottom: 2px solid #E51D30;
+    }
+  }
+}
