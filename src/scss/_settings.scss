@@ -16,6 +16,10 @@ body {
   background-color: $main-bg;
   color: $black;
   position: relative;
+
+  &._block {
+    overflow: hidden;
+  }
 }
 
 ul,
@@ -311,6 +315,7 @@ main {
     color: #AEAEAE;
   }
 }
+
 .main-textarea {
   @include montserrat-regular;
   font-size: 14px;
@@ -327,3 +332,8 @@ main {
     color: #AEAEAE;
   }
 }
+
+
+
+
+
