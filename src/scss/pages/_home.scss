@@ -1,6 +1,15 @@
 .home-page {
   background: #FFFFFF;
 
+  .home-btn {
+    @include montserrat-medium;
+    font-size: 15px;
+    background-color: #B7212E;
+    padding: 16px 26px;
+    color: #ffffff;
+    display: inline-block;
+  }
+
   h2.home-page__subtitle {
     @include montserrat-semibold;
     font-size: 30px;
@@ -8,7 +17,7 @@
   }
 
   .events {
-    padding: 46px 0 45px;
+    padding: 46px 0 51px;
 
 
     &__title-block {
@@ -64,10 +73,12 @@
           @media (max-width: 1024px) {
             width: 100%;
           }
+
           a {
             max-width: 380px;
             font-size: 30px;
             margin-bottom: 25px;
+
             &:hover {
               text-decoration: underline;
               text-decoration-color: #E51D30;
@@ -82,6 +93,7 @@
           flex-direction: column;
           gap: 10px;
           background: #ffffff;
+
           .events-list__sub-event {
             height: 50%;
             padding: 22px 22px;
@@ -136,7 +148,89 @@
   }
 
   .faculty {
-    min-height: 500px;
+    padding-bottom: 55px;
+
+    h2 {
+      margin-bottom: 26px;
+    }
+
+    .faculty-swiper {
+      margin-bottom: 30px;
+
+      .swiper-slide {
+
+        &__wrapper {
+          padding: 23px;
+        }
+
+        h4 {
+          @include montserrat-semibold;
+          font-size: 20px;
+          line-height: 1.2;
+        }
+
+        &._yellow {
+          background-color: #F2F0E6;
+        }
+
+        &._gray {
+          background-color: #F2F2F2;
+        }
+
+        &._green {
+          background-color: #EDF8E4;
+        }
+
+        &._blue {
+          background-color: #E6F3FA;
+        }
+      }
+
+      &__content {
+        flex-direction: column;
+        height: 182px;
+        justify-content: space-between;
+        display: flex;
+        margin-bottom: 27px;
+
+        p {
+          @include montserrat-regular;
+          font-size: 14px;
+          height: 4.8em;
+          line-height: 1.6em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+      }
+
+      &__link {
+        @include montserrat-regular;
+        font-size: 14px;
+        color: #B7212E;
+        display: block;
+        padding-top: 15px;
+        border-top: 1px solid #4a4a4a;
+      }
+    }
+    .faculty-swiper-controllers {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      @media (max-width: 550px) {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+      &__btns {
+        display: flex;
+        gap: 25px;
+      }
+    }
+
   }
 
 }
