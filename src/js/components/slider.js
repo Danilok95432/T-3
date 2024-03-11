@@ -69,3 +69,25 @@ new Swiper('.faculty-swiper', {
     prevEl: '.faculty-swiper__swiper-button-prev',
   },
 })
+
+new Swiper('.sponsors-swiper', {
+  loop: true,
+  spaceBetween: 12,
+  slidesPerView: 1,
+  grabCursor: true,
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    992: {
+      slidesPerView: 4,
+    },
+    1280: {
+      slidesPerView: 6,
+    }
+
+  },
+})

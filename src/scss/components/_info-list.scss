@@ -1,0 +1,33 @@
+.info-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  li {
+    width: 296px;
+    min-height: 296px;
+    padding: 23px;
+    background-color: #ffffff;
+    @media (max-width: 550px) {
+      width: 100%;
+    }
+  }
+
+  p {
+    @include montserrat-regular;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  &__item-content {
+    height: 213px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #4a4a4a;
+    margin-bottom: 17px;
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+}
