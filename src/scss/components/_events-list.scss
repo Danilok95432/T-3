@@ -1,4 +1,4 @@
-.events-list {
+.main-events-list {
   margin-bottom: 22px;
 
   @media (max-width: 768px) {
@@ -58,7 +58,7 @@
 
     &:hover {
       text-decoration: underline;
-    text-underline-offset: 3px;
+      text-underline-offset: 3px;
     }
   }
 

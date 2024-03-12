@@ -240,6 +240,29 @@
     @media (max-width: 550px) {
       display: block;
     }
+
+    .main-menu__nav-search {
+      &::before {
+        display: none;
+      }
+    }
+
+    .main-menu__search-form {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .search-form__input {
+      line-height: 1;
+      padding: 4px 3px 3px;
+    }
+
+    .search-form__search-close {
+      svg path {
+        fill: #000000;
+      }
+    }
+
   }
 
   .mobile-menu {
@@ -256,6 +279,7 @@
         &:last-child {
           margin-top: 23px;
         }
+
         a {
           @include montserrat-semibold;
           font-size: 20px;
@@ -270,6 +294,7 @@
           svg path {
             fill: #FFFFFF;
           }
+
           color: #ffffff;
         }
       }

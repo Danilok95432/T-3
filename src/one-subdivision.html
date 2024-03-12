@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Факультет «Дизайн»'
+})
+
+<body class="page__body one-subdivision-page">
+
+<div class="site-container">
+  <header class="header home-header">
+    <div class="home-header__top">
+      @include('partials/home-menu.html')
+      <div class="home-header__title-wrapper">
+        <div class="container">
+          <h2 class="home-header__title">
+            Университет имени С.Г. Строганова
+          </h2>
+        </div>
+      </div>
+    </div>
+    <nav class="home-header__nav">
+      <div class="container">
+        <ul>
+          <li class="_active">
+            <a href="index.html">Главная</a>
+          </li>
+          <li>
+            <a href="#">Университет</a>
+          </li>
+          <li>
+            <a href="#">Абитуриентам</a>
+          </li>
+          <li>
+            <a href="#">Студентам</a>
+          </li>
+          <li>
+            <a href="#">Дополнительное
+              образование</a>
+          </li>
+          <li>
+            <a href="#">Международный
+              клуб</a>
+          </li>
+          <li>
+            <a href="#">Дистанционное
+              обучение</a>
+          </li>
+          <li>
+            <a href="#">Наука</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="section">
+      <div class="container">
+        <ul class="home-bread-crumbs">
+          <li>
+            <a href="index.html">Университет Строганова</a>
+          </li>
+          <li>
+            <a href="#"> Подразделения</a>
+          </li>
+          <li>
+            <a href="#">Факультет «Дизайн»</a>
+          </li>
+        </ul>
+        <h1>Факультет «Дизайн»</h1>
+        <span class="one-subdivision-page__date">22 декабря 2023</span>
+        <div class="one-subdivision-page__top">
+          <div class="one-subdivision-page__main-img">
+            <img src="img/one-news-main.jpg" alt="news">
+          </div>
+          <ul>
+            <li class="_active">
+              <a href="#">Факультет «Дизайн»</a>
+            </li>
+            <li>
+              <a href="#">Факультет «Искусство Реставрации»</a>
+            </li>
+            <li>
+              <a href="#">Кафедра «Академический Рисунок»</a>
+            </li>
+            <li>
+              <a href="#">Кафедра «История искусств и гуманитарные науки»</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="one-subdivision-page__inner">
+          <div class="one-subdivision-page__inner-content">
+            <p>
+              В рамках дисциплины «Основы российской государственности», 22
+              декабря в стенах нашего университета состоялась студенческая
+              конференция «Роль музея в формировании образа российской
+              государственности».
+            </p>
+            <p>
+              С приветственным словом к участникам конференции обратился
+              проректор, профессор А.Н. Лаврентьев. С докладами выступили
+              руководитель и преподаватель кафедры Истории искусства и
+              гуманитарных наук: профессор К.Н. Гаврилин, доцент В.М. Зубец,
+              начальник отдела по воспитательной работе и культурно-массовым
+              мероприятиям А.Д. Акилова.
+            </p>
+            <p>
+              Студенты первого курса выступили с интересными и очень
+              актуальными сообщениями по проблемам развития музеев в России,
+              подчеркивая большую роль музеев в сохранении исторической памяти
+              народа. Большая часть студентов подготовили творческие работы по
+              теме конференции. Лучшие из них были отобраны для он-лайн
+              выставки. Большинство творческих работ студентов были
+              экспонированы в актовом зале Строгановки в ходе проведения
+              конференции.
+            </p>
+            <a href="#">Материалы конференции</a>
+          </div>
+          <div class="grid-layout main-gallery">
+            <a href="img/gallery1.jpg">
+              <img src="img/gallery1.jpg"/>
+            </a>
+            <a href="img/gallery2.jpg">
+              <img src="img/gallery2.jpg"/>
+            </a>
+            <a href="img/gallery3.jpg">
+              <img src="img/gallery3.jpg"/>
+            </a>
+            <a href="img/gallery4.jpg">
+              <img src="img/gallery4.jpg"/>
+            </a>
+            <a href="img/gallery5.jpg">
+              <img src="img/gallery5.jpg"/>
+            </a>
+            <a href="img/gallery6.jpg">
+              <img src="img/gallery6.jpg"/>
+            </a>
+            <a href="img/gallery7.jpg">
+              <img src="img/gallery7.jpg"/>
+            </a>
+          </div>
+          <a href="news.html" class="one-subdivision-page__all-news">
+            Все новости
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  @include('partials/home-footer.html')
+</div>
+
+</body>
+
+</html>

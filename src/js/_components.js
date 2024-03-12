@@ -15,6 +15,7 @@ import './components/homeLangSwitcher'
 import './components/burgerMenu'
 import './components/toggleLinks'
 import './components/tagsList'
+import './components/galleryImg'
 
 
 
