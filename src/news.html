@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Новости'
+})
+
+<body class="page__body news-page">
+
+<div class="site-container">
+  <header class="header home-header">
+    <div class="home-header__top">
+      @include('partials/home-menu.html')
+      <div class="home-header__title-wrapper">
+        <div class="container">
+          <h2 class="home-header__title">
+            Университет имени С.Г. Строганова
+          </h2>
+        </div>
+      </div>
+    </div>
+    <nav class="home-header__nav">
+      <div class="container">
+        <ul>
+          <li class="_active">
+            <a href="index.html">Главная</a>
+          </li>
+          <li>
+            <a href="#">Университет</a>
+          </li>
+          <li>
+            <a href="#">Абитуриентам</a>
+          </li>
+          <li>
+            <a href="#">Студентам</a>
+          </li>
+          <li>
+            <a href="#">Дополнительное
+              образование</a>
+          </li>
+          <li>
+            <a href="#">Международный
+              клуб</a>
+          </li>
+          <li>
+            <a href="#">Дистанционное
+              обучение</a>
+          </li>
+          <li>
+            <a href="#">Наука</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="section">
+      <div class="container">
+        <ul class="home-bread-crumbs">
+          <li>
+            <a href="index.html">Университет Строганова</a>
+          </li>
+          <li>
+            <a href="#">Новости</a>
+          </li>
+        </ul>
+        <div class="news-page__title-block">
+          <h1>Новости</h1>
+          <select name="news_filter">
+            <option value="0">ВСЕ ГОДЫ</option>
+            <option value="1">2020</option>
+            <option value="2">2021</option>
+            <option value="3">2023</option>
+          </select>
+          <ul class="tags-list _collapsed" data-tags-count="6">
+            <li class="_active">
+              <a href="#">Все новости</a>
+            </li>
+            <li>
+              <a href="#">Олимпиада</a>
+            </li>
+            <li>
+              <a href="#">Выставки</a>
+            </li>
+            <li>
+              <a href="#">Почетные гости</a>
+            </li>
+            <li>
+              <a href="#">Росмолодежь</a>
+            </li>
+            <li>
+              <a href="#">ВКМП</a>
+            </li>
+            <li>
+              <a href="#">Наука</a>
+            </li>
+            <li>
+              <a href="#">Молодежная политика</a>
+            </li>
+            <li>
+              <a href="#">Наши преподаватели</a>
+            </li>
+            <li>
+              <a href="#">Мывместе</a>
+            </li>
+            <li>
+              <a href="#">События</a>
+            </li>
+            <li>
+              <a href="#">Анонс</a>
+            </li>
+            <li>
+              <a href="#">ФИП</a>
+            </li>
+            <li>
+              <a href="#">Колледж</a>
+            </li>
+            <li class="collapse-controller">
+              <span class="collapse-controller__visible">
+                Все теги...
+              </span>
+              <span class="collapse-controller__collapse">
+                Свернуть...
+              </span>
+            </li>
+          </ul>
+        </div>
+        <ul class="events-list">
+          <li class="_title">
+            Март, 2024
+          </li>
+          <li>
+            <span>
+              4 марта
+            </span>
+            <div>
+              <a href="#">
+                Конкурс среди студентов на лучшую уличную инсталляцию
+              </a>
+              <p>
+                В рамках творческого партнерства кафедра средового дизайна РГХПУ
+                им. С.Г.Строганова и девелопер FORMA провели конкурс среди
+                студентов на лучшую уличную инсталляцию. Концептуальные работы
+                участников оценивали эксперты в области архитектуры и искусства:
+                Сергей Даньшин, Виктор Слепухин, Рубен Аракелян, Сабина Чагина,
+                Юлия Бычкова, Дарья Филиппова, Софья Рауф, Дарья Белякова и
+                Василий
+              </p>
+            </div>
+            <div class="events-list__image">
+              <img src="img/news-1.jpg" alt="news-1">
+            </div>
+          </li>
+          <li>
+            <span>
+              1 марта
+            </span>
+            <div>
+              <a href="#">
+                Проект кафедры «Художественная реставрация мебели» и
+                Музея-заповедника Мураново им. Ф.И.Тютчева, при поддержки
+                Президентского фонда культурных инициатив
+              </a>
+              <p>
+                На кафедре «Художественная реставрация мебели» важное
+                событие!<br> Студенты кафедры совместно с организацией
+                Айпикворум
+                начинают работать над реализацией гранта Пр
+              </p>
+            </div>
+            <div class="events-list__image">
+              <img src="img/news-2.jpg" alt="news-2">
+            </div>
+          </li>
+          <li class="_title">
+            февраль, 2024
+          </li>
+          <li>
+            <span>
+              14 февраля
+            </span>
+            <div>
+              <a href="#">
+                Компания MR Group и РГХПУ им. С.Г. Строганова подписали
+                соглашение о стратегическом партнерстве
+              </a>
+              <p>
+                Продолжая развивать связи с миром искусства, компания MR Group
+                13 февраля подписала соглашение о долгосрочном партнерстве с
+                Российским государственным художественно-промышленным
+                университетом имени С.Г. Строганова (РГХПУ, «Строгановка»).
+                Документ предполагает сотрудничество по целому ряду на
+              </p>
+            </div>
+            <div class="events-list__image">
+              <img src="img/news-3.jpg" alt="news-3">
+            </div>
+          </li>
+          <li>
+            <span>
+              2 февраля
+            </span>
+            <div>
+              <a href="#">
+                Научно-практический семинар
+              </a>
+              <p>
+                Научно-методический отдел, отдел аспирантуры и докторантуры,
+                кафедры, а также Управление по молодежной политике и
+                воспитательной работе и Студенческое Научное Общество РГХПУ им.
+                С.Г. Строганова объявляют о начале работы научно-практического
+                семинара «Эксперименты и новации в художественном и проектном
+                творчестве, реставрации и искусствоведении».
+              </p>
+            </div>
+            <div class="events-list__image">
+              <img src="img/news-4.jpg" alt="news-4">
+            </div>
+          </li>
+          <li class="_title">
+            январь, 2024
+          </li>
+          <li>
+            <span>
+              18 января
+            </span>
+            <div>
+              <a href="#">
+                Встреча с представителями Монгольского государственного
+                университета искусств и культуры
+              </a>
+              <p>
+                18 января 2024 года представители Монгольского государственного
+                университета искусств и культуры прибыли с дружеским визитом в
+                Российский государственный художественно-промышленный
+                университет им. С.Г. Строганова для обсуждения направлений
+                сотрудничества в сфере образования, науки
+              </p>
+            </div>
+            <div class="events-list__image">
+              <img src="img/news-5.jpg" alt="news-5">
+            </div>
+          </li>
+        </ul>
+        @include('partials/pagination.html')
+      </div>
+    </section>
+  </main>
+  @include('partials/home-footer.html')
+</div>
+
+</body>
+
+</html>

@@ -5,6 +5,8 @@
 //Страницы
 
 @import "pages/home";
+@import "pages/events";
+@import "pages/news";
 
 @import "pages/main-sdo";
 @import "pages/profile-teacher";
@@ -33,6 +35,9 @@
 @import "./components/home-lang-switcher";
 @import "./components/home-header";
 @import "./components/home-footer";
+@import "./components/home-bread-crumbs";
+@import "./components/events-list";
+@import "./components/tags-list";
 
 @import "./components/burger-menu";
 @import "./components/main-menu";

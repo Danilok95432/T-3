@@ -1,17 +1,17 @@
 .pagination {
-  margin-top: 35px;
+  padding-top: 35px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 5px;
 
   &__item {
     transition: all .3s;
     cursor: pointer;
-
-    &:not(:last-child) {
-      margin-right: 35px;
-    }
-
+    display: flex;
+    justify-content: center;
+    width: 44px;
+    padding-bottom: 15px;
     &:hover {
       a {
         color: $main-red;
@@ -22,7 +22,10 @@
       a {
         font-weight: 500;
         color: #B7212E;
+        line-height: 1;
       }
+
+      border-bottom: 3px solid #B7212E;
     }
 
     a {
