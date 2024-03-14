@@ -27,23 +27,23 @@ new Swiper('.support-swiper', {
 
 new Swiper('.prospects-swiper', {
   loop: true,
-  spaceBetween: 0,
+  spaceBetween: 55,
   slidesPerView: 1,
   grabCursor: true,
-  pagination: {
-    el: '.prospects-swiper-pagination',
-    clickable: true,
+  navigation: {
+    nextEl: ".prospects-swiper__swiper-button-next",
+    prevEl: ".prospects-swiper__swiper-button-prev",
   },
 })
 
 new Swiper('.teachers-swiper', {
   loop: true,
-  spaceBetween: 0,
+  spaceBetween: 55,
   slidesPerView: 1,
   grabCursor: true,
-  pagination: {
-    el: '.teachers-swiper-pagination',
-    clickable: true,
+  navigation: {
+    nextEl: ".teachers-swiper__swiper-button-next",
+    prevEl: ".teachers-swiper__swiper-button-prev",
   },
 })
 new Swiper('.faculty-swiper', {

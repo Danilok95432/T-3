@@ -83,4 +83,17 @@
       height: 100%;
     }
   }
+
+  &__add-links-list {
+    a {
+      display: block;
+      color: #B7212E;
+      font-size: 15px;
+      @include montserrat-regular;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
 }
