@@ -32,9 +32,92 @@
           <span>Обучающая лекция</span>
         </div>
         <h1>Рисунок черепа анфас, лекция П.П. Преподавательского</h1>
-        <div class="lecture-page__wrapper">
+      </div>
+
+      <div class="lecture-page__wrapper lesson-aside-wrapper">
+        <div class="container">
+          <aside class="lesson-aside">
+            <div class="lesson-aside__content">
+              <button class="lesson-aside__collapse-btn" type="button">
+                <svg width="15" height="26" viewBox="0 0 15 26" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.6083 1.39165C13.7325 1.51548 13.831 1.66259 13.8982 1.82455C13.9654 1.98651 14 2.16014 14 2.33549C14 2.51084 13.9654 2.68447 13.8982 2.84643C13.831 3.00839 13.7325 3.1555 13.6083 3.27933L3.88466 13.0004L13.6083 22.7214C13.8587 22.9717 13.9993 23.3112 13.9993 23.6652C13.9993 24.0192 13.8587 24.3587 13.6083 24.6091C13.358 24.8594 13.0185 25 12.6645 25C12.3105 25 11.971 24.8594 11.7207 24.6091L1.05581 13.9442C0.931665 13.8204 0.833166 13.6732 0.765961 13.5113C0.698754 13.3493 0.664163 13.1757 0.664163 13.0004C0.664163 12.825 0.698754 12.6514 0.765961 12.4894C0.833166 12.3275 0.931665 12.1803 1.05581 12.0565L11.7207 1.39165C11.8445 1.2675 11.9916 1.16901 12.1536 1.1018C12.3155 1.03459 12.4892 1 12.6645 1C12.8399 1 13.0135 1.03459 13.1754 1.1018C13.3374 1.16901 13.4845 1.2675 13.6083 1.39165Z"
+                        fill="white" stroke="white" stroke-width="0.25"/>
+                </svg>
+                Свернуть
+              </button>
+              <ul class="main-accordion">
+                <li class="accordion-el">
+                  <button class="accordion-btn" type="button">
+                    Описание урока
+                    <span class="accordion-btn__icon"></span>
+                  </button>
+                  <div class="accordion-content">
+                    <p>
+                      На протяжении всего курса Вы будете выполнять работыв
+                      качестве домашнего заданияи отправлять их на проверку
+                      преподавателю. Мы настоятельно рекомендуем сохранить эти
+                      зарисовки, желательно, оформляя их в альбом. Такой альбом
+                      будет необходим Вам на протяжении всего профессионального
+                      пути, а также пригодится для сдачи итогового задания
+                      курса.
+                    </p>
+                  </div>
+                </li>
+                <li class="accordion-el">
+                  <button class="accordion-btn" type="button">Подготовка к уроку
+                    <span class="accordion-btn__icon"></span>
+                  </button>
+                  <div class="accordion-content">
+                    <h6>
+                      Материалы
+                    </h6>
+                    <ol>
+                      <li>
+                        Карандаш средней жесткости
+                      </li>
+                      <li>
+                        Лист А3
+                      </li>
+                      <li>
+                        Цветные карандаши — синий, красный, зеленый
+                      </li>
+                    </ol>
+                    <p>
+                      На протяжении всего курса Вы будете выполнять работы в
+                      качестве домашнего задания и отправлять их на проверку
+                      преподавателю. Мы настоятельно рекомендуем сохранить эти
+                      зарисовки, желательно, оформляя их в альбом. Такой альбом
+                      будет необходим Вам на протяжении всего профессионального
+                      пути, а также пригодится для сдачи итогового задания
+                      курса.
+                    </p>
+                  </div>
+                </li>
+                <li class="accordion-el">
+                  <button class="accordion-btn" type="button">Домашнее задание
+                    <span class="accordion-btn__icon"></span>
+                  </button>
+                  <div class="accordion-content">
+                    <p>
+                      Сделать анатомическую зарисовкумягких тканей предплечья в
+                      фас и профиль, подписать анатомические образования, о
+                      которых упоминалось в лекции.
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+
+              <button class="lesson-aside__collapse-btn main-button _red">
+                Перейти к уроку
+              </button>
+            </div>
+          </aside>
           <div class="lecture-page__lesson _file">
-            <button class="lecture-burger-btn" type="button">
+            <button class="lecture-burger-btn lesson-aside__open-btn"
+                    type="button">
               <svg width="32" height="24" viewBox="0 0 32 24" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -46,21 +129,18 @@
               </svg>
 
             </button>
-
             <div class="lecture-page__lesson-top">
               <h3>Обучающая лекция</h3>
               <p class="lecture-page__lesson-desc">Рисунок черепа анфас,
                 построение, изучение формы, компоновка в листе</p>
             </div>
             <span class="lesson-status"></span>
-
             <div class="lecture-page__lesson-file">
-              <object data="./data/test-pdf.pdf" width="100%"
-                      height="810px">
+              <object data="./data/test-pdf.pdf">
               </object>
             </div>
-
-            <img class="lecture-page__lesson-image" src="./img/lecture-img.jpg" alt="урок">
+            <img class="lecture-page__lesson-image" src="./img/lecture-img.jpg"
+                 alt="урок">
             <span>Лекцию читает</span>
             <p class="lecture-page__lesson-desc">Преподавательский Преподаватель
               Преподавателевич</p>
@@ -97,8 +177,6 @@
                 </div>
               </div>
             </div>
-
-
             <p>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
@@ -146,11 +224,11 @@
                 3. Нажмите кнопку «Отправить».
               </p>
 
-              <p>
+              <p class="_sm">
                 Ответ преподавателя поступит на указанную Вами при регистрации
                 почту в течение 3 рабочих дней.
               </p>
-              <p>
+              <p class="_sm">
                 Если преподаватель отклонит работу — исправьте недочеты и
                 повторите отправку работы (1-3).
               </p>
@@ -158,6 +236,7 @@
             </div>
           </form>
         </div>
+
       </div>
     </section>
     @include('partials/info-modal.html')

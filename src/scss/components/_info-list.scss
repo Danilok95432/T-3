@@ -3,11 +3,16 @@
   gap: 12px;
   flex-wrap: wrap;
 
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+
   li {
     width: 296px;
     min-height: 296px;
     padding: 23px;
     background-color: #ffffff;
+
     @media (max-width: 550px) {
       width: 100%;
     }
