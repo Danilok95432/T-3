@@ -3,7 +3,6 @@ const accordions = document.querySelectorAll('.main-accordion')
 if (accordions) {
   accordions.forEach(accordionEl => {
     accordionEl.addEventListener('click', (e) => {
-      e.preventDefault()
       if (e.target.classList.contains('accordion-btn')) {
         const parentEl = e.target.closest('.accordion-el')
         const accordionContent = parentEl.querySelector('.accordion-content')
