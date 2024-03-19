@@ -23,7 +23,19 @@ if (sdoRegForm) {
         rule: 'required',
         errorMessage: 'Это поле нужно заполнить'
       },
+      {
+        validator: (value, fields) => {
+          const passField = Object.values(fields).find(field => field.elem.name === 'password')
 
+          if (passField && passField.elem) {
+            const repeatPasswordValue = passField.elem.value
+            return value === repeatPasswordValue
+          }
+
+          return true
+        },
+        errorMessage: 'Пароли должны совпадать',
+      }
     ])
     .onSuccess((e) => {
       e.currentTarget.submit()
