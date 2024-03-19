@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Восстановление пароля СДО'
+})
+
+<body class="page__body pass-recovery-sdo-page">
+
+<div class="site-container">
+  <header class="header">
+    @include('partials/main-menu.html')
+    <div class="header__inner">
+      <div class="container">
+        <h1>
+          Клевер:<br/>
+          учим тому, что умеем сами
+        </h1>
+        <p>
+          Система дистанционного обучения «Клевер» позволяет получить
+          новые теоретические знания и практические навыки в контакте
+          с опытными преподавателями.
+        </p>
+        <div class="header__inner-links">
+          <a class="main-sdo-btn" href="#">Начать учиться</a>
+          <a class="main-sdo-btn" href="#">Оценить перспективы</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <div class="main-auth-form">
+        <form class="validation-form" action="#">
+          <div class="container">
+            <h2>
+              Восстановить пароль
+            </h2>
+            <div class="main-auth-form__input">
+              <label>Ваш логин<span>*</span></label>
+              <input type="email" placeholder="yourname@domain.com" name="login"
+                     required>
+            </div>
+            <button class="main-auth-form__btn" type="submit">Восстановить
+              пароль
+            </button>
+            <a class="main-auth-form__page-link"
+               href="sdo-auth.html">Вернуться к авторизации</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  @include('partials/footer.html')
+</div>
+
+</body>
+
+</html>

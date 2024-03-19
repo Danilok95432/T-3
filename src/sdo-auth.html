@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Авторизация СДО'
+})
+
+<body class="page__body auth-sdo-page">
+
+<div class="site-container">
+  <header class="header">
+    @include('partials/main-menu.html')
+    <div class="header__inner">
+      <div class="container">
+        <h1>
+          Клевер:<br/>
+          учим тому, что умеем сами
+        </h1>
+        <p>
+          Система дистанционного обучения «Клевер» позволяет получить
+          новые теоретические знания и практические навыки в контакте
+          с опытными преподавателями.
+        </p>
+        <div class="header__inner-links">
+          <a class="main-sdo-btn" href="#">Начать учиться</a>
+          <a class="main-sdo-btn" href="#">Оценить перспективы</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <div class="main-auth-form">
+        <div class="main-auth-form__controllers">
+          <div class="container">
+            <a class="_active" href="sdo-auth.html">Вход</a>
+            <a href="sdo-reg.html">Регистрация</a>
+          </div>
+        </div>
+        <form class="validation-form" action="#" novalidate="novalidate">
+          <div class="container">
+            <h2>
+              Вход в личный кабинет
+            </h2>
+            <div class="main-auth-form__input">
+              <label>Ваш логин<span>*</span></label>
+              <input type="text" placeholder="yourname@domain.com" name="login"
+                     required>
+            </div>
+            <div class="main-auth-form__input">
+              <label>Ваш пароль<span>*</span></label>
+              <input type="password" placeholder="****************"
+                     name="password" required>
+            </div>
+            <button class="main-auth-form__btn" type="submit">Войти в систему
+            </button>
+
+            <a class="main-auth-form__page-link" href="sdo-pass-recovery.html">Восстановить
+              / поменять пароль</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  @include('partials/footer.html')
+</div>
+
+</body>
+
+</html>

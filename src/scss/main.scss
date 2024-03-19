@@ -10,6 +10,9 @@
 @import "pages/one-news";
 @import "pages/one-subdivision";
 @import "pages/subdivisions";
+@import "pages/sdo-auth";
+@import "pages/sdo-reg";
+@import "pages/sdo-pass-recovery";
 
 
 @import "pages/main-sdo";
@@ -26,6 +29,8 @@
 @import "pages/paid-course";
 @import "pages/payment";
 @import "pages/lecture";
+@import "pages/home-auth";
+@import "pages/home-pass-recovery";
 
 
 
@@ -42,6 +47,8 @@
 @import "./components/home-bread-crumbs";
 @import "./components/events-list";
 @import "./components/tags-list";
+@import "./components/main-auth-form";
+@import "./components/just-validate";
 
 @import "./components/burger-menu";
 @import "./components/main-menu";

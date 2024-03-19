@@ -1,0 +1,57 @@
+.reg-sdo-page {
+
+  @media (max-width: 768px) {
+    background-color: #ffffff;
+    .header__inner {
+      display: none;
+    }
+  }
+
+  .main-sdo-btn {
+    font-size: 15px;
+    @include montserrat-medium;
+    padding: 10px 41px;
+    display: inline-block;
+    background-color: #B7212E;
+    border: none;
+    color: #ffffff;
+  }
+
+  .header {
+    &__inner {
+      padding: 55px 0 60px;
+      background: url("../img/home-bg.jpg") no-repeat;
+      background-size: cover;
+
+      h1 {
+        @include montserrat-semibold;
+        font-size: 35px;
+        margin-bottom: 66px;
+        line-height: 1.2;
+        color: #ffffff;
+      }
+
+      p {
+        max-width: 525px;
+        line-height: 1.7;
+        @include montserrat-medium;
+        margin-bottom: 52px;
+        color: #ffffff;
+      }
+    }
+
+    &__inner-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+
+      a {
+        &:nth-child(2) {
+          border: 1px solid #ffffff;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,10 @@
+
+.just-validate-error-field {
+  box-shadow: 0 0 0 2px #E51D30 inset;
+}
+
+.just-validate-error-label {
+  @include montserrat-semibold;
+  font-size: 12px;
+  color: #B7212E;
+}
