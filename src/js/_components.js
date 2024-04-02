@@ -18,6 +18,7 @@ import './components/tagsList'
 import './components/galleryImg'
 import './components/lessonAside'
 import './components/formValidation'
+import './components/customLightbox'
 
 
 

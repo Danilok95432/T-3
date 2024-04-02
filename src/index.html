@@ -7,7 +7,10 @@
 
 <body class="page__body home-page">
 
+
 <div class="site-container">
+  <div class="modal-overlay"></div>
+  @include('partials/big-img-modal.html')
   <header class="header home-header">
     <div class="home-header__top">
       @include('partials/home-menu.html')
@@ -275,7 +278,7 @@
         <div class="swiper faculty-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide _yellow">
-              <div class="swiper-slide__wrapper">
+              <a href="#" class="swiper-slide__wrapper">
                 <div class="faculty-swiper__content">
                   <h4>Факультет «Искусство реставрации»</h4>
                   <p>
@@ -290,13 +293,13 @@
                     mollit anim id est laborum.
                   </p>
                 </div>
-                <a href="#" class="faculty-swiper__link">
+                <p class="faculty-swiper__link">
                   Кафедры факультета
-                </a>
-              </div>
+                </p>
+              </a>
             </div>
             <div class="swiper-slide _gray">
-              <div class="swiper-slide__wrapper">
+              <a href="#" class="swiper-slide__wrapper">
                 <div class="faculty-swiper__content">
                   <h4>Институт дополнительного образования</h4>
                   <p>
@@ -311,13 +314,13 @@
                     mollit anim id est laborum.
                   </p>
                 </div>
-                <a href="#" class="faculty-swiper__link">
+                <p class="faculty-swiper__link">
                   Курсы и обучающие программы
-                </a>
-              </div>
+                </p>
+              </a>
             </div>
             <div class="swiper-slide _green">
-              <div class="swiper-slide__wrapper">
+              <a href="#" class="swiper-slide__wrapper">
                 <div class="faculty-swiper__content">
                   <h4>Общевузовская кафедра «Академический рисунок»</h4>
                   <p>
@@ -332,13 +335,13 @@
                     mollit anim id est laborum.
                   </p>
                 </div>
-                <a href="#" class="faculty-swiper__link">
+                <p class="faculty-swiper__link">
                   Программа обучения
-                </a>
-              </div>
+                </p>
+              </a>
             </div>
             <div class="swiper-slide _blue">
-              <div class="swiper-slide__wrapper">
+              <a href="#" class="swiper-slide__wrapper">
                 <div class="faculty-swiper__content">
                   <h4>Общевузовская кафедра «Академическая живопись»</h4>
                   <p>
@@ -353,14 +356,13 @@
                     mollit anim id est laborum.
                   </p>
                 </div>
-                <a href="#" class="faculty-swiper__link">
+                <p class="faculty-swiper__link">
                   История, преподаватели
-                </a>
-              </div>
-
+                </p>
+              </a>
             </div>
             <div class="swiper-slide _yellow">
-              <div class="swiper-slide__wrapper">
+              <a href="#" class="swiper-slide__wrapper">
                 <div class="faculty-swiper__content">
                   <h4>Факультет «Искусство реставрации»</h4>
                   <p>
@@ -375,13 +377,13 @@
                     mollit anim id est laborum.
                   </p>
                 </div>
-                <a href="#" class="faculty-swiper__link">
+                <p class="faculty-swiper__link">
                   Кафедры факультета
-                </a>
-              </div>
+                </p>
+              </a>
             </div>
             <div class="swiper-slide _gray">
-              <div class="swiper-slide__wrapper">
+              <a href="#" class="swiper-slide__wrapper">
                 <div class="faculty-swiper__content">
                   <h4>Институт дополнительного образования</h4>
                   <p>
@@ -396,13 +398,13 @@
                     mollit anim id est laborum.
                   </p>
                 </div>
-                <a href="#" class="faculty-swiper__link">
+                <p class="faculty-swiper__link">
                   Курсы и обучающие программы
-                </a>
-              </div>
+                </p>
+              </a>
             </div>
             <div class="swiper-slide _green">
-              <div class="swiper-slide__wrapper">
+              <a href="#" class="swiper-slide__wrapper">
                 <div class="faculty-swiper__content">
                   <h4>Общевузовская кафедра «Академический рисунок»</h4>
                   <p>
@@ -417,13 +419,13 @@
                     mollit anim id est laborum.
                   </p>
                 </div>
-                <a href="#" class="faculty-swiper__link">
+                <p class="faculty-swiper__link">
                   Программа обучения
-                </a>
-              </div>
+                </p>
+              </a>
             </div>
             <div class="swiper-slide _blue">
-              <div class="swiper-slide__wrapper">
+              <a href="#" class="swiper-slide__wrapper">
                 <div class="faculty-swiper__content">
                   <h4>Общевузовская кафедра «Академическая живопись»</h4>
                   <p>
@@ -438,11 +440,10 @@
                     mollit anim id est laborum.
                   </p>
                 </div>
-                <a href="#" class="faculty-swiper__link">
+                <p class="faculty-swiper__link">
                   История, преподаватели
-                </a>
-              </div>
-
+                </p>
+              </a>
             </div>
           </div>
         </div>
@@ -491,31 +492,33 @@
           <h2 class="home-page__subtitle">
             Галерея
           </h2>
-          <p>
+          <a href="#">
             Работы студентов 3-4 курсов ДСТ
-          </p>
+          </a>
         </div>
-        <ul class="gallery-list">
-          <li>
-            <img src="img/home-gallery-1.jpg" alt="gallery-1">
-          </li>
-          <li>
-            <img src="img/home-gallery-2.jpg" alt="gallery-2">
-          </li>
-          <li>
-            <img src="img/home-gallery-3.jpg" alt="gallery-3">
-          </li>
-          <li>
-            <img src="img/home-gallery-4.jpg" alt="gallery-4">
-          </li>
-          <li>
-            <img src="img/home-gallery-5.jpg" alt="gallery-5">
-          </li>
-          <li>
-            <img src="img/home-gallery-6.jpg" alt="gallery-6">
-          </li>
-        </ul>
+        <div class="swiper home-gallery-swiper custom-lightbox">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/home-gallery-1.jpg" alt="gallery-1">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/home-gallery-2.jpg" alt="gallery-2">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/home-gallery-3.jpg" alt="gallery-3">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/home-gallery-4.jpg" alt="gallery-4">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/home-gallery-5.jpg" alt="gallery-5">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/home-gallery-6.jpg" alt="gallery-6">
+            </div>
 
+          </div>
+        </div>
       </div>
     </section>
     <section class="section courses">
@@ -716,27 +719,25 @@
         <h2>При поддержке</h2>
         <div class="swiper sponsors-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <a href="#" class="swiper-slide">
               <img src="./img/sponsor-1.jpg" alt="slide">
-            </div>
-            <div class="swiper-slide">
+            </a>
+            <a href="#" class="swiper-slide">
               <img src="./img/sponsor-2.jpg" alt="slide">
-            </div>
-            <div class="swiper-slide">
+            </a>
+            <a href="#" class="swiper-slide">
               <img src="./img/sponsor-3.jpg" alt="slide">
-            </div>
-            <div class="swiper-slide">
+            </a>
+            <a href="#" class="swiper-slide">
               <img src="./img/sponsor-4.jpg" alt="slide">
-            </div>
-            <div class="swiper-slide">
+            </a>
+            <a href="#" class="swiper-slide">
               <img src="./img/sponsor-5.jpg" alt="slide">
-            </div>
-            <div class="swiper-slide">
+            </a>
+            <a href="#" class="swiper-slide">
               <img src="./img/sponsor-6.jpg" alt="slide">
-            </div>
-
+            </a>
           </div>
-
         </div>
       </div>
     </section>
