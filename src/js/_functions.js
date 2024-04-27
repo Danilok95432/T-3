@@ -77,6 +77,22 @@ async function sendData (data, url) {
   })
 }
 
+
+//Сбор данных форм
+
+export const serializeForm = (formNode) => {
+  return new FormData(formNode)
+}
+
+// Преобразование formData в объект
+export const formToObj = (formData) => {
+  return Array.from(formData.entries()).reduce((memo, pair) => ({
+    ...memo,
+    [pair[0]]: pair[1],
+  }), {})
+}
+
+
 // показ/скрытие модалки ошибки
 
 const showInfoModal = (responseText) => {
