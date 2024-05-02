@@ -1,11 +1,13 @@
 .courses-student-page {
-  margin-bottom: 80px;
+
+  // margin-bottom: 80px;
   &__inner {
     .container {
       display: flex;
       align-items: flex-start;
     }
-    .profile-menu li a{
+
+    .profile-menu li a {
       align-items: center;
     }
   }
