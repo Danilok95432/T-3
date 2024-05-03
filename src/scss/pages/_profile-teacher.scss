@@ -3,6 +3,17 @@
     .container {
       display: flex;
       align-items: flex-start;
+
+      @media (max-width: 900px) {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+
+        .profile-menu,
+        .profile-data { 
+          width: 100%;
+        }
+      }
     }
   }
 }

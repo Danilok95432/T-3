@@ -6,6 +6,12 @@
   .container {
     display: flex;
     align-items: center;
+
+    @media (max-width: 890px) {
+      flex-direction: column;
+      max-width: 90vw;
+     
+    }
   }
 
   &__avatar {
@@ -14,6 +20,10 @@
     height: 296px;
     border: 34px solid #D9D8E0;
     margin-right: 50px;
+
+    @media (max-width: 890px) {
+      margin-right: 0;
+    }
 
     img {
       height: 100%;
@@ -31,6 +41,12 @@
     color: #FFFFFF;
     max-width: 450px;
     margin-bottom: 15px;
+
+    @media (max-width: 890px) {
+      color: #000;
+      font-size: 25px;
+
+    }
   }
 
   &__desc {
@@ -39,12 +55,20 @@
     line-height: 18px;
     color: #FFFFFF;
     margin-bottom: 80px;
+
+    @media (max-width: 890px) {
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+
   }
 
   &__stat {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
     li {
       @include montserrat-regular;
       font-size: 14px;
@@ -58,6 +82,10 @@
         line-height: 43px;
         margin-right: 7px;
       }
+    }
+
+    @media (max-width: 1080px) {
+      flex-direction: column;
     }
 
   }
