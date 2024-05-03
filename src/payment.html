@@ -66,7 +66,7 @@
             <input class="main-input" type="text" name="sign_promo"
                    placeholder="Промокод">
 
-            <button class="main-button _red" type="submit">Подписаться</button>
+            <button class="main-button payment-page__submit-btn _red" type="submit" data-url="./data/test.txt" data-info='{"add": "доп. инфо"}'>Подписаться</button>
             <p class="_marked">
               Нажимая кнопку «Подписаться», я принимаю условия <a href="#">договора-оферты</a>.
             </p>
@@ -94,6 +94,11 @@
         </div>
       </div>
     </section>
+    <div class="info-modal hidden">
+      <div class="info-modal__content">
+        <p class="info-modal__content-text"></p>
+      </div>
+    </div>
   </main>
   @include('partials/footer.html')
 </div>

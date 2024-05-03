@@ -20,6 +20,7 @@ import './components/lessonAside'
 import './components/formValidation'
 import './components/customLightbox'
 import './components/lectureForm'
+import './components/courseSign'
 
 
 
