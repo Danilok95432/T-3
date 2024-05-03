@@ -95,13 +95,14 @@ export const formToObj = (formData) => {
 
 // показ/скрытие модалки ошибки
 
-const showInfoModal = (responseText) => {
+if (infoModal) {
   infoModal.addEventListener('click', (e) => {
     if (e.target.classList.contains('info-modal')) {
       infoModal.classList.add('hidden')
     }
-
   })
+}
+const showInfoModal = (responseText) => {
   const modalText = infoModal.querySelector('.info-modal__content-text')
   modalText.textContent = responseText
   infoModal.classList.remove('hidden')
