@@ -69,13 +69,19 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+    }
 
+    .main-button {
+      align-self: flex-start;
     }
 
     .student-courses__list-info {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
+
+      flex: 1;
+      align-items: flex-start;
 
       &:not(:last-child) {
         margin-right: 35px;
@@ -83,6 +89,9 @@
 
       svg {
         margin-right: 12px;
+
+        min-width: 36px;
+        height: 42px;
       }
     }
 
@@ -118,9 +127,5 @@
       color: #000000;
       margin-bottom: 4px;
     }
-
-
   }
-
-
 }

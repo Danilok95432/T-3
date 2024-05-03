@@ -4,9 +4,19 @@
   background-color: #ffffff;
   flex-grow: 1;
   position: relative;
+
+  @media (max-width: 950px) {
+    padding: 30px 20px;
+  }
+
   .profile-form {
     &__row {
       display: flex;
+
+      @media (max-width: 1180px) {
+        flex-direction: column;
+      }
+
       &:not(:last-child) {
         margin-bottom: 25px;
       }
@@ -36,6 +46,11 @@
           background: none;
           border-color: transparent;
         }
+
+        &.about-textarea {
+          height: auto;
+          max-height: max-content;
+        }
       }
     }
 
@@ -54,6 +69,11 @@
 
     &__email-row {
       display: flex;
+
+      @media (max-width: 490px) {
+        flex-direction: column;
+        gap: 10px;
+      }
 
       &:last-child {
         display: none;
@@ -94,6 +114,7 @@
       padding: 0 26px;
       line-height: 22px;
       text-align: center;
+      width: max-content;
 
     }
 
@@ -102,14 +123,39 @@
       margin-left: 235px;
       background: #B7212E;
       color: #FFFFFF;
+
+      @media (max-width: 1180px) {
+        margin: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__btn-foto-download {
+      background: #B7212E;
+      color: #FFFFFF;
+      padding: 5px 40px;
+      width: max-content;
     }
 
     &__btn-cancel {
       background: #D9D8E0;
     }
   }
+
+  .isEditableBlock {
+    display: none;
+  }
+
   &._edit-active {
     padding-bottom: 60px;
+
+    .isEditableBlock {
+      display: flex;
+    }
+
+    .nameData {
+      display: none;
+    }
 
     .edit-btn {
       display: none;
