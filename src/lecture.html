@@ -196,11 +196,9 @@
               форме ниже.
             </p>
 
-            <textarea class="main-textarea">
+            <textarea class="main-textarea" name="task_comment"></textarea>
 
-            </textarea>
-
-            <button class="main-button _outline" type="submit">Отправить
+            <button class="main-button lecture-page__form-btn-submit _outline" type="submit" data-url="./data/test.txt" data-task-id="ftyd526">Отправить
             </button>
 
             <span class="border"></span>
@@ -239,7 +237,11 @@
 
       </div>
     </section>
-    @include('partials/info-modal.html')
+    <div class="info-modal hidden">
+      <div class="info-modal__content">
+        <p class="info-modal__content-text"></p>
+      </div>
+    </div>
     @include('partials/loader.html')
   </main>
   @include('partials/footer.html')
