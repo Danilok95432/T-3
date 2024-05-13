@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html', { 'title': 'Студент существует' })
+
+  <body class="page__body student-exists-sdo-page info-page">
+    <div class="site-container">
+      <header class="header">@include('partials/main-menu.html')</header>
+
+      <main class="main">
+        <section class="section">
+          <div class="container">
+            <div class="info-block">
+              <div class="info-wrapper">
+                <svg
+                  width="126"
+                  height="126"
+                  viewBox="0 0 126 126"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.17157 20.4574C-0.390523 22.0195 -0.390526 24.5521 1.17157 26.1142L38.3434 63.286L1.1726 100.457C-0.389495 102.019 -0.389491 104.552 1.17261 106.114L19.7357 124.677C21.2978 126.239 23.8305 126.239 25.3926 124.677L62.5634 87.506L99.7341 124.677C101.296 126.239 103.829 126.239 105.391 124.677L123.954 106.114C125.516 104.552 125.516 102.019 123.954 100.457L86.7834 63.286L123.955 26.1143C125.517 24.5522 125.517 22.0195 123.955 20.4574L105.392 1.89428C103.83 0.332181 101.297 0.332177 99.7352 1.89427L62.5634 39.066L25.3916 1.89423C23.8295 0.33213 21.2968 0.332134 19.7347 1.89423L1.17157 20.4574Z"
+                    fill="url(#paint0_linear_621_692)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_621_692"
+                      x1="73"
+                      y1="147"
+                      x2="385"
+                      y2="37.0005"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#F5F5F5" />
+                      <stop offset="1" stop-color="#B7212E" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+                <h2>Урок недоступен</h2>
+
+                <p>
+                  Для того, чтобы получить доступ к этому уроку, Вы должны
+                  завершить все предыдущие уроки.
+                </p>
+
+                <a href="#" class="main-auth-form__btn back-to-course-link">
+                  Вернуться к курсу
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>
