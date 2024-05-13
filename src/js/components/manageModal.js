@@ -7,19 +7,22 @@ if (modalOverlay) {
   modalOverlay.addEventListener('click', (e) => {
     e.preventDefault()
     e.currentTarget.classList.remove('_active')
-    const activeModal = e.currentTarget.closest('.site-container').querySelector('.modal._active')
+    const activeModal = e.currentTarget
+      .closest('.site-container')
+      .querySelector('.modal._active')
     if (activeModal) {
       activeModal.classList.remove('_active')
     }
   })
 }
 
-
 if (openModalBtns) {
-  openModalBtns.forEach(btn => {
+  openModalBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault()
-      const targetModal = document.querySelector(`#${e.currentTarget.dataset.openModal}`)
+      const targetModal = document.querySelector(
+        `#${e.currentTarget.dataset.openModal}`,
+      )
       targetModal.classList.add('_active')
       modalOverlay.classList.add('_active')
     })
@@ -27,7 +30,7 @@ if (openModalBtns) {
 }
 
 if (closeModalBtns) {
-  closeModalBtns.forEach(btn => {
+  closeModalBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault()
       const targetModal = e.currentTarget.closest('.modal')

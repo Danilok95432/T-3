@@ -1,11 +1,11 @@
-import {showBigImgModal} from '../_functions'
+import { showBigImgModal } from '../_functions'
 
 const customLightbox = document.querySelector('.custom-lightbox')
 
 if (customLightbox) {
   const lightboxImages = customLightbox.querySelectorAll('img')
 
-  lightboxImages?.forEach(imgEl => {
+  lightboxImages?.forEach((imgEl) => {
     imgEl.addEventListener('click', (e) => {
       showBigImgModal(e.target.src)
     })

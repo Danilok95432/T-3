@@ -1,4 +1,9 @@
-import {formToObj, sendData, serializeForm, showInfoModal} from "../_functions";
+import {
+  formToObj,
+  sendData,
+  serializeForm,
+  showInfoModal,
+} from '../_functions'
 
 const signForm = document.querySelector('form.payment-page__content-sign')
 
@@ -15,7 +20,7 @@ if (signForm) {
     const signInfoData = JSON.parse(signInfo)
     const allData = {
       ...objData,
-      ...signInfoData
+      ...signInfoData,
     }
     const jsonData = JSON.stringify(allData)
 
@@ -23,7 +28,7 @@ if (signForm) {
       const response = await sendData(jsonData, signFormScript)
       const finishedResponse = await response.json()
 
-      const {status, errortext} = finishedResponse
+      const { status, errortext } = finishedResponse
 
       switch (status) {
         case 'ok':
@@ -44,11 +49,11 @@ if (signForm) {
         case 'period-promo':
           showInfoModal('Период действия промокода не наступил или закончился')
           break
-        default :
+        default:
           showInfoModal(errortext)
       }
     } catch (err) {
-      showInfoModal("Во время выполнения запроса произошла ошибка")
+      showInfoModal('Во время выполнения запроса произошла ошибка')
       console.error(err)
     }
   })

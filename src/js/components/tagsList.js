@@ -10,7 +10,7 @@ if (tagsList) {
         el.classList.add('hidden')
       }
     })
-  collapsedBtn.addEventListener('click', (e) => {
+  collapsedBtn.addEventListener('click', () => {
     tagsList.classList.toggle('_collapsed')
 
     if (tagsList.classList.contains('_collapsed')) {
@@ -20,7 +20,7 @@ if (tagsList) {
         }
       })
     } else {
-      tags.forEach(el => el.classList.remove('hidden'))
+      tags.forEach((el) => el.classList.remove('hidden'))
     }
   })
 }

@@ -2,9 +2,9 @@
 import { bigImgModal, infoModal, modalOverlay } from './_vars'
 
 const cutString = (stringArray, stringLength) => {
-  stringArray.forEach(str => {
+  stringArray.forEach((str) => {
     let cutLength = 0
-    stringLength ? cutLength = stringLength : cutLength = +str.dataset.shear
+    stringLength ? (cutLength = stringLength) : (cutLength = +str.dataset.shear)
 
     if (cutLength && cutLength < str.textContent.length) {
       str.textContent = `${str.textContent.substring(0, cutLength)}...`
@@ -44,13 +44,11 @@ const updateChangeableListId = (changeableList) => {
 
         input.value = changeableId
         input.id = changeableId
-        inputLabel.setAttribute("for", changeableId)
+        inputLabel.setAttribute('for', changeableId)
       }
-
     })
   }
 }
-
 
 // Блокировка/разблокировка добавления/удаления элементов в изменяемых списках при ограничении максимального количества
 
@@ -66,17 +64,14 @@ const limitationChangeableElements = (changeableList, addBtn) => {
   }
 }
 
-
-
 // Фунцкия отправки fetch запросов
-async function sendData (data, url) {
+async function sendData(data, url) {
   return await fetch(url, {
     method: 'POST',
-    headers: {'Content-Type': 'multipart/form-data'},
+    headers: { 'Content-Type': 'multipart/form-data' },
     body: data,
   })
 }
-
 
 //Сбор данных форм
 
@@ -86,12 +81,14 @@ export const serializeForm = (formNode) => {
 
 // Преобразование formData в объект
 export const formToObj = (formData) => {
-  return Array.from(formData.entries()).reduce((memo, pair) => ({
-    ...memo,
-    [pair[0]]: pair[1],
-  }), {})
+  return Array.from(formData.entries()).reduce(
+    (memo, pair) => ({
+      ...memo,
+      [pair[0]]: pair[1],
+    }),
+    {},
+  )
 }
-
 
 // показ/скрытие модалки ошибки
 
@@ -108,13 +105,12 @@ const showInfoModal = (responseText) => {
   infoModal.classList.remove('hidden')
 }
 
-
 export {
   cutString,
   sendData,
   showInfoModal,
   updateChangeableListId,
-  limitationChangeableElements
+  limitationChangeableElements,
 }
 
 //Прокрутка вверх
@@ -122,7 +118,7 @@ export {
 const scrollBtn = document.querySelector('#scrollTop')
 
 if (scrollBtn) {
-  scrollBtn.addEventListener('click', e => {
+  scrollBtn.addEventListener('click', (e) => {
     e.preventDefault()
     window.scrollBy({
       top: -99999,

@@ -1,11 +1,10 @@
-import AirDatepicker from "air-datepicker"
-
+import AirDatepicker from 'air-datepicker'
 
 const allDateInputs = document.querySelectorAll('input[data-date-start]')
 
 if (allDateInputs) {
-  allDateInputs.forEach(el => {
-    const {dateStart} = el.dataset
+  allDateInputs.forEach((el) => {
+    const { dateStart } = el.dataset
 
     const customDate = new AirDatepicker(el, {
       startDate: dateStart,
@@ -20,7 +19,3 @@ if (allDateInputs) {
     })
   })
 }
-
-
-
-

@@ -1,5 +1,4 @@
-import {Swiper} from 'swiper/bundle'
-
+import { Swiper } from 'swiper/bundle'
 
 // Инициализация слайдеров
 
@@ -20,8 +19,7 @@ new Swiper('.support-swiper', {
     },
     1280: {
       slidesPerView: 5,
-    }
-
+    },
   },
 })
 
@@ -31,8 +29,8 @@ new Swiper('.prospects-swiper', {
   slidesPerView: 1,
   grabCursor: true,
   navigation: {
-    nextEl: ".prospects-swiper__swiper-button-next",
-    prevEl: ".prospects-swiper__swiper-button-prev",
+    nextEl: '.prospects-swiper__swiper-button-next',
+    prevEl: '.prospects-swiper__swiper-button-prev',
   },
 })
 
@@ -42,8 +40,8 @@ new Swiper('.teachers-swiper', {
   slidesPerView: 1,
   grabCursor: true,
   navigation: {
-    nextEl: ".teachers-swiper__swiper-button-next",
-    prevEl: ".teachers-swiper__swiper-button-prev",
+    nextEl: '.teachers-swiper__swiper-button-next',
+    prevEl: '.teachers-swiper__swiper-button-prev',
   },
 })
 new Swiper('.faculty-swiper', {
@@ -53,7 +51,6 @@ new Swiper('.faculty-swiper', {
   grabCursor: true,
   autoHeight: true,
   breakpoints: {
-
     768: {
       slidesPerView: 2,
     },
@@ -87,8 +84,7 @@ new Swiper('.sponsors-swiper', {
     },
     1280: {
       slidesPerView: 6,
-    }
-
+    },
   },
 })
 
@@ -109,7 +105,6 @@ new Swiper('.home-gallery-swiper', {
     },
     1280: {
       slidesPerView: 6,
-    }
-
+    },
   },
 })
