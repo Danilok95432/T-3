@@ -1,0 +1,72 @@
+.prompt-title {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  &__button {
+
+    &:hover {
+      svg {
+        path {
+          fill: #B7212E;
+        }
+
+        circle {
+          stroke: #B7212E;
+        }
+
+      }
+    }
+  }
+
+
+  &__content {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40px;
+    padding: 25px 20px 15px;
+    z-index: 20;
+    background: #F5F5F5;
+    border-radius: 5px;
+    width: 300px;
+    &._active {
+      display: block;
+    }
+
+    h5 {
+      margin-bottom: 10px;
+      font-size: 15px;
+      @include montserrat-semibold;
+    }
+
+    ul {
+      li {
+        font-size: 14px;
+        @include montserrat-regular;
+        padding-left: 15px;
+        position: relative;
+
+        h6 {
+          @include montserrat-medium;
+          font-size: 14px;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 9px;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #B7212E;
+        }
+      }
+    }
+  }
+}

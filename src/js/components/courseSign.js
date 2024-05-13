@@ -28,14 +28,14 @@ if (signForm) {
       const response = await sendData(jsonData, signFormScript)
       const finishedResponse = await response.json()
 
-      const { status, errortext } = finishedResponse
+      const { status, errortext, url } = finishedResponse
 
       switch (status) {
         case 'ok':
-          location.reload()
+          window.location.replace(url)
           break
         case 'free':
-          window.location.href = 'courses-student.html'
+          window.location.replace('courses-student.html')
           break
         case 'profile':
           showInfoModal('Заполните профиль')

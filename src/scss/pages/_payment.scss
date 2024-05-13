@@ -5,14 +5,22 @@
   }
 
   h1 {
-    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+
+  h2 {
+    @include montserrat-semibold;
+    font-size: 18px;
+    margin-bottom: 7px;
+    margin-top: 25px;
   }
 
   h3 {
     @include montserrat-semibold;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
 
   &__content {
@@ -21,61 +29,54 @@
     border-radius: 5px 5px 0 0;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
   }
 
   &__content-img {
     width: 140px;
     height: 140px;
-    margin-right: 20px;
     border-radius: 5px;
   }
 
   &__content-text {
-    max-width: 635px;
+    max-width: 643px;
     margin-right: 20px;
 
     h6 {
-      @include montserrat-regular;
-      font-size: 14px;
+      @include montserrat-semibold;
+      font-size: 15px;
       line-height: 17px;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 15px;
+      @include montserrat-medium
     }
 
     .payment-page__content-teacher {
-      font-size: 14px;
+      @include montserrat-regular;
+      font-size: 15px;
       line-height: 17px;
       color: #B7212E;
-      margin-bottom: 13px;
+      margin-bottom: 20px;
     }
 
 
   }
 
-
-  &__content-sign {
+  .sign-form {
     width: 322px;
     min-width: 322px;
-    padding: 22px 18px 23px 18px;
+    padding: 18px 18px 23px 18px;
     border: 1px solid #AEAEAE;
     border-radius: 5px;
     box-shadow: 0 4px 0 #E9EAED;
-
-    .payment-page__content-sign-top {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      margin-bottom: 15px;
-    }
 
     h4 {
       @include montserrat-medium;
       font-size: 18px;
       line-height: 22px;
-
-      &:first-child {
-        margin-right: 15px;
-      }
-
       span {
         @include montserrat-semibold;
         font-size: 25px;
@@ -87,7 +88,6 @@
     p {
       font-size: 12px;
       line-height: 15px;
-      margin-bottom: 10px;
 
       a {
         color: #B7212E;
@@ -110,16 +110,67 @@
       }
     }
 
-    .main-input {
-      margin-bottom: 20px;
-    }
-
     .main-button {
       width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 12px;
     }
 
+    &__suggest {
+      margin-bottom: 5px;
+      display: flex;
+      gap: 5px;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    &__input-item {
+      margin-bottom: 16px;
+      &._border {
+        padding-bottom: 22px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(#000000, 0.6);
+      }
+    }
+
+    &__prompt {
+      padding-bottom: 15px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid rgba(#000000, 0.6);
+    }
+
+    &__promo-wrapper {
+      position: relative;
+      .main-input {
+        padding-right: 115px;
+      }
+      .sign-form__promo-btn {
+        position: absolute;
+        right: 7px;
+        border-radius: 3px;
+        top: 50%;
+        background: #000000;
+        transform: translateY(-50%);
+        width: 100px;
+        height: 30px;
+        color: #ffffff;
+        font-size: 14px;
+        @include montserrat-medium;
+      }
+    }
+
+
+    &__total {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      gap: 10px;
+      justify-content: space-between;
+    }
   }
+
 
   &__warning {
     padding: 37px 25px;
@@ -136,6 +187,7 @@
       line-height: 25px;
       position: relative;
       margin-bottom: 5px;
+
       svg {
         position: absolute;
         top: 4px;
