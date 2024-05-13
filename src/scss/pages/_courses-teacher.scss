@@ -1,8 +1,147 @@
 .courses-teacher-page {
+
   &__inner {
     .container {
       display: flex;
       align-items: flex-start;
+    }
+  }
+
+  .navigation-small-screen {
+    display: none;
+  }
+
+  .section {
+    .container {
+      display: flex;
+
+      @media (max-width: 1270px) {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+
+        .profile-menu,
+        .owned-courses {
+          width: 100%;
+        }
+
+        .owned-courses {
+          border-top: 0.25px solid #000;
+          margin: 0;
+          padding-left: 20px;
+          padding-right: 20px;
+
+          h2 {
+            font-size: 24px;
+          }
+        }
+      }
+
+      @media (max-width: 700px) {
+        .accordion-content {
+        }
+
+        .accordion-content ul {
+          li {
+            flex-direction: column;
+          }
+
+        }
+      }
+
+      @media (max-width: 650px) {
+        .accordion-btn {
+          padding: 15px 40px 15px 15px;
+        }
+
+        .owned-courses__list-item .accordion-arrow {
+          right: 15px;
+          top: 22px;
+        }
+
+        .owned-courses__list-item-info {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+
+      @media (max-width: 590px) {
+        .navigation-big-screen {
+          display: none;
+        }
+
+        .navigation-small-screen {
+          margin-top: 25px;
+          border-radius: 3px;
+          display: flex;
+          width: max-content;
+
+          button {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 8px 15px;
+
+
+            color: #064AB1;
+            border: 1px solid #000000;
+
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+
+            color: #000000;
+
+            &._blocked {
+              color: #91969A;
+
+              background: #EFEFEF;
+              border: 1px solid #959595;
+            }
+          }
+
+          &__prev {
+            border-radius: 3px 0px 0px 3px;
+          }
+
+          &__next {
+            border-radius: 0px 3px 3px 0px;
+          }
+        }
+      }
+
+      @media (max-width: 450px) {
+        .owned-courses__stats {
+          border: none;
+          background-color: #EFEFEF;
+          flex-direction: column;
+          gap: 10px;
+          padding: 15px;
+
+          p {
+            position: static;
+          }
+
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    &__inner {
+      .container {
+        display: flex;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .profile-info,
+  .profile-menu {
+    @media (max-width: 550px) {
+      display: none;
     }
   }
 }

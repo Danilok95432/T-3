@@ -10,9 +10,131 @@
         padding: 0;
 
         .profile-menu,
-        .profile-data { 
+        .profile-data {
           width: 100%;
         }
+      }
+    }
+  }
+
+
+  @media (max-width: 450px) {
+    .profile-info__avatar {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      width: 161px;
+      min-width: 161px;
+      height: 161px;
+      border-width: 15px;
+      align-self: flex-start;
+    }
+
+    .profile-menu {
+      display: none;
+    }
+  }
+
+  .profile-info {
+    padding-top: 0px;
+    background-image: none;
+    background-color: #fff;
+
+    .background-container {
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      min-height: 340px;
+
+      background-image: url('../img/profile-info-bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .profile-info__name,
+    .profile-info__desc,
+    .profile-info__avatar {
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-info__name,
+    .profile-info__desc {
+      color: #fff;
+    }
+
+    .profile-info__name {
+      line-height: 1.2;
+    }
+
+    .profile-info__stat {
+      margin-top: 70px;
+      gap: 12px;
+
+      background-color: #EFEFEF;
+      padding: 10px 20px;
+
+      span {
+        font-size: 15px;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  @media (max-width: 350px) {
+    .edit-btn {
+      top: 16px;
+      right: 62px;
+    }
+
+    .profile-data {
+      padding-top: 15px;
+    }
+
+    .profile-data h2 {
+      font-size: 24px;
+    }
+  }
+
+  &:has(._edit-active) {
+    .profile-info {
+      display: none;
+    }
+
+    main {
+      border-top: 0.25px solid #000;
+    }
+
+    h2:not(.isEditableBlock) {
+      display: none;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    .profile-form__email {
+      background-color: #EFEFEF;
+      color: #959595;
+      padding: 8px;
+      width: 100%;
+    }
+
+    .profile-form__label {
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.2;
+
+      color: #000000;
+    }
+
+    .profile-form__row-btn {
+      flex-direction: row;
+      gap: 10px;
+      padding: 0 20px 0 5px;
+
+      button {
+        flex: 1;
       }
     }
   }

@@ -12,4 +12,106 @@
     }
   }
 
+  .section {
+    .container {
+      display: flex;
+
+      @media (max-width: 1270px) {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+
+        .profile-menu,
+        .student-courses {
+          width: 100%;
+        }
+
+        .student-courses {
+          border-top: 0.25px solid #000;
+          margin: 0;
+          padding-left: 20px;
+          padding-right: 20px;
+
+          h2 {
+            font-size: 24px;
+          }
+
+          &__stats {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #EFEFEF;
+
+            span {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 950px) {
+        .student-courses__list {
+          li {
+            padding: 18px 10px;
+
+            .student-courses__list-items {
+              flex-direction: column;
+              gap: 20px;
+              flex-wrap: nowrap;
+
+              .student-courses__list-info {
+                margin: 0;
+
+                .student-courses__list-info-text {
+                  display: flex;
+                  gap: 5px;
+                }
+              }
+
+              a {
+                @media (max-width: 450px) {
+                  width: 100%;
+                  padding: 8px;
+                }
+              }
+            }
+
+            svg {
+              max-width: 22px;
+              max-height: 22px;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 630px) {
+        .student-courses__desc {
+          border: none;
+          background-color: #EFEFEF;
+          padding: 15px;
+          flex-direction: column;
+          gap: 10px;
+
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+
+    &__inner {
+      .container {
+        display: flex;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .profile-info,
+  .profile-menu {
+    @media (max-width: 550px) {
+      display: none;
+    }
+  }
+
 }
