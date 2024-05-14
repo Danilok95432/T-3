@@ -1,12 +1,27 @@
 .payment-page {
 
+  @media (max-width: 768px) {
+    background-color: #ffffff;
+  }
+
+
+  .bread-crumbs {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
   &__inner {
     padding-bottom: 75px;
   }
 
+
   h1 {
     margin-top: 10px;
     margin-bottom: 35px;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   h2 {
@@ -14,6 +29,10 @@
     font-size: 18px;
     margin-bottom: 7px;
     margin-top: 25px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-top: 16px;
+    }
   }
 
   h3 {
@@ -21,6 +40,9 @@
     font-size: 24px;
     line-height: 22px;
     margin-bottom: 25px;
+    @media (max-width: 768px) {
+      line-height: 1.1;
+    }
   }
 
   &__content {
@@ -30,6 +52,17 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 25px;
+    }
+
+    @media (max-width: 768px) {
+      border-top: 1px solid rgba(#000000, 0.6);
+      padding: 25px 5px 50px 5px;
+      border-radius: 0;
+    }
   }
 
   &__content-img {
@@ -47,11 +80,18 @@
       font-size: 15px;
       line-height: 17px;
       margin-bottom: 5px;
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
     }
 
     p {
       font-size: 15px;
-      @include montserrat-medium
+      @include montserrat-medium;
+      @media (max-width: 768px) {
+        line-height: 1.4;
+        font-size: 14px;
+      }
     }
 
     .payment-page__content-teacher {
@@ -60,6 +100,10 @@
       line-height: 17px;
       color: #B7212E;
       margin-bottom: 20px;
+      @media (max-width: 768px) {
+        margin-bottom: 17px;
+        font-size: 14px;
+      }
     }
 
 
@@ -73,10 +117,17 @@
     border-radius: 5px;
     box-shadow: 0 4px 0 #E9EAED;
 
+    @media (max-width: 768px) {
+      width: 100%;
+      min-width: auto;
+      padding: 12px 18px;
+    }
+
     h4 {
       @include montserrat-medium;
       font-size: 18px;
       line-height: 22px;
+
       span {
         @include montserrat-semibold;
         font-size: 25px;
@@ -113,6 +164,10 @@
     .main-button {
       width: 100%;
       margin-bottom: 12px;
+      @media (max-width: 768px) {
+        padding: 9px 50px;
+        margin-bottom: 15px;
+      }
     }
 
     &__suggest {
@@ -122,10 +177,15 @@
       justify-content: space-between;
       align-items: center;
       font-size: 12px;
+      line-height: 1.2;
+      @media (max-width: 768px) {
+        gap: 2px;
+      }
     }
 
     &__input-item {
-      margin-bottom: 16px;
+      margin-bottom: 22px;
+
       &._border {
         padding-bottom: 22px;
         margin-bottom: 20px;
@@ -141,9 +201,11 @@
 
     &__promo-wrapper {
       position: relative;
+
       .main-input {
         padding-right: 115px;
       }
+
       .sign-form__promo-btn {
         position: absolute;
         right: 7px;
@@ -168,9 +230,51 @@
       margin-top: 20px;
       gap: 10px;
       justify-content: space-between;
+
+      @media (max-width: 768px) {
+        margin-bottom: 10px;
+      }
+
+      h4:first-child {
+        @media (max-width: 768px) {
+          font-size: 14px;
+          width: 100%;
+        }
+      }
+
     }
   }
 
+  .sign-form__promo-status {
+    @include montserrat-regular;
+    margin-top: 3px;
+    span {
+      font-size: 14px;
+      display: none;
+    }
+
+    &._access {
+      .promo-access {
+        display: block;
+        color: #00840D;
+      }
+    }
+
+    &._invalid {
+      .promo-invalid {
+        display: block;
+        color: #B7212E;
+      }
+    }
+  }
+
+
+  &__warning-container {
+    @media (max-width: 768px) {
+      background-color: #B7212E;
+      padding: 0;
+    }
+  }
 
   &__warning {
     padding: 37px 25px;

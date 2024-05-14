@@ -10,6 +10,7 @@
       </header>
 
       <main class="main">
+        <div class="modal-overlay"></div>
         <section class="section profile-student-page__inner">
           <div class="container">
             <ul class="profile-menu">
@@ -193,6 +194,20 @@
                 action="#"
                 name="profileStudentStudent"
               >
+                <div class="profile-form__row isEditableBlock">
+                  <p class="profile-form__label">Фотография:</p>
+                  <div class="general-dropzone-wrapper">
+                    <div
+                      class="dropzone general-dropzone"
+                      id="student-photo"
+                      data-show-preview="true"
+                      data-general-info='{"url": "./data/test.txt", "removeUrl": "./data/test.txt", "width": "110", "height": "110", "acceptedFiles": ".png, .jpeg, .jpg", "type": "student-photo", "filesCount": "1", "additional": "доп.контент"}'
+                    >
+                      <div class="dz-message">Загрузить фото</div>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="profile-form__row">
                   <p class="profile-form__label">Фамилия, Имя, Отчество:</p>
                   <input
@@ -298,6 +313,7 @@
           </div>
         </section>
         @include('partials/info-modal.html')
+        @include('partials/big-img-modal.html')
       </main>
       @include('partials/footer.html')
     </div>
