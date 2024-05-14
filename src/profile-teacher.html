@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru" class="page">
   @include('partials/head.html', { 'title': 'Профиль преподавателя' })
 
@@ -10,6 +10,7 @@
       </header>
 
       <main class="main">
+        <div class="modal-overlay"></div>
         <section class="section profile-teacher-page__inner">
           <div class="container">
             <ul class="profile-menu">
@@ -119,12 +120,17 @@
               <h2 class="isEditableBlock">Редактирование профиля</h2>
               <form class="profile-form" action="" name="profileTeacher">
                 <div class="profile-form__row isEditableBlock">
-                  <button
-                    type="button"
-                    class="profile-form__btn profile-form__btn-foto-download"
-                  >
-                    Загрузить фото
-                  </button>
+                  <p class="profile-form__label">Фотография:</p>
+                  <div class="general-dropzone-wrapper">
+                    <div
+                      class="dropzone general-dropzone"
+                      id="teacher-photo"
+                      data-show-preview="true"
+                      data-general-info='{"url": "./data/test.txt", "removeUrl": "./data/test.txt", "width": "110", "height": "110", "acceptedFiles": ".png, .jpeg, .jpg", "type": "teacher-photo", "filesCount": "1", "additional": "доп.контент"}'
+                    >
+                      <div class="dz-message">Загрузить фото</div>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="profile-form__row isEditableBlock">
@@ -265,6 +271,7 @@
             </div>
           </div>
         </section>
+        @include('partials/big-img-modal.html')
       </main>
       @include('partials/footer.html')
     </div>
