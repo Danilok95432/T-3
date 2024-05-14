@@ -4,8 +4,18 @@
     @include montserrat-regular;
     padding-left: 25px;
     position: relative;
+
+    @media (max-width: 768px) {
+      padding-left: 15px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
     &:not(:last-child) {
       margin-bottom: 5px;
+      @media (max-width: 768px) {
+        margin-bottom: 9px;
+      }
     }
     &::before {
       content: '';
@@ -16,6 +26,11 @@
       height: 8px;
       border-radius: 50%;
       background: #B7212E;
+      @media (max-width: 768px) {
+        width: 6px;
+        height: 6px;
+        top: 6px;
+      }
     }
   }
 }

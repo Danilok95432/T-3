@@ -25,17 +25,24 @@
     left: 50%;
     transform: translateX(-50%);
     top: 40px;
-    padding: 25px 20px 15px;
+    padding: 16px 21px 20px;
     z-index: 20;
     background: #F5F5F5;
     border-radius: 5px;
     width: 300px;
+
+    @media (max-width: 1450px) {
+      transform: none;
+      left: auto;
+      right: 0;
+    }
+
     &._active {
       display: block;
     }
 
     h5 {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       font-size: 15px;
       @include montserrat-semibold;
     }
@@ -46,21 +53,23 @@
         @include montserrat-regular;
         padding-left: 15px;
         position: relative;
+        line-height: 1.35;
 
         h6 {
           @include montserrat-medium;
           font-size: 14px;
+          line-height: 1.2;
         }
 
         &:not(:last-child) {
-          margin-bottom: 5px;
+          margin-bottom: 21px;
         }
 
         &::before {
           content: '';
           position: absolute;
           left: 0;
-          top: 9px;
+          top: 5px;
           width: 6px;
           height: 6px;
           border-radius: 50%;
