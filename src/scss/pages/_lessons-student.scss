@@ -5,6 +5,11 @@
     .container {
       display: flex;
       align-items: flex-start;
+
+      .student-lessons {
+        max-width: 907px;
+        min-width: 907px;
+      }
     }
 
     .profile-menu li a {
@@ -78,9 +83,13 @@
         gap: 20px;
         padding: 0;
 
-        .profile-menu,
-        .student-lessons {
+        .profile-menu {
           width: 100%;
+        }
+
+        .student-lessons {
+          min-width: 100%;
+          max-width: 100%;
         }
 
         .student-lessons {

@@ -21,6 +21,7 @@ import './components/formValidation'
 import './components/customLightbox'
 import './components/lectureForm'
 import './components/courseSign'
+import './components/listTasksAside'
 
 
 
