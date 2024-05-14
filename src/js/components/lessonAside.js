@@ -15,4 +15,4 @@ if (lessonAsideWrapper) {
       lessonAsideWrapper.classList.remove('_aside-active')
     }),
   )
-}
+}  
