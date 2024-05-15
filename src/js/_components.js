@@ -23,4 +23,7 @@ import './components/lectureForm'
 import './components/courseSign'
 import './components/listTasksAside'
 import './components/promptTitle'
+import './components/showFullScreenImage'
+import './components/reviewStudentTask'
+
 

@@ -1,0 +1,130 @@
+.sdo-contacts-page {
+    background-color: #fff;
+
+    @media (max-width: 768px) {
+        .header__inner {
+            display: none;
+        }
+    }
+
+    .main-sdo-btn {
+        font-size: 15px;
+        @include montserrat-medium;
+        padding: 10px 41px;
+        display: inline-block;
+        background-color: #B7212E;
+        border: none;
+        color: #ffffff;
+    }
+
+    .header {
+        &__inner {
+            padding: 55px 0 60px;
+            background: url("../img/home-bg.jpg") no-repeat;
+            background-size: cover;
+
+            h1 {
+                @include montserrat-semibold;
+                font-size: 35px;
+                margin-bottom: 66px;
+                line-height: 1.2;
+                color: #ffffff;
+            }
+
+            p {
+                max-width: 525px;
+                line-height: 1.7;
+                @include montserrat-medium;
+                margin-bottom: 52px;
+                color: #ffffff;
+            }
+        }
+
+        &__inner-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+
+            a {
+                &:nth-child(2) {
+                    border: 1px solid #ffffff;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    .page-content {
+        padding: 60px 0 120px;
+
+        @media (max-width: 1300px) {
+            padding: 30px 10px 60px 10px;
+        }
+
+        @media (max-width: 550px) {
+            border-top: 1px solid #000;
+        }
+    }
+
+    h2 {
+        margin-bottom: 35px;
+        font-weight: 600;
+        font-size: 45px;
+        line-height: 1.2;
+
+        @media (max-width: 550px) {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .cart-container {
+        margin-bottom: 40px;
+        height: 425px;
+
+        @media (max-width: 550px) {
+            margin-bottom: 30px;
+            height: 370px;
+        }
+    }
+
+    .text {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.2;
+
+        @media (max-width: 550px) {
+            font-size: 14px;
+        }
+    }
+
+    .link {
+        color: #4291FF;
+    }
+
+    .contact-table {
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        p {
+            display: flex;
+        }
+
+        @media (max-width: 550px) {
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        &__title {
+            width: 250px;
+            display: inline-block;
+
+            @media (max-width: 550px) {
+                width: 125px;
+                min-width: 125px;
+            }
+        }
+    }
+}
