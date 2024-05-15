@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Контакты СДО'
+})
+
+<body class="page__body sdo-contacts-page">
+
+<div class="site-container">
+  <header class="header">
+    @include('partials/main-menu.html')
+    <div class="header__inner">
+      <div class="container">
+        <h1>
+          Клевер:<br/>
+          учим тому, что умеем сами
+        </h1>
+        <p>
+          Система дистанционного обучения «Клевер» позволяет получить
+          новые теоретические знания и практические навыки в контакте
+          с опытными преподавателями.
+        </p>
+        <div class="header__inner-links">
+          <a class="main-sdo-btn" href="#">Начать учиться</a>
+          <a class="main-sdo-btn" href="#">Оценить перспективы</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section">
+          <div class="page-content container">
+           <h2>
+                Контакты
+            </h2>
+            <div class="cart-container">        
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaa722239a31c7dbfdcf45d07589bf87841a5354d58f203d11113db14a203d426&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+            <div class="contact-table">
+            <p>
+                <span class="contact-table__title text">ООО НПО ТАУ</span> 
+                <a class="text link" href="#" download>Реквизиты (PDF, 278 Кб)</a>
+            </p>
+            <p>
+                <span class="contact-table__title text">Адрес</span> 
+                <span class="text">Россия, Тамбов, бульвар Энтузиастов, 2А</span>
+            </p>
+            <p>
+                <span class="contact-table__title text">Общая почта</span>              
+                <a class="text link" href="mailto:info@npotau.ru">info@npotau.ru</a>
+                
+            </p>
+            <p>
+                <span class="contact-table__title text">Телефон</span>
+                <span class="text">+7 (475) 255-70-40</span>
+            </p>
+            <p>
+                <span class="contact-table__title text">Почта бухгалтерии</span>
+                <a class="text link" href="mailto:fin@npotau.ru">fin@npotau.ru</a>
+            </p>
+            <p>
+                <span class="contact-table__title text">Почта поддержки</span>
+                <a class="text link" href="mailto:support@npotau.ru">support@npotau.ru</a>
+            </p>
+            <p>
+                <span class="contact-table__title text">Для заказов</span>
+                <a class="text link" href="mailto:commerce@npotau.ru">commerce@npotau.ru</a>
+            </p>
+            </div>
+            <p class="text">Информация о вакансиях — на странице <a class="link" href="#">«Карьера»</a></p>
+          </div>
+    </section>
+  </main>
+  @include('partials/footer.html')
+</div>
+
+</body>
+
+</html>
