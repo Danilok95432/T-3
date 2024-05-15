@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="ru" class="page">
+  @include('partials/head.html', { 'title': 'Тестирование' })
+
+  <body class="page__body lecture-page">
+    <div class="site-container">
+      <header class="header">@include('partials/main-menu.html')</header>
+
+      <main class="main">
+        <section class="section lecture-page__inner">
+          <div class="container">
+            <div class="bread-crumbs">
+              <a href="index.html">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.36402 0.136393C6.3209 0.0931581 6.26967 0.0588562 6.21326 0.0354518C6.15686 0.0120473 6.0964 0 6.03533 0C5.97426 0 5.9138 0.0120473 5.8574 0.0354518C5.80099 0.0588562 5.74976 0.0931581 5.70664 0.136393L0.135564 5.70747C0.0924789 5.75066 0.0583299 5.80192 0.0350691 5.85832C0.0118083 5.91472 -0.000108218 5.97515 7.40484e-07 6.03616V12.5357C7.40484e-07 12.6589 0.0489133 12.777 0.135978 12.864C0.223043 12.9511 0.341128 13 0.464257 13H4.64256C4.76569 13 4.88378 12.9511 4.97084 12.864C5.05791 12.777 5.10682 12.6589 5.10682 12.5357V8.8217H6.96384V12.5357C6.96384 12.6589 7.01275 12.777 7.09982 12.864C7.18688 12.9511 7.30497 13 7.4281 13H11.6064C11.7295 13 11.8476 12.9511 11.9347 12.864C12.0217 12.777 12.0707 12.6589 12.0707 12.5357V6.03616C12.0708 5.97515 12.0589 5.91472 12.0356 5.85832C12.0123 5.80192 11.9782 5.75066 11.9351 5.70747L10.6779 4.45119V1.3936C10.6779 1.27047 10.629 1.15238 10.5419 1.06532C10.4548 0.978255 10.3368 0.929342 10.2136 0.929342H9.28512C9.16199 0.929342 9.04391 0.978255 8.95684 1.06532C8.86978 1.15238 8.82087 1.27047 8.82087 1.3936V2.59416L6.36402 0.136393ZM0.928513 12.0715V6.22836L6.03533 1.12154L11.1421 6.22836V12.0715H7.89235V8.35744C7.89235 8.23431 7.84344 8.11623 7.75638 8.02916C7.66931 7.9421 7.55123 7.89318 7.4281 7.89318H4.64256C4.51943 7.89318 4.40135 7.9421 4.31428 8.02916C4.22722 8.11623 4.17831 8.23431 4.17831 8.35744V12.0715H0.928513Z"
+                    fill="black"
+                  />
+                </svg>
+                Главная
+              </a>
+              <span class="separator"></span>
+              <a href="all-courses.html">Все курсы</a>
+              <span class="separator"></span>
+              <span>Обучающая лекция</span>
+            </div>
+            <h1>Рисунок черепа анфас, лекция П.П. Преподавательского</h1>
+          </div>
+
+          <div class="lecture-page__wrapper lesson-aside-wrapper">
+            <div class="container">
+              <aside class="lesson-aside">
+                <div class="lesson-aside__content">
+                  <button class="lesson-aside__collapse-btn" type="button">
+                    <svg
+                      width="15"
+                      height="26"
+                      viewBox="0 0 15 26"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M13.6083 1.39165C13.7325 1.51548 13.831 1.66259 13.8982 1.82455C13.9654 1.98651 14 2.16014 14 2.33549C14 2.51084 13.9654 2.68447 13.8982 2.84643C13.831 3.00839 13.7325 3.1555 13.6083 3.27933L3.88466 13.0004L13.6083 22.7214C13.8587 22.9717 13.9993 23.3112 13.9993 23.6652C13.9993 24.0192 13.8587 24.3587 13.6083 24.6091C13.358 24.8594 13.0185 25 12.6645 25C12.3105 25 11.971 24.8594 11.7207 24.6091L1.05581 13.9442C0.931665 13.8204 0.833166 13.6732 0.765961 13.5113C0.698754 13.3493 0.664163 13.1757 0.664163 13.0004C0.664163 12.825 0.698754 12.6514 0.765961 12.4894C0.833166 12.3275 0.931665 12.1803 1.05581 12.0565L11.7207 1.39165C11.8445 1.2675 11.9916 1.16901 12.1536 1.1018C12.3155 1.03459 12.4892 1 12.6645 1C12.8399 1 13.0135 1.03459 13.1754 1.1018C13.3374 1.16901 13.4845 1.2675 13.6083 1.39165Z"
+                        fill="white"
+                        stroke="white"
+                        stroke-width="0.25"
+                      />
+                    </svg>
+                    Свернуть
+                  </button>
+                  <ul class="main-accordion">
+                    <li class="accordion-el">
+                      <button class="accordion-btn" type="button">
+                        Описание урока
+                        <span class="accordion-btn__icon"></span>
+                      </button>
+                      <div class="accordion-content">
+                        <p>
+                          На протяжении всего курса Вы будете выполнять работыв
+                          качестве домашнего заданияи отправлять их на проверку
+                          преподавателю. Мы настоятельно рекомендуем сохранить
+                          эти зарисовки, желательно, оформляя их в альбом. Такой
+                          альбом будет необходим Вам на протяжении всего
+                          профессионального пути, а также пригодится для сдачи
+                          итогового задания курса.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="accordion-el">
+                      <button class="accordion-btn" type="button">
+                        Подготовка к уроку
+                        <span class="accordion-btn__icon"></span>
+                      </button>
+                      <div class="accordion-content">
+                        <h6>Материалы</h6>
+                        <ol>
+                          <li>Карандаш средней жесткости</li>
+                          <li>Лист А3</li>
+                          <li>Цветные карандаши — синий, красный, зеленый</li>
+                        </ol>
+                        <p>
+                          На протяжении всего курса Вы будете выполнять работы в
+                          качестве домашнего задания и отправлять их на проверку
+                          преподавателю. Мы настоятельно рекомендуем сохранить
+                          эти зарисовки, желательно, оформляя их в альбом. Такой
+                          альбом будет необходим Вам на протяжении всего
+                          профессионального пути, а также пригодится для сдачи
+                          итогового задания курса.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="accordion-el">
+                      <button class="accordion-btn" type="button">
+                        Домашнее задание
+                        <span class="accordion-btn__icon"></span>
+                      </button>
+                      <div class="accordion-content">
+                        <p>
+                          Сделать анатомическую зарисовкумягких тканей
+                          предплечья в фас и профиль, подписать анатомические
+                          образования, о которых упоминалось в лекции.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <button class="lesson-aside__collapse-btn main-button _red">
+                    Перейти к уроку
+                  </button>
+                </div>
+              </aside>
+              <div class="lecture-page__lesson">
+                <button
+                  class="lecture-burger-btn lesson-aside__open-btn"
+                  type="button"
+                >
+                  <svg
+                    width="32"
+                    height="24"
+                    viewBox="0 0 32 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M29 2C29.2652 2 29.5196 2.10536 29.7071 2.29289C29.8946 2.48043 30 2.73478 30 3V21C30 21.2652 29.8946 21.5196 29.7071 21.7071C29.5196 21.8946 29.2652 22 29 22H3C2.73478 22 2.48043 21.8946 2.29289 21.7071C2.10536 21.5196 2 21.2652 2 21V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2H29ZM3 0C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3L0 21C0 21.7956 0.31607 22.5587 0.87868 23.1213C1.44129 23.6839 2.20435 24 3 24H29C29.7956 24 30.5587 23.6839 31.1213 23.1213C31.6839 22.5587 32 21.7956 32 21V3C32 2.20435 31.6839 1.44129 31.1213 0.87868C30.5587 0.316071 29.7956 0 29 0H3Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M6 7C6 6.73478 6.10536 6.48043 6.29289 6.29289C6.48043 6.10536 6.73478 6 7 6H25C25.2652 6 25.5196 6.10536 25.7071 6.29289C25.8946 6.48043 26 6.73478 26 7C26 7.26522 25.8946 7.51957 25.7071 7.70711C25.5196 7.89464 25.2652 8 25 8H7C6.73478 8 6.48043 7.89464 6.29289 7.70711C6.10536 7.51957 6 7.26522 6 7ZM6 12C6 11.7348 6.10536 11.4804 6.29289 11.2929C6.48043 11.1054 6.73478 11 7 11H25C25.2652 11 25.5196 11.1054 25.7071 11.2929C25.8946 11.4804 26 11.7348 26 12C26 12.2652 25.8946 12.5196 25.7071 12.7071C25.5196 12.8946 25.2652 13 25 13H7C6.73478 13 6.48043 12.8946 6.29289 12.7071C6.10536 12.5196 6 12.2652 6 12ZM6 17C6 16.7348 6.10536 16.4804 6.29289 16.2929C6.48043 16.1054 6.73478 16 7 16H19C19.2652 16 19.5196 16.1054 19.7071 16.2929C19.8946 16.4804 20 16.7348 20 17C20 17.2652 19.8946 17.5196 19.7071 17.7071C19.5196 17.8946 19.2652 18 19 18H7C6.73478 18 6.48043 17.8946 6.29289 17.7071C6.10536 17.5196 6 17.2652 6 17Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+                <div class="lecture-page__lesson-top">
+                  <h3>Обучающая лекция</h3>
+                  <p class="lecture-page__lesson-desc">
+                    Рисунок черепа анфас, построение, изучение формы, компоновка
+                    в листе
+                  </p>
+                </div>
+                <span class="lesson-status"></span>
+                <div class="lecture-page__lesson-file">
+                  <object data="./data/test-pdf.pdf"></object>
+                </div>
+                <img
+                  class="lecture-page__lesson-image"
+                  src="./img/lecture-img.jpg"
+                  alt="урок"
+                />
+                <span>Лекцию читает</span>
+                <p class="lecture-page__lesson-desc">
+                  Преподавательский Преподаватель Преподавателевич
+                </p>
+                <p>
+                  МПГУ им. Ленина, Худграф факультет, специальность: учитель
+                  изобразительного искусства, труда и декоративного искусства,
+                  магистр
+                </p>
+                <p>Курсов: 3, лекций: 21, студентов: 18</p>
+                <p>
+                  <svg
+                    width="14"
+                    height="13"
+                    viewBox="0 0 14 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.76827 10.2621L3.5278 11.9655C3.47835 11.9915 3.4226 12.0032 3.36686 11.9992C3.31111 11.9952 3.25759 11.9757 3.21236 11.9429C3.16713 11.9101 3.13199 11.8652 3.11092 11.8135C3.08985 11.7617 3.08368 11.7051 3.09312 11.65L3.71231 8.04159L1.09031 5.48597C1.05034 5.44692 1.02207 5.39749 1.0087 5.34324C0.995338 5.28898 0.997399 5.23207 1.01466 5.17893C1.03191 5.12579 1.06368 5.07853 1.10637 5.04248C1.14906 5.00643 1.20097 4.98302 1.25626 4.97491L4.87966 4.44851L6.4999 1.16521C6.5248 1.11556 6.56302 1.07381 6.61029 1.04463C6.65755 1.01545 6.71201 1 6.76756 1C6.82311 1 6.87756 1.01545 6.92483 1.04463C6.9721 1.07381 7.01032 1.11556 7.03522 1.16521L8.65546 4.44851L12.2785 4.97491C12.3339 4.9829 12.3859 5.00623 12.4287 5.04227C12.4714 5.0783 12.5033 5.1256 12.5205 5.17879C12.5378 5.23199 12.5398 5.28896 12.5264 5.34325C12.5129 5.39754 12.4846 5.44698 12.4445 5.48597L9.82281 8.04159L10.4416 11.65C10.451 11.705 10.4448 11.7616 10.4238 11.8133C10.4027 11.865 10.3676 11.9098 10.3225 11.9426C10.2773 11.9754 10.2238 11.995 10.1682 11.999C10.1125 12.003 10.0568 11.9914 10.0073 11.9655L6.76827 10.2621Z"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Общий рейтинг: 290 баллов
+                </p>
+              </div>
+              <form class="lecture-page__testing-form testing-form" action="#">
+                <div class="testing-form__title">
+                  <h3>Тестирование</h3>
+                  <p>Возможен выбор нескольких вариантов</p>
+                </div>
+                <ul class="testing-form__questions-list">
+                  <li>
+                    <h6>
+                      <span>1.</span>
+                      Lorem ipsum, or lipsum as it is some times known, is dummy
+                      text used in laying out print, graphic or web designs.<br />
+                      (выберите 1–3 варианта ответа)
+                    </h6>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="q1_v1" />
+                      <span>
+                        The purpose of lorem ipsum is to create a natural
+                        looking block of text (sentence, paragraph, page, etc.)
+                      </span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="q1_v2" />
+                      <span>
+                        A practice not without controversy, laying out pages
+                        with meaningless filler text can be very useful when the
+                        focus is meant ....
+                      </span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="q1_v3" />
+                      <span>
+                        The passage experienced a surge in popularity during the
+                        1960s when Letraset used it on their dry-transfer...
+                      </span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="q1_v4" />
+                      <span>
+                        Today it's seen all around the web; on templates,
+                        websites, and stock designs. Use our generator to get
+                        your own, ...
+                      </span>
+                    </label>
+                  </li>
+                  <li>
+                    <h6>
+                      <span>2.</span>
+                      Lorem ipsum, or lipsum as it is sometimes?<br />
+                      (выберите 1–3 варианта ответа)
+                    </h6>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="q2_v1" />
+                      <span>
+                        The purpose of lorem ipsum is to create a natural
+                        looking block of text (sentence....
+                      </span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="q2_v2" />
+                      <span>
+                        A practice not without controversy, laying out pages
+                        with meaningless filler text c...
+                      </span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="q2_v3" />
+                      <span> The passage experienced a surge in ... </span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="q2_v4" />
+                      <span> Today it's seen all around the web; on ... </span>
+                    </label>
+                  </li>
+                  <li>
+                    <h6>
+                      <span>3.</span>
+                      Lorem ipsum, or lipsum as it is sometimes known, is dummy
+                      text used in laying out print, graphic or web designs.
+                    </h6>
+                    <label class="main-checkbox">
+                      <input type="radio" name="q3" value="1" />
+                      <span>
+                        The purpose of lorem ipsum is to create a natural
+                        looking block of text (sentence, paragraph, page, etc.)
+                        that doesn't....
+                      </span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="radio" name="q3" value="2" />
+                      <span>
+                        A practice not without controversy, laying out pages
+                        with meaningless filler text can be very useful when the
+                        focus is meant ....
+                      </span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="radio" name="q3" value="3" />
+                      <span>
+                        The passage experienced a surge in popularity during the
+                        1960s when Letraset used it on their dry-transfer...
+                      </span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="radio" name="q3" value="4" />
+                      <span
+                        >Today it's seen all around the web; on templates,
+                        websites, and stock designs. Use our generator to get
+                        your own, ...
+                      </span>
+                    </label>
+                  </li>
+                  <li>
+                    <h6>
+                      <span>4.</span>
+                      Lorem ipsum, or lipsum as it is sometimes?
+                    </h6>
+                    <label class="main-checkbox">
+                      <input type="radio" name="q4" value="1" />
+                      <span>
+                        The purpose of lorem ipsum is to create a natural
+                        looking block of text (sentence....
+                      </span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="radio" name="q4" value="2" />
+                      <span>
+                        A practice not without controversy, laying out pages
+                        with meaningless filler text c...
+                      </span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="radio" name="q4" value="3" />
+                      <span> The passage experienced a surge in ... </span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="radio" name="q4" value="4" />
+                      <span>TToday it's seen all around the web; on ... </span>
+                    </label>
+                  </li>
+                </ul>
+                <button
+                  class="main-button testing-form__submit-btn _red"
+                  type="submit"
+                >
+                  Ответить
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <div class="info-modal hidden">
+          <div class="info-modal__content">
+            <p class="info-modal__content-text"></p>
+          </div>
+        </div>
+        @include('partials/loader.html')
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>
