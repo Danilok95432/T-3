@@ -167,7 +167,7 @@
                 </a>
               </li>
             </ul>
-            <div class="profile-data">
+            <div class="profile-data _replace">
               <button class="edit-btn" type="button">
                 <svg
                   width="23"
@@ -189,6 +189,14 @@
                 </svg>
               </button>
               <h2>Данные профиля</h2>
+              <div class="profile-data__replace-prompt">
+                <h6>Внимание!</h6>
+                <p>
+                  Вы были перенаправлены на страницу заполнения профиля со
+                  страницы подписки на курс. Завершите заполнение, сохраните
+                  данные и будете возвращены на страницу подписки
+                </p>
+              </div>
               <form
                 class="profile-form"
                 action="#"
@@ -207,18 +215,47 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="profile-form__row">
-                  <p class="profile-form__label">Фамилия, Имя, Отчество:</p>
+                <div class="profile-form__row isEditableBlock">
+                  <p class="profile-form__label">Фамилия:</p>
                   <input
                     class="profile-form__disabled"
                     type="text"
-                    name="profileStudentName"
-                    value="Константинопольский Константин Константинович"
+                    name="profileLastName"
+                    value="Константинопольский"
+                    required
                     disabled
                   />
                 </div>
-                <div class="profile-form__row">
+
+                <div class="profile-form__row isEditableBlock">
+                  <p class="profile-form__label">Имя:</p>
+                  <input
+                    class="profile-form__disabled"
+                    type="text"
+                    name="profileFirstName"
+                    value="Константин"
+                    required
+                    disabled
+                  />
+                </div>
+
+                <div class="profile-form__row isEditableBlock">
+                  <p class="profile-form__label">Отчество:</p>
+                  <input
+                    class="profile-form__disabled"
+                    type="text"
+                    name="profileMiddleName"
+                    value="Константинович"
+                    disabled
+                  />
+                </div>
+                <div
+                  class="profile-form__row profile-form__fullname-row nameData"
+                >
+                  <p class="profile-form__label">Фамилия, Имя, Отчество:</p>
+                  <p>Константинопольский Константин Константинович</p>
+                </div>
+                <div class="profile-form__row profile-form__email-row">
                   <p class="profile-form__label">Электронная почта (логин):</p>
                   <div class="profile-form__email-wrapper">
                     <div class="profile-form__email-row">

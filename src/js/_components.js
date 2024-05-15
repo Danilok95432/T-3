@@ -25,5 +25,4 @@ import './components/listTasksAside'
 import './components/promptTitle'
 import './components/showFullScreenImage'
 import './components/reviewStudentTask'
-
-
+import './components/actionBtns'

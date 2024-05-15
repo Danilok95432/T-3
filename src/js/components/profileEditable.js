@@ -35,6 +35,12 @@ if (editableBlock) {
   const profileFormScript = profileFormSaveBtn.dataset.url
   profileForm.addEventListener('submit', async (e) => {
     e.preventDefault()
+
+    if (!e.currentTarget.checkValidity()) {
+      const invalidElements = e.currentTarget.querySelectorAll(':invalid')
+      invalidElements[0].reportValidity()
+    }
+
     const data = serializeForm(e.target)
     const objData = formToObj(data)
     const jsonData = JSON.stringify(objData)
@@ -43,9 +49,11 @@ if (editableBlock) {
       const response = await sendData(jsonData, profileFormScript)
       const finishedResponse = await response.json()
 
-      const { status, errortext } = finishedResponse
+      const { status, errortext, url } = finishedResponse
       if (status === 'ok') {
         location.reload()
+      } else if (status === 'saved') {
+        window.location.replace(url)
       } else {
         showInfoModal(errortext)
       }
