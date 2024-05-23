@@ -83,7 +83,7 @@
       }
 
       &._active {
-        a {
+       & > a {
           color: #B7212E;
         }
 
@@ -135,6 +135,10 @@
         color: #000000;
         transition: all .3s;
         display: block;
+        &._active {
+          color: #B7212E;
+          pointer-events: none;
+        }
         &:not(:last-child) {
           margin-bottom: 27px;
         }
