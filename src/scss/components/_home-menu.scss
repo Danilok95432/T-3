@@ -42,11 +42,7 @@
         @include montserrat-medium;
       }
     }
-
-
   }
-
-
   .mobile-menu {
     display: none;
     @media (max-width: 768px) {
@@ -58,7 +54,7 @@
 
     &__logo {
       background-color: #B7212E;
-      padding: 15px 0;
+      padding: 35px 0 40px;
       display: flex;
       justify-content: center;
 
