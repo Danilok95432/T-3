@@ -1,0 +1,23 @@
+.lk-content {
+  display: flex;
+  gap: 15px;
+
+  .profile-menu {
+    margin-right: 0;
+    padding: 14px 35px 35px 33px;
+    li._active::after {
+      height: 68%;
+    }
+  }
+
+  &__avatar {
+    min-width: 296px;
+    width: 296px;
+    height: 296px;
+    border: 34px solid #D9D8E0;
+    margin-bottom: 15px;
+    img {
+      height: 100%;
+    }
+  }
+}

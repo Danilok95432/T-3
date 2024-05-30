@@ -1,7 +1,7 @@
 .home-header {
 
   &__top {
-    background: url("../img/home-header-bg.jpg") no-repeat;
+    background: url("../img/home-header-bg-2.jpg") no-repeat;
     background-size: cover;
     min-height: 410px;
     display: flex;
@@ -37,7 +37,6 @@
     }
 
 
-
     @media (max-width: 768px) {
       display: none;
     }
@@ -69,6 +68,7 @@
       gap: 10px;
       position: relative;
       transition: all .3s;
+
       svg {
         margin-top: 5px;
         min-width: 12px;
@@ -83,7 +83,7 @@
       }
 
       &._active {
-       & > a {
+        & > a {
           color: #B7212E;
         }
 
@@ -94,6 +94,7 @@
         svg {
           transform: rotate(180deg);
         }
+
         .home-header__nav-dropdown {
           z-index: 20;
           visibility: visible;
@@ -128,6 +129,7 @@
       opacity: 0;
       visibility: hidden;
       transition: all .3s;
+
       a {
         font-size: 15px;
         max-width: 100%;
@@ -135,13 +137,16 @@
         color: #000000;
         transition: all .3s;
         display: block;
+
         &._active {
           color: #B7212E;
           pointer-events: none;
         }
+
         &:not(:last-child) {
           margin-bottom: 27px;
         }
+
         &:hover {
           color: #B7212E;
         }
@@ -151,4 +156,34 @@
 
   }
 
+  // для личного кабинета
+  &._lk {
+    .home-header__top {
+      min-height: 219px;
+      justify-content: flex-start;
+      background-position-y: 42%;
+    }
+
+    .home-menu__controllers {
+      p {
+        color: #FFFFFF;
+        font-size: 14px;
+      }
+    }
+
+    .home-header__title-container {
+      .container {
+        padding: 50px 15px 0 178px;
+      }
+    }
+
+    .home-header__title {
+      font-size: 25px;
+    }
+
+    .home-header__nav {
+      background: #ffffff;
+      margin-bottom: 15px;
+    }
+  }
 }

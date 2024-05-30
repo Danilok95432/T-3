@@ -1,6 +1,12 @@
 .home-page {
   background: #FFFFFF;
 
+  .home-header {
+    &__top {
+      background: url("../img/home-header-bg.jpg") no-repeat;
+      background-size: cover;
+    }
+  }
   .home-btn {
     @include montserrat-medium;
     font-size: 15px;
