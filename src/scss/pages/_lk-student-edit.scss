@@ -1,0 +1,20 @@
+.lk-student-edit-page{
+
+  .main {
+    padding-bottom: 80px;
+    @media (max-width: 768px) {
+      background: #ffffff;
+    }
+  }
+
+  .lk-content {
+    &__inner {
+      h2 {
+        font-size: 24px;
+        @include montserrat-regular;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+}

@@ -2,10 +2,10 @@
 <html lang="ru" class="page">
 
 @include('partials/head.html', {
-'title': 'Объявление'
+'title': 'Редактирование профился'
 })
 
-<body class="page__body lk-student-ad-page">
+<body class="page__body lk-student-edit-page">
 
 <div class="site-container">
   <header class="header home-header _lk">
@@ -2349,14 +2349,14 @@
 
   <main class="main">
 
-    <section class="section lk-student-ad-page__inner">
+    <section class="section lk-student-edit-page__inner">
       <div class="container lk-content">
         <div class="lk-content__menu">
           <div class="lk-content__avatar">
             <img src="./img/profile-student-info-avatar.jpg" alt="аватар профиля">
           </div>
           <ul class="profile-menu">
-            <li class="border-bottom _active">
+            <li class="border-bottom">
               <a href="lk-student-ads.html">
                 <svg width="16" height="19" viewBox="0 0 16 19" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
@@ -2384,7 +2384,7 @@
                 Объявления
               </a>
             </li>
-            <li class="border-bottom">
+            <li class="border-bottom _active">
               <a href="lk-student-profile.html">
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
@@ -2494,44 +2494,10 @@
           </ul>
         </div>
         <div class="lk-content__inner">
-          <div class="lk-student-ad-page__title">
-            <h2>Внимание: мошенники!</h2>
-            <h6>Объявление из раздела «Безопасность»</h6>
-            <p class="public-date">
-              Дата и время публикации: 22.05.2022, 12:25:02
-            </p>
-            <p>
-              Источник объявления: <b>Иванов Иван Иванович, преподаватель</b>
-            </p>
-          </div>
-          <div class="lk-student-ad-page__content">
-            <p>
-              Тут какой-то текст о том, что студентам угрожают мошенники. Это все по телефону, неизвестно кто представляется преподавателем и вымогает деньги у студентов, у которых есть проблемы с учебой.
-            </p>
-            <a href="#">
-              Ссылка на дополнительную информацию
-            </a>
-          </div>
-          <div class="table-footer">
-            <div class="table-navigation">
-              <button class="table-navigation__prev _blocked">
-                <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.58236 1L1 8L7.58236 15" stroke="black" stroke-linecap="round"
-                        stroke-linejoin="round"/>
-                </svg>
-                Назад
-              </button>
-              <button class="table-navigation__next">
-                Далее
-                <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.00358 15L7.58594 8L1.00358 1" stroke="black" stroke-linecap="round"
-                        stroke-linejoin="round"/>
-                </svg>
-              </button>
-            </div>
-          </div>
+          <h2 class="lk-student-edit-page__title">
+            Редактирование профиля
+          </h2>
+
         </div>
       </div>
     </section>
