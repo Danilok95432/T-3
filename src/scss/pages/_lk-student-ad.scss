@@ -1,0 +1,81 @@
+.lk-student-ad-page {
+
+  .main {
+    padding-bottom: 80px;
+    @media (max-width: 768px) {
+      background: #ffffff;
+    }
+  }
+
+  .lk-content {
+    &__inner {
+      h2 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__title {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #9C9C9C;
+    margin-bottom: 28px;
+
+    p, span {
+      font-size: 13px;
+      @include montserrat-light;
+
+      @media (max-width: 768px) {
+        font-size: 15px;
+        line-height: 1.2;
+      }
+
+      b {
+        font-weight: 500;
+      }
+    }
+
+    h6 {
+      @include montserrat-medium;
+      font-size: 13px;
+      margin-bottom: 15px;
+      line-height: 1.2;
+
+      @media (max-width: 768px) {
+        font-size: 15px;
+      }
+    }
+
+    .public-date {
+      margin-bottom: 2px;
+      line-height: 1.1;
+      @media (max-width: 768px) {
+        line-height: 1.2;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__content {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #9C9C9C;
+    margin-bottom: 15px;
+    @media (max-width: 768px) {
+      line-height: 1.35;
+    }
+    p {
+      font-size: 15px;
+      @include montserrat-regular;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      @media (max-width: 768px) {
+        line-height: 1.35;
+      }
+    }
+
+    a {
+      font-size: 15px;
+      @include montserrat-medium;
+      color: #4291FF;
+    }
+  }
+}
