@@ -4,10 +4,7 @@
 
   .profile-menu {
     margin-right: 0;
-    padding: 14px 35px 35px 33px;
-    li._active::after {
-      height: 68%;
-    }
+    padding: 23px 35px 25px 33px;
   }
 
   &__avatar {
@@ -16,6 +13,7 @@
     height: 296px;
     border: 34px solid #D9D8E0;
     margin-bottom: 15px;
+
     img {
       height: 100%;
     }
