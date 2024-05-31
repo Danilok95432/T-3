@@ -117,7 +117,6 @@
                 </svg>
               </button>
               <h2>Данные профиля</h2>
-              <h2 class="isEditableBlock">Редактирование профиля</h2>
               <form class="profile-form" action="" name="profileTeacher">
                 <div class="profile-form__row isEditableBlock">
                   <p class="profile-form__label">Фотография:</p>
@@ -128,7 +127,9 @@
                       data-show-preview="true"
                       data-general-info='{"url": "./data/test.txt", "removeUrl": "./data/test.txt", "width": "110", "height": "110", "acceptedFiles": ".png, .jpeg, .jpg", "type": "teacher-photo", "filesCount": "1", "additional": "доп.контент"}'
                     >
-                      <div class="dz-message">Загрузить фото</div>
+                      <div class="dz-message profile-form__btn-download-photo">
+                        Загрузить фото
+                      </div>
                     </div>
                   </div>
                 </div>
