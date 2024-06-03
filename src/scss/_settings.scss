@@ -17,6 +17,10 @@ body {
   color: $black;
   position: relative;
 
+  &._lk {
+    background: #ffffff;
+  }
+
   &._block {
     overflow: hidden;
   }
@@ -102,6 +106,16 @@ main {
 
 .hidden {
   display: none !important;
+}
+
+// стили для таблицы vikon
+@media (max-width: 1280px) {
+  .container-thead {
+    display: none !important;
+  }
+  .vikon-responsive-table {
+    overflow-x: auto;
+  }
 }
 
 .dz-details,

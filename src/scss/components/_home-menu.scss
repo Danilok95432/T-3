@@ -43,15 +43,12 @@
       }
     }
   }
+
   .mobile-menu {
     display: none;
     @media (max-width: 768px) {
       display: block;
     }
-  }
-
-  .mobile-menu {
-
     &__logo {
       background-color: #B7212E;
       padding: 35px 0 40px;
