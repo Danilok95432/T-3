@@ -2,21 +2,34 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+
   &__item {
     font-size: 15px;
     @include montserrat-medium;
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 45px;
     padding: 0 24px;
+
+    @media (max-width: 768px) {
+      height: 40px;
+    }
+
     &._submit {
       color: #FFFFFF;
       background: #B7212E;
+      gap: 5px;
+
+      @media (max-width: 768px) {
+        span {
+          display: none;
+        }
+      }
     }
+
     &._cancel {
       color: #000000;
       background: #D9D8E0;
     }
   }
-
 }
