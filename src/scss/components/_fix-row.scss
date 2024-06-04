@@ -17,6 +17,14 @@
     margin: 0;
   }
 
+  &._mobile {
+    display: none;
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+
+
   &__title {
     min-width: 192px;
     width: 192px;

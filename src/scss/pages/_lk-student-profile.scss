@@ -1,50 +1,76 @@
 .lk-student-profile-page{
-
-  .main {
-    padding-bottom: 80px;
-    @media (max-width: 768px) {
-      background: #ffffff;
-    }
-  }
-
   .lk-content {
-    &__inner {
-      h2 {
-        font-size: 24px;
-        @include montserrat-regular;
-        margin-bottom: 0;
+    padding: 41px 0 115px;
+    h2 {
+      font-size: 24px;
+      @include montserrat-regular;
+      margin-bottom: 23px;
+      @media (max-width: 768px) {
+        margin-bottom: 30px;
       }
     }
+
   }
 
-  &__title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 22px;
-    a {
-      width: 23px;
-      height: 23px;
-    }
-  }
 
   &__main-info {
-    padding-bottom: 12px;
-    border-bottom: 1px solid #9C9C9C;
-    margin-bottom: 35px;
+    margin-bottom: 38px;
+    position: relative;
+    padding-right: 250px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 33px;
+    }
+
+    @media (max-width: 1280px) {
+      padding-right: 0;
+      display: flex;
+      gap: 70px;
+      align-items: center;
+    }
+
     h3 {
       @include montserrat-semibold;
       font-size: 24px;
-      margin-bottom: 4px;
+      margin-bottom: 9px;
+      @media (max-width: 768px) {
+        span:not(._name) {
+          display: none;
+        }
+      }
     }
     p {
       @include montserrat-light;
       font-size: 15px;
+      @media (max-width: 768px) {
+        font-size: 13px;
+        line-height: 1.2;
+      }
+    }
+
+    ._avatar {
+      position: absolute;
+      right: 0;
+      top: -50px;
+      min-width: 220px;
+      width: 220px;
+      height: 220px;
+      @media (max-width: 1280px) {
+        position: static;
+        min-width: 65px;
+        width: 65px;
+        height: 65px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
   .personal-data-list {
+
+    max-width: 860px;
 
     .fix-row {
       &__desc._icon {
@@ -58,6 +84,9 @@
     li {
       &:not(:last-child) {
         margin-bottom: 38px;
+        @media  (max-width: 768px) {
+          margin-bottom: 33px;
+        }
       }
     }
 
