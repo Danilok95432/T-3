@@ -1,6 +1,9 @@
 .lk-student-ads-page {
   .lk-content {
     padding: 45px 0 450px;
+    @media (max-width: 1024px) {
+      padding: 20px 0 200px;
+    }
     h2 {
       margin-bottom: 30px;
     }
