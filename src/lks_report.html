@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ru" class="page">
-  @include('partials/head.html', { 'title': 'Добавить отчет' })
+  @include('partials/head.html', { 'title': 'Отчет учебной деятельности' })
 
-  <body class="page__body lk-add-report-page _lk">
+  <body class="page__body lk-report-page _lk">
     <div class="site-container">
       <header class="lk-header">
         <div class="lk-header__top">
@@ -3425,132 +3425,93 @@
 
       <main class="main">
         <div class="modal-overlay"></div>
-        <section class="section lk-add-report-page__inner lk-content">
+        <section class="section lk-report-page__inner lk-content">
           <div class="container">
-            <h2 class="lk-add-report-page__title">
-              Добавить отчет об учебной деятельности
-            </h2>
-
-            <form action="#">
-              <div class="fix-row">
-                <h5 class="fix-row__title">Дисциплина:</h5>
-                <input
-                  class="main-input"
-                  value="Длинное название учебной дисциплины"
-                  type="text"
-                  name="subject"
+            <a class="back-button" href="#">
+              <svg
+                width="9"
+                height="16"
+                viewBox="0 0 9 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.58236 1L1 8L7.58236 15"
+                  stroke="black"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 />
+              </svg>
+              <span>Назад</span>
+            </a>
+
+            <h3>Отчет учебной деятельности</h3>
+
+            <h4>Эссе, длинное название отчёта</h4>
+
+            <div class="report-data">
+              <div class="report-data__item">
+                <p class="report-data__item-title">Отчет создан:</p>
+                <p class="report-data__item-value">30.11.2023, 10:09:32</p>
               </div>
 
-              <div class="fix-row">
-                <h5 class="fix-row__title">Выбор вида отчета:</h5>
+              <div class="report-data__item">
+                <p class="report-data__item-title">Название отчета:</p>
+                <p class="report-data__item-value">Длинное название отчета</p>
+              </div>
 
-                <select class="main-input select" name="work">
-                  <option value="1">
-                    ВКР (Выпускная квалификационная работа)
-                  </option>
-                  <option value="2">
-                    ВКР (Выпускная квалификационная работа)
-                  </option>
-                </select>
+              <div class="report-data__item">
+                <p class="report-data__item-title">Дисциплина:</p>
+                <p class="report-data__item-value">История</p>
+              </div>
 
-                <p class="fix-row__mark">
-                  Требуется выбрать вид отчёта из списка
+              <div class="report-data__item">
+                <p class="report-data__item-title">Вид отчета:</p>
+                <p class="report-data__item-value">Эссе</p>
+              </div>
+
+              <div class="report-data__item">
+                <p class="report-data__item-title">Преподаватель:</p>
+                <p class="report-data__item-value">Иванов Иван Иванович</p>
+              </div>
+
+              <div class="report-data__item">
+                <p class="report-data__item-title">Кафедра:</p>
+                <p class="report-data__item-value">
+                  <a href="#">Кафедра Художественной Керамики</a>
                 </p>
               </div>
 
-              <div class="fix-row">
-                <h5 class="fix-row__title">Название отчёта:</h5>
-                <input
-                  class="main-input"
-                  value="Длинное название учебной дисциплины"
-                  type="text"
-                  name="subject"
-                />
-                <p class="fix-row__mark">
-                  Название должно быть не очень длинным, ёмким и отражающим суть
-                  и смысл.
+              <div class="report-data__item">
+                <p class="report-data__item-title">Приложение:</p>
+                <p class="report-data__item-value">
+                  <a href="#">Название документа.docx,  Картинка.png</a>
                 </p>
               </div>
 
-              <div class="fix-row">
-                <h5 class="fix-row__title">Преподаватель:</h5>
-                <input
-                  class="main-input"
-                  placeholder="Начните вводить фамилию..."
-                  type="text"
-                  name="teacher"
-                />
-                <p class="fix-row__mark">
-                  Здесь нужно указать преподавателя, который получит отчёт и
-                  сможет его оценить.
+              <div class="report-data__item">
+                <p class="report-data__item-title">Описание работы:</p>
+                <p class="report-data__item-value">
+                  Эссе тестовое полностью сдано
                 </p>
               </div>
 
-              <div class="fix-row">
-                <h5 class="fix-row__title">Кафедра:</h5>
-                <input
-                  class="main-input"
-                  placeholder="Начните вводить название..."
-                  type="text"
-                  name="department"
-                />
-                <p class="fix-row__mark">
-                  Здесь нужно указать кафедру, на которой Вы сдаете работу.
+              <div class="report-data__item">
+                <p class="report-data__item-title">Оценка:</p>
+                <p class="report-data__item-value">
+                  <span class="mark">4</span>
+                  (пятибалльная система)
                 </p>
               </div>
 
-              <div class="fix-row">
-                <h5 class="fix-row__title">Описание:</h5>
-                <textarea
-                  class="main-input textarea"
-                  name="desc"
-                  id="desc"
-                ></textarea>
-              </div>
-
-              <div class="fix-row">
-                <h5 class="fix-row__title">Файл работы:</h5>
-                <div class="general-dropzone-wrapper">
-                  <div
-                    class="dropzone general-dropzone"
-                    id="work-file"
-                    data-show-preview="true"
-                    data-general-info='{"url": "./data/test.txt", "removeUrl": "./data/test.txt", "width": "110", "height": "110", "acceptedFiles": ".png, .gif, .jpg, .doc, .docx, .pdf", "type": "work-file", "filesCount": "5", "additional": "доп.контент"}'
-                  >
-                    <div class="download-button-container">
-                      <div class="dz-message profile-form__btn-download-photo">
-                        Добавить файл
-                      </div>
-
-                      <p class="dropzone-mark">
-                        Формат файла - JPG, PNG, GIF, DOC, DOCX, PDF.
-                        Максимальный размер: 2.5 Мб.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="fix-row">
-                <h5 class="fix-row__title"></h5>
-                <div class="form-controllers">
-                  <button class="form-controllers__item _submit" type="submit">
-                    Сохранить <span> изменения</span>
-                  </button>
-                  <a
-                    class="form-controllers__item _cancel"
-                    href="lk-student-profile.html"
-                  >
-                    Отменить
-                  </a>
-                </div>
-
-                <p class="time-up-mark">
-                  Время, отведенное на сдачу задания, закончилось Обратитесь к
-                  преподавателю.
+              <div class="report-data__item">
+                <p class="report-data__item-title">Комментарий:</p>
+                <p class="report-data__item-value">
+                  Какой-то комментарий в одну или две строки. Можно вставить
+                  любой текст.
                 </p>
               </div>
-            </form>
+            </div>
           </div>
         </section>
         @include('partials/big-img-modal.html')

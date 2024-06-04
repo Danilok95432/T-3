@@ -1,0 +1,58 @@
+.lk-report-page {
+
+    .back-button {
+        margin-bottom: 40px;
+        width: max-content;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        border: 1px solid #959595;
+        border-radius: 3px;
+        padding: 4px 13px;
+        color: #000000;
+    }
+
+    h3 {
+        margin-bottom: 25px;
+        @include montserrat-regular;
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+
+    h4 {
+        margin-bottom: 23px;
+        @include montserrat-semibold;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+    }
+
+    .report-data {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &__item {
+            display: flex;
+
+            @media (max-width: 810px) {
+                flex-direction: column;
+            }
+
+            &-title {
+                width: 170px;
+            }
+
+            &-value {
+                .mark {
+                    font-weight: 600;
+                }
+
+                a {
+                    color: #B7212E;
+                }
+            }
+        }
+    }
+}
