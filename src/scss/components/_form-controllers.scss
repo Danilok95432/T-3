@@ -1,18 +1,23 @@
 .form-controllers {
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+      justify-content: space-between;
+  }
 
   &__item {
     font-size: 15px;
     @include montserrat-medium;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 45px;
     padding: 0 24px;
 
     @media (max-width: 768px) {
       height: 40px;
+      width: 48%;
     }
 
     &._submit {
