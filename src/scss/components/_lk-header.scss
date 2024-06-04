@@ -3,7 +3,7 @@
     display: none;
     background: #FFFFFF;
     padding: 20px 15px;
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       display: flex;
     }
 
@@ -22,16 +22,18 @@
 
   .lk-menu {
     background: rgba(#000000, 0.4);
+
     &__container-lg {
       display: flex;
       padding: 13px 15px 13px 220px;
       justify-content: space-between;
       gap: 20px;
       position: relative;
-      @media (max-width: 768px) {
+      @media (max-width: 1024px) {
         display: none;
       }
     }
+
     &__logo {
       position: absolute;
       left: 15px;
@@ -43,6 +45,7 @@
       display: flex;
       gap: 20px;
       align-items: center;
+
       a {
         color: #ffffff;
         font-size: 15px;
@@ -55,9 +58,10 @@
 
     .mobile-menu {
       display: none;
-      @media (max-width: 768px) {
+      @media (max-width: 1024px) {
         display: block;
       }
+
       &__logo {
         background-color: #B7212E;
         padding: 35px 0 40px;
@@ -102,16 +106,15 @@
         color: #000000;
       }
 
+      &__blind-version {
+        z-index: 25;
+        font-size: 12px;
+      }
+
       &__top {
         display: flex;
         align-items: center;
         gap: 24px;
-        margin-bottom: 6px;
-
-        a {
-          z-index: 25;
-          font-size: 12px;
-        }
       }
 
       &__controllers {
@@ -133,6 +136,14 @@
 
       }
 
+
+      &__burger-menu {
+        a {
+          font-size: 20px;
+          @include montserrat-semibold;
+        }
+      }
+
     }
 
   }
@@ -144,14 +155,14 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       background: none;
       min-height: auto;
     }
   }
 
   &__title-container {
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       display: none;
     }
 
@@ -171,6 +182,10 @@
     background: #ffffff;
     padding: 31px 0;
     border-bottom: 1px solid #a2a2a2;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+
     ul {
       display: flex;
       align-items: center;
@@ -237,6 +252,8 @@
           display: none;
         }
       }
+
+
     }
   }
 }
