@@ -24,6 +24,14 @@
     }
   }
 
+  &._textarea {
+    .fix-row__title {
+      padding-top: 7px;
+      @media (max-width: 768px) {
+        padding-top: 0;
+      }
+    }
+  }
 
   &__title {
     min-width: 192px;
@@ -55,6 +63,21 @@
       display: flex;
       gap: 8px;
       align-items: center;
+    }
+  }
+
+  &__file-desc {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    p {
+      font-size: 12px;
+      line-height: 1.2;
+      @include montserrat-regular
     }
   }
 
