@@ -1,0 +1,81 @@
+.lks-complete-revision-page {
+
+  .main-textarea {
+    max-width: 660px;
+    height: 215px;
+    border-radius: 0;
+    @media (max-width: 768px) {
+      height: 272px;
+    }
+  }
+
+  .lk-content {
+    padding: 46px 0 165px;
+
+    @media (max-width: 768px) {
+      padding: 36px 0 120px;
+    }
+
+    h2 {
+      margin-bottom: 24px;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 13px;
+      }
+    }
+
+  }
+
+  .fix-row {
+    align-items: center;
+    @media (max-width: 768px) {
+      align-items: flex-start;
+      &:not(:last-child) {
+        margin-bottom: 23px;
+      }
+    }
+    &._textarea {
+      align-items: flex-start;
+      .fix-row__title {
+        @media (max-width: 768px) {
+          font-size: 12px;
+          @include montserrat-medium
+        }
+      }
+    }
+
+    &._file {
+      min-height: 45px;
+      margin-bottom: 60px;
+      @media (max-width: 768px) {
+        margin-bottom: 57px;
+      }
+
+      .fix-row__title {
+        @media (max-width: 768px) {
+          font-size: 12px;
+          @include montserrat-medium
+        }
+      }
+    }
+
+    &__title {
+      min-width: 212px;
+      width: 212px;
+    }
+
+
+  }
+
+  &__desc {
+    margin-bottom: 36px;
+    font-size: 18px;
+    line-height: 1.3;
+    @include montserrat-semibold;
+    @media (max-width: 768px) {
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+  }
+}

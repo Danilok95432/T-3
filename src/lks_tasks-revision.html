@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ru" class="page">
-  @include('partials/head.html', { 'title': 'Отчеты учебной деятельности' })
+  @include('partials/head.html', { 'title': 'Задания на доработку' })
 
-  <body class="page__body lks-reports-page _lk">
+  <body class="page__body lks-tasks-revision-page _lk">
     <div class="site-container">
       <header class="lk-header">
         <div class="lk-header__top">
@@ -3027,12 +3027,12 @@
       </header>
 
       <main class="main">
-        <section class="section lks-reports-page__inner lk-content">
+        <section class="section lks-tasks-revision-page__inner lk-content">
           <div class="container">
-            <div class="lks-reports-page__title">
-              <h2>Отчеты учебной деятельности</h2>
-              <a class="main-button _red" href="#">Добавить отчет</a>
-            </div>
+            <h2>Задания на доработку</h2>
+            <p class="lks-tasks-revision-page__desc">
+              Это — список заданий, возвращенных преподавателем на доработку
+            </p>
             <div class="mobile-filtration">
               <form class="mobile-filter-form" action="#">
                 <button class="mobile-filter-form__close-btn" type="button">
@@ -3129,17 +3129,6 @@
                     <option value="0">Вид отчета</option>
                     <option value="1" selected>Экзамен</option>
                     <option value="2">Срез</option>
-                  </select>
-                </div>
-                <div class="input-wrapper">
-                  <label>Оценки</label>
-                  <select class="main-input _mobile-filter" name="grade">
-                    <option value="0">Все</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
                   </select>
                 </div>
                 <div class="input-wrapper">
@@ -3369,7 +3358,6 @@
             <div class="flex-table">
               <div class="flex-table__row flex-table__title-row">
                 <p class="flex-table__cell">№</p>
-                <p class="flex-table__cell">Дата отчёта</p>
                 <div class="flex-table__cell">
                   <label class="mobile-label">Название</label>
                   <input
@@ -3379,6 +3367,7 @@
                     type="text"
                   />
                 </div>
+                <p class="flex-table__cell">Время выдачи / Срок исполнения</p>
                 <div class="flex-table__cell">
                   <label class="mobile-label">Дисциплина</label>
                   <input
@@ -3394,17 +3383,6 @@
                     <option value="0">Вид отчета</option>
                     <option value="1">Экзамен</option>
                     <option value="2">Срез</option>
-                  </select>
-                </div>
-                <div class="flex-table__cell">
-                  <label class="mobile-label">Оценка</label>
-                  <select class="main-input _lk-filter" name="grade">
-                    <option value="0">Все</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
                   </select>
                 </div>
                 <div class="flex-table__cell">
@@ -3428,26 +3406,30 @@
               </div>
               <div class="flex-table__row">
                 <p class="flex-table__cell">1</p>
-                <p class="flex-table__cell">22.05.2024</p>
                 <p class="flex-table__cell">
                   <a href="#">Экзамен по живописи</a>
                 </p>
+                <p class="flex-table__cell">
+                  <span>22.05.2024 10:41:00</span> /
+                  <span>27.05.2024 12:00:00</span>
+                </p>
                 <p class="flex-table__cell">Первая Дисциплина</p>
                 <p class="flex-table__cell">Экзамен</p>
-                <p class="flex-table__cell">5</p>
-                <p class="flex-table__cell">Иванов Е. Е.</p>
+                <p class="flex-table__cell">Иванов Евгений Евгеньевич</p>
                 <p class="flex-table__cell">ДСТ</p>
               </div>
               <div class="flex-table__row">
                 <p class="flex-table__cell">2</p>
-                <p class="flex-table__cell">22.05.2024</p>
                 <p class="flex-table__cell">
                   <a href="#">Контрольный срез (графика)</a>
                 </p>
+                <p class="flex-table__cell">
+                  <span>22.05.2024 10:41:00</span> /
+                  <span>27.05.2024 12:00:00</span>
+                </p>
                 <p class="flex-table__cell">Вторая Дисциплина</p>
                 <p class="flex-table__cell">Срез</p>
-                <p class="flex-table__cell">5</p>
-                <p class="flex-table__cell">Трифонов А. А.</p>
+                <p class="flex-table__cell">Трифониади Александр Алексеевич</p>
                 <p class="flex-table__cell">ДПиНП</p>
               </div>
             </div>

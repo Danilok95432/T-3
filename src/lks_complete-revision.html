@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ru" class="page">
-  @include('partials/head.html', { 'title': 'Отчеты учебной деятельности' })
+  @include('partials/head.html', { 'title': 'Выполнить доработку задания' })
 
-  <body class="page__body lks-reports-page _lk">
+  <body class="page__body lks-complete-revision-page _lk">
     <div class="site-container">
       <header class="lk-header">
         <div class="lk-header__top">
@@ -3027,480 +3027,101 @@
       </header>
 
       <main class="main">
-        <section class="section lks-reports-page__inner lk-content">
+        <section class="section lks-complete-revision-page__inner lk-content">
           <div class="container">
-            <div class="lks-reports-page__title">
-              <h2>Отчеты учебной деятельности</h2>
-              <a class="main-button _red" href="#">Добавить отчет</a>
-            </div>
-            <div class="mobile-filtration">
-              <form class="mobile-filter-form" action="#">
-                <button class="mobile-filter-form__close-btn" type="button">
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 15 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M14.7328 1.54988L1.54987 14.7328C1.19358 15.0891 0.623515 15.0891 0.267221 14.7328C-0.0890736 14.3765 -0.0890736 13.8064 0.267221 13.4501L13.4501 0.267221C13.8064 -0.0890736 14.3765 -0.0890736 14.7328 0.267221C15.0891 0.623515 15.0891 1.19359 14.7328 1.54988Z"
-                      fill="black"
-                    />
-                    <path
-                      d="M0.266511 1.54988L13.4494 14.7328C13.8057 15.0891 14.3758 15.0891 14.7321 14.7328C15.0884 14.3765 15.0884 13.8064 14.7321 13.4501L1.54916 0.267221C1.19287 -0.0890736 0.622806 -0.0890736 0.266511 0.267221C-0.0185245 0.623515 -0.0185245 1.19359 0.266511 1.54988Z"
-                      fill="black"
-                    />
-                  </svg>
-                </button>
-                <h5>Фильтры</h5>
-                <div class="input-wrapper">
-                  <label>Дисциплина</label>
-                  <input class="main-input" type="text" name="subject" />
-                </div>
-                <div class="drop-list" data-preview-count="6">
-                  <div class="drop-list__content">
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="subject_1" />
-                        <span>Первая дисциплина</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="subject_2" />
-                        <span>Вторая дисциплина</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="subject_3" />
-                        <span>Третья дисциплина</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="subject_4" />
-                        <span>Четвертая дисциплина</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="subject_5" />
-                        <span>Пятая дисциплина</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="subject_6" />
-                        <span>Шестая дисциплина</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="subject_7" />
-                        <span>Седьмая дисциплина</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="subject_8" />
-                        <span>Восьмая дисциплина</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="subject_9" />
-                        <span>Девятая дисциплина</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="subject_10" />
-                        <span>Десятая дисциплина</span>
-                      </label>
-                    </div>
-                  </div>
-                  <button class="drop-list__toggle-btn"></button>
-                </div>
-                <div class="input-wrapper">
-                  <label>Вид отчета</label>
-                  <select class="main-input _mobile-filter" name="type_report">
-                    <option value="0">Вид отчета</option>
-                    <option value="1" selected>Экзамен</option>
-                    <option value="2">Срез</option>
-                  </select>
-                </div>
-                <div class="input-wrapper">
-                  <label>Оценки</label>
-                  <select class="main-input _mobile-filter" name="grade">
-                    <option value="0">Все</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                </div>
-                <div class="input-wrapper">
-                  <label>Преподаватель</label>
-                  <input class="main-input" type="text" name="teacher" />
-                </div>
-                <div class="drop-list" data-preview-count="3">
-                  <div class="drop-list__content">
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="teacher_1" />
-                        <span>Иванов Е. Е.</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="teacher_2" />
-                        <span>Трифонов А. А.</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="teacher_3" />
-                        <span>Петров А. А.</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="teacher_4" />
-                        <span>Александров А. А.</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="teacher_5" />
-                        <span>Васильев А. А.</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="teacher_6" />
-                        <span>Никитин А. А.</span>
-                      </label>
-                    </div>
-                  </div>
-                  <button class="drop-list__toggle-btn"></button>
-                </div>
-                <div class="input-wrapper">
-                  <label>Кафедра</label>
-                  <input class="main-input" type="text" name="department" />
-                </div>
-                <div class="drop-list" data-preview-count="6">
-                  <div class="drop-list__content">
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="department_1" />
-                        <span>ДСТ</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="department_2" />
-                        <span>ДПиНП</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="department_3" />
-                        <span>ВАПЧ</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="department_4" />
-                        <span>СДМЛТ</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="department_5" />
-                        <span>СПТДЛ</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="department_6" />
-                        <span>ДЛА</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="department_7" />
-                        <span>СДМЛТ1</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="department_8" />
-                        <span>ДЛА1</span>
-                      </label>
-                    </div>
-                    <div class="drop-list__item">
-                      <label class="main-checkbox">
-                        <input type="checkbox" name="department_9" />
-                        <span>ВАПЧ1</span>
-                      </label>
-                    </div>
-                  </div>
-                  <button class="drop-list__toggle-btn"></button>
-                </div>
-                <button
-                  class="main-button mobile-filter-form__submit-btn _red"
-                  type="submit"
+            <h2>Выполнить доработку задания (подать отчет)</h2>
+            <p class="lks-complete-revision-page__desc">
+              Выполнение задания «Какое-то название задания», доработка
+            </p>
+            <form action="#">
+              <div class="fix-row">
+                <h5 class="fix-row__title">Кафедра:</h5>
+                <a class="fix-row__desc" href="#"
+                  >Кафедра Художественной Керамики</a
                 >
-                  Показать 9 отчетов
-                </button>
-              </form>
-              <div class="mobile-filtration__controllers">
-                <input
-                  class="main-input mobile-filtration__main-search-input"
-                  type="text"
-                  placeholder="Название"
-                  name="title"
-                />
-                <button class="mobile-filtration__filter-btn" type="button">
-                  <span class="_filter-counter">2</span>
-                  <svg
-                    width="21"
-                    height="18"
-                    viewBox="0 0 21 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.50977 7C8.16662 7 9.50977 5.65685 9.50977 4C9.50977 2.34315 8.16662 1 6.50977 1C4.85291 1 3.50977 2.34315 3.50977 4C3.50977 5.65685 4.85291 7 6.50977 7Z"
-                      stroke="black"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M0 4H3.34"
-                      stroke="black"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M10 4H20.35"
-                      stroke="black"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M13.8398 17C15.4967 17 16.8398 15.6569 16.8398 14C16.8398 12.3431 15.4967 11 13.8398 11C12.183 11 10.8398 12.3431 10.8398 14C10.8398 15.6569 12.183 17 13.8398 17Z"
-                      stroke="black"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M20.35 14H17"
-                      stroke="black"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M10.35 14H0"
-                      stroke="black"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                    />
-                  </svg>
-                </button>
               </div>
-              <ul class="mobile-filtration__filter-list">
-                <li>
-                  <a href="#">Сбросить всё</a>
-                </li>
-                <li>
-                  Экзамен
-                  <a class="_remove-filter" href="#">
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="11" cy="11" r="11" fill="#C2C2C2" />
-                      <path
-                        d="M15.8987 6.97493L6.97493 15.8987C6.73374 16.1399 6.34785 16.1399 6.10667 15.8987C5.86549 15.6576 5.86549 15.2717 6.10667 15.0305L15.0305 6.10667C15.2717 5.86549 15.6575 5.86549 15.8987 6.10667C16.1399 6.34785 16.1399 6.73375 15.8987 6.97493Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                      <path
-                        d="M6.10369 6.97493L15.0275 15.8987C15.2687 16.1399 15.6546 16.1399 15.8958 15.8987C16.1369 15.6576 16.1369 15.2717 15.8958 15.0305L6.97195 6.10667C6.73077 5.86549 6.34488 5.86549 6.10369 6.10667C5.91075 6.34785 5.91075 6.73375 6.10369 6.97493Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  Александров А. А.
-                  <a class="_remove-filter" href="#">
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="11" cy="11" r="11" fill="#C2C2C2" />
-                      <path
-                        d="M15.8987 6.97493L6.97493 15.8987C6.73374 16.1399 6.34785 16.1399 6.10667 15.8987C5.86549 15.6576 5.86549 15.2717 6.10667 15.0305L15.0305 6.10667C15.2717 5.86549 15.6575 5.86549 15.8987 6.10667C16.1399 6.34785 16.1399 6.73375 15.8987 6.97493Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                      <path
-                        d="M6.10369 6.97493L15.0275 15.8987C15.2687 16.1399 15.6546 16.1399 15.8958 15.8987C16.1369 15.6576 16.1369 15.2717 15.8958 15.0305L6.97195 6.10667C6.73077 5.86549 6.34488 5.86549 6.10369 6.10667C5.91075 6.34785 5.91075 6.73375 6.10369 6.97493Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="flex-table">
-              <div class="flex-table__row flex-table__title-row">
-                <p class="flex-table__cell">№</p>
-                <p class="flex-table__cell">Дата отчёта</p>
-                <div class="flex-table__cell">
-                  <label class="mobile-label">Название</label>
-                  <input
-                    class="main-input _lk-filter"
-                    name="title"
-                    placeholder="Название"
-                    type="text"
-                  />
-                </div>
-                <div class="flex-table__cell">
-                  <label class="mobile-label">Дисциплина</label>
-                  <input
-                    class="main-input _lk-filter"
-                    name="subject"
-                    placeholder="Дисциплина"
-                    type="text"
-                  />
-                </div>
-                <div class="flex-table__cell">
-                  <label class="mobile-label">Вид отчета</label>
-                  <select class="main-input _lk-filter" name="type_report">
-                    <option value="0">Вид отчета</option>
-                    <option value="1">Экзамен</option>
-                    <option value="2">Срез</option>
-                  </select>
-                </div>
-                <div class="flex-table__cell">
-                  <label class="mobile-label">Оценка</label>
-                  <select class="main-input _lk-filter" name="grade">
-                    <option value="0">Все</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                </div>
-                <div class="flex-table__cell">
-                  <label class="mobile-label">Преподаватель</label>
-                  <input
-                    class="main-input _lk-filter"
-                    name="teacher"
-                    placeholder="Преподаватель"
-                    type="text"
-                  />
-                </div>
-                <div class="flex-table__cell">
-                  <label class="mobile-label">Кафедра</label>
-                  <input
-                    class="main-input _lk-filter"
-                    name="department"
-                    placeholder="Кафедра"
-                    type="text"
-                  />
-                </div>
+              <div class="fix-row">
+                <h5 class="fix-row__title">Дисциплина:</h5>
+                <p class="fix-row__desc">История</p>
               </div>
-              <div class="flex-table__row">
-                <p class="flex-table__cell">1</p>
-                <p class="flex-table__cell">22.05.2024</p>
-                <p class="flex-table__cell">
-                  <a href="#">Экзамен по живописи</a>
-                </p>
-                <p class="flex-table__cell">Первая Дисциплина</p>
-                <p class="flex-table__cell">Экзамен</p>
-                <p class="flex-table__cell">5</p>
-                <p class="flex-table__cell">Иванов Е. Е.</p>
-                <p class="flex-table__cell">ДСТ</p>
+              <div class="fix-row">
+                <h5 class="fix-row__title">Преподаватель:</h5>
+                <p class="fix-row__desc">Иванов Иван Иванович</p>
               </div>
-              <div class="flex-table__row">
-                <p class="flex-table__cell">2</p>
-                <p class="flex-table__cell">22.05.2024</p>
-                <p class="flex-table__cell">
-                  <a href="#">Контрольный срез (графика)</a>
-                </p>
-                <p class="flex-table__cell">Вторая Дисциплина</p>
-                <p class="flex-table__cell">Срез</p>
-                <p class="flex-table__cell">5</p>
-                <p class="flex-table__cell">Трифонов А. А.</p>
-                <p class="flex-table__cell">ДПиНП</p>
+              <div class="fix-row">
+                <h5 class="fix-row__title">Вид отчета:</h5>
+                <p class="fix-row__desc">Реферат</p>
               </div>
-            </div>
-            <div class="table-footer">
-              <div class="table-navigation">
-                <button class="table-navigation__prev _blocked">
-                  <svg
-                    width="9"
-                    height="16"
-                    viewBox="0 0 9 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M7.58236 1L1 8L7.58236 15"
-                      stroke="black"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  Назад
-                </button>
-                <button class="table-navigation__next">
-                  Далее
-                  <svg
-                    width="9"
-                    height="16"
-                    viewBox="0 0 9 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.00358 15L7.58594 8L1.00358 1"
-                      stroke="black"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
+              <div class="fix-row">
+                <h5 class="fix-row__title">Название отчета:</h5>
+                <p class="fix-row__desc">Какое-то название отчета, доработка</p>
               </div>
+              <div class="fix-row">
+                <h5 class="fix-row__title">Задание создано:</h5>
+                <p class="fix-row__desc">30.11.2023, 10:09:32</p>
+              </div>
+              <div class="fix-row">
+                <h5 class="fix-row__title">Отправлено на доработку:</h5>
+                <p class="fix-row__desc">30.11.2023, 10:09:32</p>
+              </div>
+              <div class="fix-row _textarea">
+                <h5 class="fix-row__title">Описание:</h5>
+                <textarea class="main-textarea" name="revision_desc"></textarea>
+              </div>
+              <div class="fix-row _file">
+                <h5 class="fix-row__title">Файл работы:</h5>
+                <div class="fix-row__file-desc">
+                  <div class="file-upload">
+                    <div class="file-upload__info">
+                      <button class="file-upload__delete-btn" type="button">
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 15 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="7.5" cy="7.5" r="7.5" fill="#A5AFBB" />
+                          <path
+                            d="M7.5318 8.33864C7.16028 8.71189 6.71447 9.15978 6.34296 9.53303C5.82283 10.0556 5.37701 10.5035 4.85688 11.026C4.55967 11.3247 4.18809 11.3247 3.96518 11.026C3.74227 10.8021 3.74227 10.3542 3.96518 10.1303C4.78252 9.30912 5.5999 8.48792 6.41724 7.66677C6.49155 7.59212 6.49151 7.59215 6.56581 7.5175C6.49151 7.44285 6.49155 7.4428 6.41724 7.36815C5.5999 6.54699 4.78252 5.72588 3.96518 4.90473C3.59366 4.53147 3.74232 4.0089 4.11384 3.8596C4.33675 3.78495 4.63397 3.78491 4.85688 4.00886C5.67422 4.83002 6.49151 5.65122 7.30885 6.47237C7.38315 6.54702 7.38321 6.54699 7.45751 6.62164C7.53182 6.54699 7.53178 6.54702 7.60608 6.47237C8.42343 5.65122 9.24078 4.83004 10.1324 3.93423C10.5039 3.63563 11.0241 3.71033 11.1727 4.08359C11.247 4.38219 11.247 4.60614 11.024 4.83009C10.2067 5.65125 9.38941 6.47235 8.57207 7.29351C8.49777 7.36816 8.49771 7.36822 8.42341 7.44287C8.49771 7.51752 8.49777 7.51748 8.57207 7.59213C9.38941 8.41329 10.2067 9.23449 11.024 10.0556C11.247 10.2796 11.3213 10.5782 11.1727 10.8022C11.0241 11.0261 10.8012 11.1753 10.5039 11.1007C10.3553 11.026 10.2067 10.9514 10.1324 10.8768C9.31509 10.0556 8.49771 9.23443 7.68037 8.41327C7.60607 8.48792 7.5318 8.41329 7.5318 8.33864Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </button>
+                      <a href="#" download="" class="file-upload__name"></a>
+                    </div>
 
-              <div class="content-count">
-                <span>Номеров на странице</span>
-                <div class="input-column-wrapper">
-                  <select class="main-input" name="content-count">
-                    <option value="1">10</option>
-                    <option value="2">25</option>
-                    <option value="3">50</option>
-                    <option value="3">100</option>
-                  </select>
+                    <label class="main-button _red file-upload__add-label">
+                      <input
+                        type="file"
+                        class="file-upload__add main-input"
+                        name="revision_file"
+                        accept=".jpg,.jpeg,.png,.gif,.doc,.docx,.pdf"
+                      />
+                      Добавить файл
+                    </label>
+                  </div>
+                  <div class="_file-info">
+                    <p>Формат файла - JPG, PNG, GIF, DOC, DOCX, PDF.</p>
+                    <p>Максимальный размер: 2.5 Мб.</p>
+                  </div>
                 </div>
               </div>
-            </div>
+              <div class="fix-row">
+                <h5 class="fix-row__title"></h5>
+                <div class="form-controllers">
+                  <button class="form-controllers__item _submit" type="submit">
+                    Сохранить <span> изменения</span>
+                  </button>
+                  <a
+                    class="form-controllers__item _cancel"
+                    href="lks_tasks-revision.html"
+                  >
+                    Отменить
+                  </a>
+                </div>
+              </div>
+            </form>
           </div>
         </section>
       </main>
