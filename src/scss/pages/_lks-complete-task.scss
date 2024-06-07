@@ -1,11 +1,26 @@
-.lks-complete-revision-page {
+.lks-complete-task-page {
+
+  .main-input {
+    min-width: 660px;
+    width: 660px;
+
+    @media (max-width: 1280px) {
+      min-width: 400px;
+      width: 400px;
+    }
+
+  }
 
   .main-textarea {
     max-width: 660px;
     height: 215px;
     border-radius: 0;
+    @media (max-width: 1280px) {
+      max-width: 400px;
+    }
     @media (max-width: 768px) {
       height: 272px;
+      max-width: 100%;
     }
   }
 
@@ -28,18 +43,33 @@
   }
 
   .fix-row {
-    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+
     &:last-child {
       margin-top: 60px;
     }
+
+    align-items: center;
     @media (max-width: 768px) {
       align-items: flex-start;
       &:not(:last-child) {
         margin-bottom: 23px;
       }
     }
+
     &._textarea {
       align-items: flex-start;
+    }
+
+    &._file {
+      min-height: 45px;
+      margin-bottom: 60px;
+      @media (max-width: 768px) {
+        margin-bottom: 57px;
+      }
+
       .fix-row__title {
         @media (max-width: 768px) {
           font-size: 12px;
@@ -49,8 +79,8 @@
     }
 
     &__title {
-      min-width: 212px;
-      width: 212px;
+      min-width: 154px;
+      width: 154px;
     }
 
 

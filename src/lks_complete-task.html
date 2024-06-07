@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ru" class="page">
-  @include('partials/head.html', { 'title': 'Выполнить доработку задания' })
+  @include('partials/head.html', { 'title': 'Выполнить задание (подать отчет)'
+  })
 
-  <body class="page__body lks-complete-revision-page _lk">
+  <body class="page__body lks-complete-task-page _lk">
     <div class="site-container">
       <header class="lk-header">
         <div class="lk-header__top">
@@ -3027,11 +3028,11 @@
       </header>
 
       <main class="main">
-        <section class="section lks-complete-revision-page__inner lk-content">
+        <section class="section lks-complete-task-page__inner lk-content">
           <div class="container">
-            <h2>Выполнить доработку задания (подать отчет)</h2>
-            <p class="lks-complete-revision-page__desc">
-              Выполнение задания «Какое-то название задания», доработка
+            <h2>Выполнить задание (подать отчет)</h2>
+            <p class="lks-complete-task-page__desc">
+              Выполнение задания «Какое-то название задания»
             </p>
             <form action="#">
               <div class="fix-row">
@@ -3049,24 +3050,48 @@
                 <p class="fix-row__desc">Иванов Иван Иванович</p>
               </div>
               <div class="fix-row">
-                <h5 class="fix-row__title">Вид отчета:</h5>
-                <p class="fix-row__desc">Реферат</p>
-              </div>
-              <div class="fix-row">
-                <h5 class="fix-row__title">Название отчета:</h5>
-                <p class="fix-row__desc">Какое-то название отчета, доработка</p>
-              </div>
-              <div class="fix-row">
                 <h5 class="fix-row__title">Задание создано:</h5>
                 <p class="fix-row__desc">30.11.2023, 10:09:32</p>
               </div>
-              <div class="fix-row">
-                <h5 class="fix-row__title">Отправлено на доработку:</h5>
-                <p class="fix-row__desc">30.11.2023, 10:09:32</p>
+              <div class="fix-row _input">
+                <h5 class="fix-row__title">Выбор вида отчета:</h5>
+                <div class="fix-row__desc">
+                  <select class="main-input _main-mark" name="type_report">
+                    <option value="1">
+                      ВКР (Выпускная квалификационная работа)
+                    </option>
+                    <option value="2">Вид отчета 2</option>
+                    <option value="3">Вид отчета 3</option>
+                  </select>
+                  <p>Требуется выбрать вид отчёта из списка.</p>
+                </div>
+              </div>
+              <div class="fix-row _input">
+                <h5 class="fix-row__title">Название отчёта:</h5>
+                <div class="fix-row__desc">
+                  <input class="main-input" name="report_name" type="text" />
+                  <p>
+                    Название должно быть не очень длинным, ёмким и отражающим
+                    суть и смысл.
+                  </p>
+                </div>
+              </div>
+              <div class="fix-row _input">
+                <h5 class="fix-row__title">Преподаватель:</h5>
+                <div class="fix-row__desc">
+                  <div class="autocomplete-input">
+                    <input class="main-input" name="teacher" type="text" />
+                    <div class="autocomplete-input__popup"></div>
+                  </div>
+                  <p>
+                    Вы можете сдать задание (подать отчет) другому
+                    преподавателю.
+                  </p>
+                </div>
               </div>
               <div class="fix-row _textarea">
                 <h5 class="fix-row__title">Описание:</h5>
-                <textarea class="main-textarea" name="revision_desc"></textarea>
+                <textarea class="main-textarea" name="report_desc"></textarea>
               </div>
               <div class="fix-row _input">
                 <h5 class="fix-row__title">Файл работы:</h5>
@@ -3095,7 +3120,7 @@
                       <input
                         type="file"
                         class="file-upload__add main-input"
-                        name="revision_file"
+                        name="report_file"
                         accept=".jpg,.jpeg,.png,.gif,.doc,.docx,.pdf"
                       />
                       Добавить файл

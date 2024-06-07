@@ -1,0 +1,25 @@
+.autocomplete-input {
+  position: relative;
+  &__popup {
+    right: 0;
+    bottom: 0;
+    border: 1px solid #A9AEBA;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background: #ffffff;
+    width: 200px;
+    display: none;
+  }
+
+  &__popup-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: all .3s;
+    font-size: 14px;
+    @include montserrat-medium;
+    &:hover {
+      background: rgba(#000000, 0.2);
+    }
+  }
+}

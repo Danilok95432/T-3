@@ -1,9 +1,11 @@
 .fix-row {
   display: flex;
   align-items: flex-start;
+
   &:not(:last-child) {
     margin-bottom: 24px;
   }
+
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
@@ -31,6 +33,69 @@
         padding-top: 0;
       }
     }
+
+    .fix-row__title {
+      @media (max-width: 768px) {
+        font-size: 12px;
+        @include montserrat-medium
+      }
+    }
+  }
+
+  &._input {
+    min-height: 45px;
+    @media (max-width: 768px) {
+      min-height: 40px;
+    }
+
+    .main-input {
+      border-radius: 0;
+      font-size: 15px;
+      @media (max-width: 768px) {
+        min-width: 100%;
+        width: 100%;
+        padding: 8px 10px;
+      }
+    }
+
+    .main-input._main-mark {
+      @media (max-width: 768px) {
+        padding-right: 30px;
+        background-position: right 10px top 13px, 0 0;
+      }
+
+    }
+
+
+    .fix-row__title {
+      @media (max-width: 768px) {
+        font-size: 12px;
+        @include montserrat-medium;
+      }
+    }
+
+    .fix-row__desc {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 5px;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 1.2;
+        @include montserrat-regular
+      }
+
+
+    }
+
+
   }
 
   &__title {
@@ -56,28 +121,15 @@
     @include montserrat-regular;
     font-size: 15px;
     line-height: 1.2;
+
     a {
       color: #B7212E;
     }
+
     &._icon {
       display: flex;
       gap: 8px;
       align-items: center;
-    }
-  }
-
-  &__file-desc {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    p {
-      font-size: 12px;
-      line-height: 1.2;
-      @include montserrat-regular
     }
   }
 
