@@ -1,0 +1,130 @@
+.lks-tasks-page {
+
+  .lk-content {
+    padding: 46px 0 575px;
+
+    @media (max-width: 768px) {
+      padding: 36px 0 120px;
+    }
+
+    h2 {
+      margin-bottom: 19px;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 13px;
+      }
+    }
+
+    .flex-table {
+      @media (max-width: 768px) {
+        overflow: auto;
+      }
+
+      &__title-row {
+        padding: 8px 0;
+        @media (max-width: 768px) {
+          display: flex;
+        }
+
+        .flex-table__cell {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &__cell {
+        display: flex;
+        align-items: center;
+        @media (max-width: 1024px) {
+          font-size: 14px;
+        }
+        @media (max-width: 768px) {
+          &:not(:last-child) {
+            margin-bottom: 0;
+          }
+        }
+
+        &:nth-child(1) {
+          width: 4%;
+          text-align: center;
+          justify-content: center;
+          @media (max-width: 768px) {
+            display: flex;
+          }
+        }
+
+        &:nth-child(2) {
+          width: 22%;
+
+          .main-input {
+            max-width: 250px;
+          }
+        }
+
+        &:nth-child(3) {
+          display: block;
+          width: 15%;
+        }
+
+
+        &:nth-child(4) {
+          width: 18%;
+
+          .main-input {
+            max-width: 200px;
+          }
+
+          @media (max-width: 1200px) {
+            width: 16%;
+          }
+        }
+
+        &:nth-child(5) {
+          width: 12%;
+
+          .main-input {
+            max-width: 125px;
+          }
+          @media (max-width: 1200px) {
+            width: 14%;
+          }
+
+        }
+
+        &:nth-child(6) {
+          width: 18%;
+          .main-input {
+            max-width: 200px;
+          }
+        }
+
+        &:nth-child(7) {
+          width: 12%;
+
+          .main-input {
+            max-width: 125px;
+          }
+        }
+      }
+
+      &__row {
+        padding: 7px 0;
+        @media (max-width: 1024px) {
+          min-width: 1100px;
+        }
+        @media (max-width: 768px) {
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  &__desc {
+    margin-bottom: 26px;
+    font-size: 15px;
+    line-height: 1.1;
+    @include montserrat-light;
+  }
+}
