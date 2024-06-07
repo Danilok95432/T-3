@@ -1,3 +1,13 @@
+const footerAccordions = document.querySelectorAll('.footer-list')
+
+if (footerAccordions) {
+  if (window.screen.width < 768) {
+    footerAccordions.forEach((item) => item.classList.add('main-accordion'))
+  } else {
+    footerAccordions.forEach((item) => item.classList.delete('main-accordion'))
+  }
+}
+
 const accordions = document.querySelectorAll('.main-accordion')
 
 if (accordions) {
