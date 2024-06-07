@@ -2,8 +2,23 @@
   background-color: #3A0308;
   padding: 40px 0 30px;
 
+  &._lk {
+    @media (max-width: 768px) {
+      background-color: #B7212E;
+    }
+  }
+
+  &._portal {
+    @media (max-width: 768px) {
+      background-color: #3A0308;
+    }
+
+    .footer-small-screen {
+      color: #C4B3B4;
+    }
+  }
+
   @media (max-width: 768px) {
-    background-color: #B7212E;
     padding: 20px 0;
   }
 
@@ -42,7 +57,7 @@
         margin-bottom: 20px;
         width: 100%;
         min-width: calc(100% - 20px);
-        margin-right: 20px;
+
       }
 
       li,
