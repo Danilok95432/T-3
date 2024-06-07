@@ -1,9 +1,15 @@
 .home-auth-page {
   background-color: #fff;
+
   .main-auth-form form {
     padding: 108px 0 128px;
+
     @media (max-width: 768px) {
       padding: 37px 0 65px;
     }
+  }
+
+  footer {
+    background-color: #3A0308;
   }
 }

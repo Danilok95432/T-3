@@ -227,4 +227,14 @@
       display: none;
     }
   }
+
+  .main-accordion {
+    @media (min-width: 768px) {
+      .accordion-content {
+        visibility: visible;
+        opacity: 1;
+        height: max-content;
+      }
+    }
+  }
 }

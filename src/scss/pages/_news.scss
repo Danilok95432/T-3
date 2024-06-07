@@ -10,6 +10,7 @@
     align-items: flex-start;
     gap: 30px;
     margin-bottom: 36px;
+
     @media (max-width: 1280px) {
       flex-wrap: wrap;
     }
@@ -31,5 +32,9 @@
       border: 1px solid #C9C9C9;
       background: url('../img/select-mark.svg') no-repeat 90% center;
     }
+  }
+
+  footer {
+    background-color: #3A0308;
   }
 }
