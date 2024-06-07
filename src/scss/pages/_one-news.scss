@@ -4,6 +4,7 @@
   section {
     padding-bottom: 116px;
   }
+
   h1 {
     font-size: 30px;
     @include montserrat-semibold;
@@ -54,6 +55,7 @@
       gap: 24px;
       min-width: 35px;
       width: 35px;
+
       @media (max-width: 550px) {
         flex-direction: row;
       }
@@ -77,17 +79,21 @@
     gap: 8px 15px;
     flex-wrap: wrap;
     margin-bottom: 57px;
+
     @media (max-width: 1024px) {
       justify-content: center;
     }
   }
 
   &__all-news {
-     @include montserrat-medium;
+    @include montserrat-medium;
     font-size: 15px;
     color: #ffffff;
     background-color: #B7212E;
     padding: 19px 47px;
   }
 
+  footer {
+    background-color: #3A0308;
+  }
 }

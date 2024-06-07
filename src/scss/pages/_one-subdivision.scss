@@ -28,6 +28,7 @@
       min-width: 300px;
       background-color: #F2F2F2;
       padding: 22px 23px 45px;
+
       @media (max-width: 1024px) {
         width: 100%;
       }
@@ -114,4 +115,7 @@
     padding: 19px 47px;
   }
 
+  footer {
+    background-color: #3A0308;
+  }
 }
