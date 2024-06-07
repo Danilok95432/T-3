@@ -3473,31 +3473,43 @@
                 </p>
               </div>
 
-              <div class="fix-row">
+              <div class="fix-row _input">
                 <h5 class="fix-row__title">Преподаватель:</h5>
-                <input
-                  class="main-input"
-                  placeholder="Начните вводить фамилию..."
-                  type="text"
-                  name="teacher"
-                />
-                <p class="fix-row__mark">
-                  Здесь нужно указать преподавателя, который получит отчёт и
-                  сможет его оценить.
-                </p>
+                <div class="fix-row__desc">
+                  <div class="autocomplete-input" data-script="./data/test.txt">
+                    <input
+                      class="main-input"
+                      name="teacher"
+                      type="text"
+                      placeholder="Начните вводить фамилию..."
+                      autocomplete="off"
+                    />
+                    <div class="autocomplete-input__popup"></div>
+                  </div>
+                  <p>
+                    Здесь нужно указать преподавателя, который получит отчёт и
+                    сможет его оценить.
+                  </p>
+                </div>
               </div>
 
-              <div class="fix-row">
+              <div class="fix-row _input">
                 <h5 class="fix-row__title">Кафедра:</h5>
-                <input
-                  class="main-input"
-                  placeholder="Начните вводить название..."
-                  type="text"
-                  name="department"
-                />
-                <p class="fix-row__mark">
-                  Здесь нужно указать кафедру, на которой Вы сдаете работу.
-                </p>
+                <div class="fix-row__desc">
+                  <div class="autocomplete-input" data-script="./data/test.txt">
+                    <input
+                      class="main-input"
+                      name="department"
+                      type="text"
+                      placeholder="Начните вводить название..."
+                      autocomplete="off"
+                    />
+                    <div class="autocomplete-input__popup"></div>
+                  </div>
+                  <p>
+                    Здесь нужно указать кафедру, на которой Вы сдаете работу.
+                  </p>
+                </div>
               </div>
 
               <div class="fix-row">
@@ -3553,6 +3565,7 @@
             </form>
           </div>
         </section>
+        @include('partials/info-modal.html')
         @include('partials/big-img-modal.html')
       </main>
       @include('partials/home-footer.html')

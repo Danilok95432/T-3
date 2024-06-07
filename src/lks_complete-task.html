@@ -3080,7 +3080,13 @@
                 <h5 class="fix-row__title">Преподаватель:</h5>
                 <div class="fix-row__desc">
                   <div class="autocomplete-input" data-script="./data/test.txt">
-                    <input class="main-input" name="teacher" type="text" />
+                    <input
+                      class="main-input"
+                      name="teacher"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Начните вводить фамилию..."
+                    />
                     <div class="autocomplete-input__popup"></div>
                   </div>
                   <p>
@@ -3149,6 +3155,7 @@
             </form>
           </div>
         </section>
+        @include('partials/info-modal.html')
       </main>
       @include('partials/home-footer.html')
     </div>
