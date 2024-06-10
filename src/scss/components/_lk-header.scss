@@ -206,6 +206,31 @@
         }
       }
     }
+
+
+    &._lkp {
+      ul {
+        li {
+          &._active:first-child {
+            svg {
+              path {
+                fill: #B7212E;
+                stroke: transparent;
+              }
+            }
+          }
+          &._active:nth-child(2), &._active:nth-child(5) {
+            svg {
+              path {
+                fill: transparent;
+                stroke: #B7212E;
+              }
+            }
+          }
+        }
+      }
+    }
+
   }
 
   .mobile-menu {
