@@ -3288,32 +3288,32 @@
                 <div class="row">
                   <label>Название работы</label>
                   <input
-                    class="main-input"
+                    class="main-input title-input"
                     value="Какое-то название работы"
                     type="text"
-                    name="name"
+                    name="title"
                   />
-                  <p class="">Укажите название работы</p>
+                  <p class="mark">Укажите название работы</p>
                 </div>
 
-                <div class="row">
-                  <div class="">
+                <div class="row-wrapper">
+                  <div class="input-wrapper purpose-input">
                     <label>Назначение</label>
-                    <select class="main-input" name="">
+                    <select class="main-input" name="purpose">
                       <option value="1">Учебная работа</option>
                     </select>
-                    <p class="">Укажите назначение работы</p>
+                    <p class="mark">Укажите назначение работы</p>
                   </div>
 
-                  <div class="">
+                  <div class="input-wrapper type-input">
                     <label>Произведение</label>
-                    <select class="main-input" name="">
+                    <select class="main-input" name="type">
                       <option value="1">Графика</option>
                     </select>
-                    <p class="">Укажите вид произведения</p>
+                    <p class="mark">Укажите вид произведения</p>
                   </div>
 
-                  <div class="">
+                  <div class="input-wrapper date-input">
                     <label>Дата выполнения</label>
                     <input
                       class="main-input"
@@ -3325,59 +3325,64 @@
                 </div>
               </div>
 
-              <div style="border: 3px solid red">
-                <p>Файл работы:</p>
-                <div class="fix-row__desc" style="border: 3px solid green">
-                  <div class="file-upload">
-                    <div class="file-upload__info">
-                      <button
-                        class="file-upload__delete-btn"
-                        type="button"
-                      ></button>
-                      <a href="#" download="" class="file-upload__name"></a>
+              <div class="file-upload-wrapper">
+                <h5 class="file-upload-title">Файл работы:</h5>
+                <div class="general-dropzone-wrapper">
+                  <div
+                    class="dropzone general-dropzone"
+                    id="work-file"
+                    data-show-preview="true"
+                    data-general-info='{"url": "./data/test.txt", "removeUrl": "./data/test.txt", "width": "110", "height": "110", "acceptedFiles": ".png, .gif, .jpg, .doc, .docx, .pdf", "type": "work-file", "filesCount": "5", "additional": "доп.контент"}'
+                  >
+                    <div class="download-button-container">
+                      <div class="dz-message profile-form__btn-download-photo">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10 18.75C7.67936 18.75 5.45376 17.8281 3.81282 16.1872C2.17187 14.5462 1.25 12.3206 1.25 10C1.25 7.67936 2.17187 5.45376 3.81282 3.81282C5.45376 2.17187 7.67936 1.25 10 1.25C12.3206 1.25 14.5462 2.17187 16.1872 3.81282C17.8281 5.45376 18.75 7.67936 18.75 10C18.75 12.3206 17.8281 14.5462 16.1872 16.1872C14.5462 17.8281 12.3206 18.75 10 18.75ZM10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10C20 7.34784 18.9464 4.8043 17.0711 2.92893C15.1957 1.05357 12.6522 0 10 0C7.34784 0 4.8043 1.05357 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C4.8043 18.9464 7.34784 20 10 20Z"
+                            fill="#B7212E"
+                          />
+                          <path
+                            d="M10 4C10.1989 4 10.3897 4.07902 10.5303 4.21967C10.671 4.36032 10.75 4.55109 10.75 4.75V9.25H15.25C15.4489 9.25 15.6397 9.32902 15.7803 9.46967C15.921 9.61032 16 9.80109 16 10C16 10.1989 15.921 10.3897 15.7803 10.5303C15.6397 10.671 15.4489 10.75 15.25 10.75H10.75V15.25C10.75 15.4489 10.671 15.6397 10.5303 15.7803C10.3897 15.921 10.1989 16 10 16C9.80109 16 9.61032 15.921 9.46967 15.7803C9.32902 15.6397 9.25 15.4489 9.25 15.25V10.75H4.75C4.55109 10.75 4.36032 10.671 4.21967 10.5303C4.07902 10.3897 4 10.1989 4 10C4 9.80109 4.07902 9.61032 4.21967 9.46967C4.36032 9.32902 4.55109 9.25 4.75 9.25H9.25V4.75C9.25 4.55109 9.32902 4.36032 9.46967 4.21967C9.61032 4.07902 9.80109 4 10 4Z"
+                            fill="#B7212E"
+                          />
+                        </svg>
+                        Добавить файл
+                      </div>
+
+                      <p class="_file-info">
+                        Формат файла - JPG, PNG, GIF, DOC, DOCX, PDF.
+                        Максимальный размер: 2.5 Мб.
+                      </p>
                     </div>
-
-                    <label class="main-button file-upload__add-label">
-                      <input
-                        type="file"
-                        class="file-upload__add main-input"
-                        name="revision_file"
-                        accept=".jpg,.jpeg,.png,.gif,.doc,.docx,.pdf"
-                      />
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M10 18.75C7.67936 18.75 5.45376 17.8281 3.81282 16.1872C2.17187 14.5462 1.25 12.3206 1.25 10C1.25 7.67936 2.17187 5.45376 3.81282 3.81282C5.45376 2.17187 7.67936 1.25 10 1.25C12.3206 1.25 14.5462 2.17187 16.1872 3.81282C17.8281 5.45376 18.75 7.67936 18.75 10C18.75 12.3206 17.8281 14.5462 16.1872 16.1872C14.5462 17.8281 12.3206 18.75 10 18.75ZM10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10C20 7.34784 18.9464 4.8043 17.0711 2.92893C15.1957 1.05357 12.6522 0 10 0C7.34784 0 4.8043 1.05357 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C4.8043 18.9464 7.34784 20 10 20Z"
-                          fill="#B7212E"
-                        />
-                        <path
-                          d="M10 4C10.1989 4 10.3897 4.07902 10.5303 4.21967C10.671 4.36032 10.75 4.55109 10.75 4.75V9.25H15.25C15.4489 9.25 15.6397 9.32902 15.7803 9.46967C15.921 9.61032 16 9.80109 16 10C16 10.1989 15.921 10.3897 15.7803 10.5303C15.6397 10.671 15.4489 10.75 15.25 10.75H10.75V15.25C10.75 15.4489 10.671 15.6397 10.5303 15.7803C10.3897 15.921 10.1989 16 10 16C9.80109 16 9.61032 15.921 9.46967 15.7803C9.32902 15.6397 9.25 15.4489 9.25 15.25V10.75H4.75C4.55109 10.75 4.36032 10.671 4.21967 10.5303C4.07902 10.3897 4 10.1989 4 10C4 9.80109 4.07902 9.61032 4.21967 9.46967C4.36032 9.32902 4.55109 9.25 4.75 9.25H9.25V4.75C9.25 4.55109 9.32902 4.36032 9.46967 4.21967C9.61032 4.07902 9.80109 4 10 4Z"
-                          fill="#B7212E"
-                        />
-                      </svg>
-
-                      Добавить файл
-                    </label>
-                  </div>
-                  <div class="_file-info">
-                    <p>
-                      Формат файла - JPG, PNG, GIF, DOC, DOCX, PDF. Максимальный
-                      размер: 2.5 Мб.
-                    </p>
                   </div>
                 </div>
               </div>
+
+              <!-- <div class="file-upload-wrapper">
+                <div class="file-upload">
+                  <div class="file-upload__info">
+                    <button
+                      class="file-upload__delete-btn"
+                      type="button"
+                    ></button>
+                    <a href="#" download="" class="file-upload__name"></a>
+                  </div>
+
+                 
+                </div>               
+              </div> -->
 
               <div class="form-controllers">
                 <button class="form-controllers__item _submit" type="submit">
                   Сохранить <span>изменения</span>
                 </button>
-                <button>Отменить</button>
+                <button class="_cancel">Отменить</button>
               </div>
             </form>
           </div>
