@@ -1,0 +1,175 @@
+.lkp-students-list-page {
+
+    .lk-content {
+        padding: 36px 0 600px;
+
+        @media (max-width: 768px) {
+            padding: 36px 0 120px;
+        }
+
+        h2 {
+            margin-bottom: 14px;
+            margin-top: 10px;
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+                line-height: 1.2;
+            }
+        }
+
+        .flex-table {
+            @media (max-width: 768px) {
+                overflow: auto;
+            }
+
+            &__title-row {
+                padding: 10px 0;
+
+                @media (max-width: 768px) {
+                    display: flex;
+                }
+
+                .flex-table__cell {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            &__cell {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media (max-width: 768px) {
+                    font-size: 14px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 0;
+                    }
+                }
+
+                &:nth-child(1) {
+                    width: 3%;
+                    text-align: center;
+                    justify-content: center;
+                    min-width: 30px;
+                    display: flex;
+                }
+
+                &:nth-child(2) {
+                    width: 24%;
+                    justify-content: flex-start;
+
+                    .main-input {
+                        width: 275px;
+                    }
+
+                    @media (max-width: 740px) {
+                        min-width: 225px;
+                    }
+                }
+
+                &:nth-child(3) {
+                    width: 19%;
+                    justify-content: flex-start;
+
+                    .main-input {
+                        width: 220px;
+                    }
+
+                    @media (max-width: 1200px) {
+                        width: 12%
+                    }
+
+                    @media (max-width: 740px) {
+                        min-width: 115px;
+                        padding: 0;
+                        justify-content: flex-start;
+                    }
+                }
+
+                &:nth-child(4) {
+                    width: 20%;
+                    justify-content: flex-start;
+                    padding: 0;
+
+                    .main-input {
+                        width: 235px;
+                    }
+
+                    @media (max-width: 1200px) {
+                        width: 14%
+                    }
+
+                    @media (max-width: 740px) {
+                        width: 70px;
+                        padding: 0;
+                    }
+                }
+
+                &:nth-child(5) {
+                    width: 15%;
+                    padding-left: 5px;
+                    justify-content: flex-start;
+
+                    .main-input {
+                        width: 170px;
+                    }
+
+                    @media (max-width: 740px) {
+                        min-width: 210px;
+                        // justify-content: flex-start;
+                        // align-items: flex-start;
+
+                    }
+                }
+
+
+                &:nth-child(6) {
+                    width: 18%;
+                    justify-content: flex-start;
+
+
+                    .main-input {
+                        width: 225px;
+                    }
+
+                    @media (max-width: 740px) {
+                        min-width: 70px;
+                    }
+                }
+
+
+
+
+
+            }
+
+            &__row {
+                @media (max-width: 1024px) {
+                    min-width: 1050px;
+                }
+
+                @media (max-width: 1024px) {
+                    min-width: 800px;
+                }
+
+                @media (max-width: 768px) {
+                    flex-direction: row;
+                    min-width: 1000px;
+                }
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 28px;
+        }
+    }
+
+}
