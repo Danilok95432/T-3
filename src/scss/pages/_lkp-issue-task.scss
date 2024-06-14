@@ -1,0 +1,84 @@
+.lkp-issue-task-page {
+
+  .main-input {
+    min-width: 660px;
+    width: 660px;
+
+    @media (max-width: 1280px) {
+      min-width: 400px;
+      width: 400px;
+    }
+
+  }
+
+  .main-textarea {
+    max-width: 660px;
+    height: 215px;
+    border-radius: 0;
+    @media (max-width: 1280px) {
+      max-width: 400px;
+    }
+    @media (max-width: 768px) {
+      height: 272px;
+      max-width: 100%;
+    }
+  }
+
+  .lk-content {
+    padding: 46px 0 165px;
+
+    @media (max-width: 768px) {
+      padding: 36px 0 120px;
+    }
+
+    h2 {
+      margin-bottom: 45px;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 13px;
+      }
+    }
+
+  }
+
+  .fix-row {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    align-items: center;
+    @media (max-width: 768px) {
+      align-items: flex-start;
+      &:not(:last-child) {
+        margin-bottom: 23px;
+      }
+    }
+
+    &._textarea {
+      align-items: flex-start;
+    }
+
+    &__title {
+      min-width: 165px;
+      width: 165px;
+      margin-right: 15px;
+    }
+
+
+  }
+
+  &__main-rows {
+    margin-bottom: 60px;
+    .fix-row {
+      &__title {
+        font-weight: 600;
+      }
+      p.fix-row__desc {
+        font-weight: 600;
+      }
+    }
+  }
+
+
+}
