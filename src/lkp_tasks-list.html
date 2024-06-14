@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ru" class="page">
-  @include('partials/head.html', { 'title': 'Студенты преподавателя' })
+  @include('partials/head.html', { 'title': 'Задания студентам' })
 
-  <body class="page__body lkp-students-list-page _lk">
+  <body class="page__body lkp-tasks-list-page _lk">
     <div class="site-container">
       <header class="lk-header">
         <div class="lk-header__top">
@@ -2868,7 +2868,7 @@
                   Учебная деятельность
                 </a>
               </li>
-              <li class="_active">
+              <li>
                 <a href="#">
                   <svg
                     width="17"
@@ -3060,13 +3060,13 @@
       </header>
 
       <main class="main">
-        <section class="section lkp-students-list-page__inner lk-content">
+        <section class="section lkp-tasks-list-page__inner lk-content">
           <div class="container">
-            <div class="lkp-students-list-page__title">
-              <h2>Студенты <span>преподавателя</span></h2>
+            <div class="lkp-teachers-list-page__title">
+              <h2>Задания студентам</h2>
               <span
-                >Перечень студентов, связанных с Вами как с
-                преподавателем.</span
+                >Эта страница содержит список заданий, созданных Вами для
+                обучающихся у Вас студентов.</span
               >
             </div>
 
@@ -3131,77 +3131,83 @@
               <div class="flex-table__row flex-table__title-row">
                 <p class="flex-table__cell">№</p>
                 <div class="flex-table__cell">
-                  <label class="mobile-label"> Фамилия, Имя, Отчество</label>
+                  <label class="mobile-label">Название</label>
                   <input
                     class="main-input _lk-filter"
-                    name="name"
-                    placeholder="Фамилия, Имя, Отчество"
+                    name="title"
+                    placeholder="Название"
                     type="text"
                   />
                 </div>
-                <p class="flex-table__cell">№ зачетной книжки</p>
+
+                <p class="flex-table__cell">Время выдачи  / Срок исполнения</p>
+
                 <div class="flex-table__cell">
-                  <label class="mobile-label">Группа</label>
+                  <label class="mobile-label">Дисциплина</label>
                   <input
                     class="main-input _lk-filter"
-                    name="group"
-                    placeholder="Группа"
+                    name="class"
+                    placeholder="Дисциплина"
                     type="text"
                   />
                 </div>
+
                 <div class="flex-table__cell">
-                  <label class="mobile-label">Подразделение</label>
+                  <label class="mobile-label">Вид отчета</label>
+                  <select class="main-input _lk-filter" name="type">
+                    <option value="0">Вид отчета</option>
+                  </select>
+                </div>
+
+                <div class="flex-table__cell">
+                  <label class="mobile-label">Студент</label>
+                  <input
+                    class="main-input _lk-filter"
+                    name="student"
+                    placeholder="Студент"
+                    type="text"
+                  />
+                </div>
+
+                <div class="flex-table__cell">
+                  <label class="mobile-label">Кафедра</label>
                   <input
                     class="main-input _lk-filter"
                     name="department"
-                    placeholder="Подразделение"
+                    placeholder="Кафедра"
                     type="text"
                   />
-                </div>
-                <div class="flex-table__cell">
-                  <label class="mobile-label">Курс</label>
-                  <select class="main-input _lk-filter" name="course">
-                    <option value="0">Курс</option>
-                  </select>
-                </div>
-                <div class="flex-table__cell">
-                  <label class="mobile-label">Год поступления</label>
-                  <select class="main-input _lk-filter" name="year">
-                    <option value="0">Все</option>
-                  </select>
-                </div>
-                <div class="flex-table__cell">
-                  <label class="mobile-label">Форма обучения</label>
-                  <select class="main-input _lk-filter" name="type">
-                    <option value="0">Все</option>
-                  </select>
                 </div>
               </div>
 
               <div class="flex-table__row">
                 <p class="flex-table__cell">1</p>
-                <p class="flex-table__cell">Иванов Евгений Евгеньевич</p>
-                <p class="flex-table__cell">27876-ДДЕ-22</p>
-                <p class="flex-table__cell">ТИИ (2021)</p>
                 <p class="flex-table__cell">
-                  Кафедра Художественной Керамики в Безвоздушном Пространстве
+                  <a href="#">Экзамен по живописи</a>
                 </p>
-                <p class="flex-table__cell">2</p>
-                <p class="flex-table__cell">2021</p>
-                <p class="flex-table__cell">Очная</p>
+                <p class="flex-table__cell">
+                  <span>22.05.2024  10:41:00</span> /
+                  <span>27.05.2024  12:00:00</span>
+                </p>
+                <p class="flex-table__cell">Первая Дисциплина</p>
+                <p class="flex-table__cell">Экзамен</p>
+                <p class="flex-table__cell">Иванов Евгений Евгеньевич</p>
+                <p class="flex-table__cell">ДСТ</p>
               </div>
 
               <div class="flex-table__row">
                 <p class="flex-table__cell">2</p>
-                <p class="flex-table__cell">Трифонов Александр Алексеевич</p>
-                <p class="flex-table__cell">27876-ДДЕ-22</p>
-                <p class="flex-table__cell">ТИИ (2021)</p>
                 <p class="flex-table__cell">
-                  Кафедра Дизайна Средств Транспортального Транспорта
+                  <a href="#">Контрольный срез (графика)</a>
                 </p>
-                <p class="flex-table__cell">2</p>
-                <p class="flex-table__cell">2021</p>
-                <p class="flex-table__cell">Очно-заочная</p>
+                <p class="flex-table__cell">
+                  <span>22.05.2024  10:41:00</span> /
+                  <span>27.05.2024  12:00:00</span>
+                </p>
+                <p class="flex-table__cell">Вторая Дисциплина</p>
+                <p class="flex-table__cell">Срез</p>
+                <p class="flex-table__cell">Трифониади Александр Алексеевич</p>
+                <p class="flex-table__cell">ДПиНП</p>
               </div>
             </div>
             <div class="table-footer">
