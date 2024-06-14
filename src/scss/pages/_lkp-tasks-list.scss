@@ -1,4 +1,4 @@
-.lkp-teachers-list-page {
+.lkp-tasks-list-page {
 
     .lk-content {
         padding: 36px 0 600px;
@@ -60,52 +60,50 @@
                     min-width: 30px;
                     display: flex;
 
-                    @media (max-width: 1250px) {
-                        max-width: 30px;
-                    }
+                    // @media (max-width: 1250px) {
+                    //     max-width: 30px;
+                    // }
                 }
 
                 &:nth-child(2) {
-                    width: 24%;
+                    width: 15%;
                     justify-content: flex-start;
 
 
                     .main-input {
-                        width: 275px;
+                        width: 250px;
                     }
 
-                    @media (max-width: 1250px) {
-                        max-width: 270px;
+                    // @media (max-width: 1250px) {
+                    //     max-width: 270px;
 
-                        .main-input {
-                            max-width: 100%;
-                        }
-                    }
+                    //     .main-input {
+                    //         max-width: 100%;
+                    //     }
+                    // }
 
-                    @media (max-width: 500px) {
-                        width: 200px;
-                    }
+                    // @media (max-width: 500px) {
+                    //     width: 200px;
+                    // }
                 }
 
                 &:nth-child(3) {
-                    width: 19%;
+                    width: 24%;
                     justify-content: flex-start;
 
-                    .main-input {
-                        width: 220px;
-                    }
+                    
 
-                    @media (max-width: 1250px) {
-                        max-width: 250px;
+                    // @media (max-width: 1250px) {
+                    //     max-width: 250px;
 
-                        .main-input {
-                            max-width: 100%;
-                        }
-                    }
+                    //     .main-input {
+                    //         max-width: 100%;
+                    //     }
+                    // }
 
-                    @media (max-width: 500px) {
-                        width: 230px;
-                    }
+                    // @media (max-width: 500px) {
+                    //     width: 230px;
+                    // }
                 }
 
                 &:nth-child(4) {
@@ -114,67 +112,89 @@
                     padding: 0;
 
                     .main-input {
-                        width: 235px;
+                        width: 200px;
                     }
 
-                    @media (max-width: 1250px) {
-                        max-width: 190px;
-                        padding: 0;
+                    // @media (max-width: 1250px) {
+                    //     max-width: 190px;
+                    //     padding: 0;
 
-                        .main-input {
-                            max-width: 100%;
-                        }
-                    }
+                    //     .main-input {
+                    //         max-width: 100%;
+                    //     }
+                    // }
 
-                    @media (max-width: 500px) {
-                        width: 130px;
-                        padding-right: 8px;
-                    }
+                    // @media (max-width: 500px) {
+                    //     width: 130px;
+                    //     padding-right: 8px;
+                    // }
                 }
 
                 &:nth-child(5) {
-                    width: 15%;
+                    width: 10%;
                     padding-left: 5px;
                     justify-content: flex-start;
 
                     .main-input {
-                        width: 170px;
+                        width: 125px;
                     }
 
-                    @media (max-width: 1250px) {
-                        max-width: 220px;
+                    // @media (max-width: 1250px) {
+                    //     max-width: 220px;
 
-                        .main-input {
-                            max-width: 100%;
-                        }
-                    }
+                    //     .main-input {
+                    //         max-width: 100%;
+                    //     }
+                    // }
 
-                    @media (max-width: 500px) {
-                        width: 100px;
-                        padding-right: 8px;
-                    }
+                    // @media (max-width: 500px) {
+                    //     width: 100px;
+                    //     padding-right: 8px;
+                    // }
                 }
 
                 &:nth-child(6) {
-                    width: 18%;
+                    width: 12%;
                     justify-content: flex-start;
 
                     .main-input {
-                        width: 225px;
+                        width: 200px;
                     }
 
-                    @media (max-width: 1250px) {
-                        max-width: 220px;
+                    // @media (max-width: 1250px) {
+                    //     max-width: 220px;
 
-                        .main-input {
-                            max-width: 100%;
-                        }
+                    //     .main-input {
+                    //         max-width: 100%;
+                    //     }
+                    // }
+
+                    // @media (max-width: 500px) {
+                    //     width: 140px;
+
+                    // }
+                }
+
+                &:nth-child(7) {
+                    width: 15%;
+                    justify-content: flex-start;
+
+                    .main-input {
+                        width: 124px;
                     }
 
-                    @media (max-width: 500px) {
-                        width: 140px;
+                    // @media (max-width: 1250px) {
+                    //     max-width: 220px;
 
-                    }
+                    //     .main-input {
+                    //         max-width: 100%;
+                    //     }
+                    // }
+
+                    // @media (max-width: 500px) {
+                    //     width: 140px;
+
+                    // }
                 }
             }
 

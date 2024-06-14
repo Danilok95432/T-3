@@ -14,6 +14,16 @@
             @media (max-width: 768px) {
                 font-size: 24px;
                 line-height: 1.2;
+                margin-bottom: 9px;
+
+                span {
+                    display: none;
+                }
+
+                &+span {
+                    display: inline-block;
+                    line-height: 1.2;
+                }
             }
         }
 
@@ -65,7 +75,9 @@
                     }
 
                     @media (max-width: 740px) {
-                        min-width: 225px;
+                        width: 220px;
+                        padding: 0;
+
                     }
                 }
 
@@ -78,7 +90,7 @@
                     }
 
                     @media (max-width: 740px) {
-                        min-width: 115px;
+                        width: 105px;
                         padding: 0;
                         justify-content: flex-start;
                     }
@@ -97,7 +109,7 @@
                     }
 
                     @media (max-width: 740px) {
-                        width: 70px;
+                        width: 82px;
                         padding: 0;
                     }
                 }
@@ -110,13 +122,13 @@
                     }
 
                     @media (max-width: 740px) {
-                        min-width: 210px;
+                        width: 195px;
+                        padding: 0;
                         justify-content: flex-start;
                         align-items: flex-start;
 
                     }
                 }
-
 
                 &:nth-child(6) {
                     width: 8%;
@@ -126,7 +138,8 @@
                     }
 
                     @media (max-width: 740px) {
-                        min-width: 70px;
+                        padding: 0;
+                        width: 28px;
                     }
                 }
 
@@ -138,7 +151,7 @@
                         width: 75px;
                     }
 
-                    @media (max-width: 740px) {
+                    @media (max-width: 900px) {
                         min-width: 110px;
                     }
                 }
