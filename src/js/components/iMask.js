@@ -1,4 +1,5 @@
 import IMask from 'imask'
+import Inputmask from 'inputmask'
 
 const initAllMasks = () => {
   // Маски для номеров
@@ -27,6 +28,24 @@ const initAllMasks = () => {
       })
     })
   }
+
+  const initDateInputMasks = () => {
+    const dateInputMasks = document.querySelectorAll('.date-mask')
+
+    if (dateInputMasks) {
+      dateInputMasks.forEach((el) => {
+        Inputmask({
+          alias: 'datetime',
+          inputFormat: 'dd.mm.yyyy',
+          clearIncomplete: true,
+          showMaskOnHover: false,
+          showMaskOnFocus: false,
+        }).mask(el)
+      })
+    }
+  }
+
+  initDateInputMasks()
 }
 
 initAllMasks()

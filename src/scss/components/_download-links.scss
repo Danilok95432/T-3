@@ -1,0 +1,30 @@
+.download-links {
+  li {
+    display: flex;
+    gap: 6px;
+    align-items: flex-start;
+    line-height: 1.2;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    svg {
+      min-width: 50px;
+      width: 50px;
+      height: 42px;
+    }
+    a {
+      @include montserrat-medium;
+      font-size: 15px;
+      color: #B7212E;
+      line-height: 1.2;
+    }
+    p {
+      font-size: 13px;
+      @include montserrat-regular;
+      line-height: 1.2;
+    }
+  }
+  &__inner {
+    max-width: 400px;
+  }
+}

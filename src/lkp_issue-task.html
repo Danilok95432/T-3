@@ -3174,11 +3174,58 @@
               <div class="fix-row _input">
                 <h5 class="fix-row__title">Предельная дата и время сдачи:</h5>
                 <div class="fix-row__desc fix-row__date-desc">
-                  <div class="fix-row__date-desc-inputs"></div>
+                  <div class="fix-row__date-desc-inputs">
+                    <input
+                      class="custom-date date-mask"
+                      type="text"
+                      name="date_limit"
+                      data-date-start="now"
+                    />
+                    <input
+                      class="custom-date _time"
+                      type="text"
+                      name="time_limit"
+                      data-date-start=""
+                    />
+                  </div>
                   <p>
-                    Название должно быть не очень длинным, ёмким и отражающим
-                    суть и смысл.
+                    Укажите дату и время, до которых задание должно быть сдано
+                    студентом.
                   </p>
+                </div>
+              </div>
+              <div class="fix-row _input">
+                <h5 class="fix-row__title">Кафедра:</h5>
+                <div class="fix-row__desc">
+                  <div class="autocomplete-input" data-script="./data/test.txt">
+                    <input
+                      class="main-input"
+                      name="department_name"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Начните вводить название кафедры..."
+                    />
+                    <div class="autocomplete-input__popup"></div>
+                  </div>
+                  <p>
+                    Доступны только те кафедры, с которыми Вы связаны как
+                    преподаватель. Если в списке нет Вашей кафедры, обратитесь к
+                    администратору.
+                  </p>
+                </div>
+              </div>
+              <div class="fix-row _input">
+                <h5 class="fix-row__title">Выбор метода оценки:</h5>
+                <div class="fix-row__desc">
+                  <select
+                    class="main-input _main-mark"
+                    name="type_grade_system"
+                  >
+                    <option value="1">Пятибалльная система</option>
+                    <option value="2">Система 2</option>
+                    <option value="3">Система 3</option>
+                  </select>
+                  <p>Требуется выбрать метод оценки из списка.</p>
                 </div>
               </div>
               <div class="fix-row _textarea">
