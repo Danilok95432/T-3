@@ -2,6 +2,7 @@ import AirDatepicker from 'air-datepicker'
 
 const initAllDates = () => {
   const allDateInputs = document.querySelectorAll('input[data-date-start]')
+  const allTimeInputs = document.querySelectorAll('.time-input')
 
   if (allDateInputs) {
     allDateInputs.forEach((el) => {
@@ -20,6 +21,15 @@ const initAllDates = () => {
           customDate.selectDate(featuredDate)
           customDate.setViewDate(featuredDate)
         }
+      })
+    })
+  }
+  if (allTimeInputs) {
+    allTimeInputs.forEach((el) => {
+      new AirDatepicker(el, {
+        container: '.date-custom-container',
+        timepicker: true,
+        onlyTimepicker: true,
       })
     })
   }

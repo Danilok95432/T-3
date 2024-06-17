@@ -74,14 +74,11 @@
     @media (max-width: 1024px) {
       flex-direction: column-reverse;
     }
-
-
   }
 
   &__inner {
     flex-grow: 1;
   }
-
 
   .main-gallery {
     display: flex;
