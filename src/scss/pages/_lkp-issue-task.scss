@@ -36,7 +36,7 @@
       @media (max-width: 768px) {
         font-size: 24px;
         line-height: 1.2;
-        margin-bottom: 13px;
+        margin-bottom: 29px;
       }
     }
 
@@ -57,20 +57,54 @@
 
     &._textarea {
       align-items: flex-start;
+      margin-bottom: 30px;
+      @media (max-width: 768px) {
+        margin-bottom: 22px;
+      }
     }
 
     &__title {
       min-width: 165px;
       width: 165px;
       margin-right: 15px;
+      @media (max-width: 768px) {
+        min-width: 100%;
+        width: 100%;
+        margin-right: 0;
+      }
     }
 
+    &__date-desc-inputs {
+      display: flex;
+      gap: 10px;
+      min-width: 660px;
+      @media (max-width: 1280px) {
+        min-width: 400px;
+      }
+      @media (max-width: 768px) {
+        justify-content: space-between;
+        min-width: 100%;
+      }
+    }
+
+    &._controllers {
+      margin-top: 60px;
+    }
 
   }
 
   &__main-rows {
     margin-bottom: 60px;
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
     .fix-row {
+      &:not(:last-child) {
+        @media (max-width: 768px) {
+          margin-bottom: 10px;
+        }
+      }
+
       &__title {
         font-weight: 600;
       }

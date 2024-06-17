@@ -1,0 +1,40 @@
+.download-links {
+  li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    line-height: 1.2;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    a {
+      @include montserrat-medium;
+      font-size: 15px;
+      color: #B7212E;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 13px;
+      @include montserrat-regular;
+      line-height: 1.2;
+    }
+  }
+
+  &__icon {
+
+    width: 37px;
+    height: 42px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__inner {
+    max-width: 400px;
+  }
+}
