@@ -30,6 +30,7 @@ const initAllDates = () => {
         container: '.date-custom-container',
         timepicker: true,
         onlyTimepicker: true,
+        isMobile: window.screen.width <= 768,
       })
     })
   }
