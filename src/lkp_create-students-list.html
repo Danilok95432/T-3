@@ -2,7 +2,7 @@
 <html lang="ru" class="page">
   @include('partials/head.html', { 'title': 'Задания студентам' })
 
-  <body class="page__body lkp-students-list-page _lk">
+  <body class="page__body lkp-create-students-list-page _lk">
     <div class="site-container">
       <header class="lk-header">
         <div class="lk-header__top">
@@ -3060,23 +3060,82 @@
       </header>
 
       <main class="main">
-        <section class="section lkp-students-list-page__inner lk-content">
+        <section
+          class="section lkp-create-students-list-page__inner lk-content"
+        >
           <div class="container">
             <div class="lkp-students-list-page__title">
-              <div>
-                <h2>Списки студентов</h2>
-                <span
-                  >В этом разделе Вы можете составить собственный список
-                  (списочную группу) студентов. Участикам этого списка можно
-                  высылать особые задания. <br />Например, список может
-                  называться «отстающие» или «мои дипломники».</span
-                >
+              <h2>Создать / редактировать список</h2>
+            </div>
+
+            <form class="create-students-form" action="#">
+              <div class="form-item">
+                <h5>Название списка:</h5>
+
+                <div class="form-item__content">
+                  <div
+                    class="input autocomplete-input"
+                    data-script="./data/test.txt"
+                  >
+                    <input
+                      class="main-input"
+                      name="list-name"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Начните вводить название списка..."
+                    />
+                    <div class="autocomplete-input__popup"></div>
+                  </div>
+
+                  <p>
+                    Назвать список (списочную группу) можно так, как Вам нужно.
+                    Рекомендуем придумывать понятные названия, например, «Мои
+                    дипломники».
+                  </p>
+                </div>
               </div>
 
-              <a class="main-button _red" href="./lkp_create-students-list.html"
-                >Создать список</a
-              >
-            </div>
+              <div class="form-item">
+                <h6>Комментарий:</h6>
+
+                <div class="form-item__content">
+                  <textarea name="comment"></textarea>
+
+                  <p>
+                    Небольшая памятка о том, зачем был создан список и почему он
+                    называется именно так.
+                  </p>
+                </div>
+              </div>
+
+              <a class="main-button _red" href="#">Сохранить список</a>
+
+              <div class="form-item">
+                <h5>Студент:</h5>
+
+                <div class="form-item__content">
+                  <div class="autocomplete-input" data-script="./data/test.txt">
+                    <input
+                      class="main-input"
+                      name="list-name"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Начните вводить фамилию..."
+                    />
+                    <div class="autocomplete-input__popup"></div>
+                  </div>
+
+                  <p>
+                    Для того, чтобы добавить студента в список, начните набирать
+                    его фамилию. Появится выпадающее поле, в котором требуется
+                    указать студента.
+                  </p>
+                </div>
+                <a class="main-button _red" href="#"
+                  >Добавить студента в список</a
+                >
+              </div>
+            </form>
 
             <div class="flex-table">
               <div class="flex-table__row flex-table__title-row">
