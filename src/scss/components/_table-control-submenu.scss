@@ -1,14 +1,20 @@
 .table-control-submenu {
   position: relative;
+
   width: min-content;
   &:hover {
     .table-control-submenu__menu {
       display: block;
+      @media (max-width: 850px) {
+        display: none;
+      }
     }
     .table-control-submenu__btn{
       background: #E6E6E6;
     }
   }
+
+
 
   &__btn {
     background: transparent;
@@ -17,7 +23,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10;
   }
 
   &__menu {
@@ -31,6 +36,10 @@
     border-radius: 5px;
     border: 1px solid #9C9C9C;
     box-shadow: 0 10px 15px 0 rgba(91, 91, 91, 0.25);
+    @media (max-width: 1600px) {
+      left: auto;
+      right: calc(-100% + 20px) ;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -40,7 +49,6 @@
       width: 100%;
       background: transparent;
     }
-
 
     a {
       z-index: 20;
@@ -62,4 +70,44 @@
     }
   }
 
+
+}
+
+// глобальное мобильное меню
+
+.mobile-table-control {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  z-index: 999999999;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  &._active {
+    display: block;
+  }
+  &__inner {
+    position: fixed;
+    border-radius: 10px 10px 0 0;
+    left: 0;
+    bottom: 0;
+    background: #FFFFFF;
+    width: 100%;
+    padding: 0 17px;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 0;
+      color: #000000;
+      @include montserrat-medium;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #9C9C9C;
+      }
+    }
+  }
 }
