@@ -3069,67 +3069,68 @@
             </div>
 
             <form class="create-students-form" action="#">
-              <div class="form-item">
-                <h5>Название списка:</h5>
-
-                <div class="form-item__content">
-                  <div
-                    class="input autocomplete-input"
-                    data-script="./data/test.txt"
-                  >
-                    <input
-                      class="main-input"
-                      name="list-name"
-                      type="text"
-                      autocomplete="off"
-                      placeholder="Начните вводить название списка..."
-                    />
-                    <div class="autocomplete-input__popup"></div>
+              <div class="form-block">
+                <div class="form-item">
+                  <h5>Название списка:</h5>
+                  <div class="form-item__content">
+                    <div
+                      class="input autocomplete-input"
+                      data-script="./data/test.txt"
+                    >
+                      <input
+                        class="main-input"
+                        name="list-name"
+                        type="text"
+                        autocomplete="off"
+                        placeholder="Начните вводить название списка..."
+                      />
+                      <div class="autocomplete-input__popup"></div>
+                    </div>
+                    <p>
+                      Назвать список (списочную группу) можно так, как Вам
+                      нужно. Рекомендуем придумывать понятные названия,
+                      например, «Мои дипломники».
+                    </p>
                   </div>
-
-                  <p>
-                    Назвать список (списочную группу) можно так, как Вам нужно.
-                    Рекомендуем придумывать понятные названия, например, «Мои
-                    дипломники».
-                  </p>
                 </div>
+
+                <div class="form-item">
+                  <h6>Комментарий:</h6>
+                  <div class="form-item__content">
+                    <textarea name="comment"></textarea>
+                    <p>
+                      Небольшая памятка о том, зачем был создан список и почему
+                      он называется именно так.
+                    </p>
+                  </div>
+                </div>
+                <a class="main-button _red" href="#">Сохранить список</a>
               </div>
 
-              <div class="form-item">
-                <h6>Комментарий:</h6>
+              <div class="form-block">
+                <div class="form-item">
+                  <h5>Студент:</h5>
+                  <div class="form-item__content">
+                    <div
+                      class="input autocomplete-input"
+                      data-script="./data/test.txt"
+                    >
+                      <input
+                        class="main-input"
+                        name="list-name"
+                        type="text"
+                        autocomplete="off"
+                        placeholder="Начните вводить фамилию..."
+                      />
+                      <div class="autocomplete-input__popup"></div>
+                    </div>
 
-                <div class="form-item__content">
-                  <textarea name="comment"></textarea>
-
-                  <p>
-                    Небольшая памятка о том, зачем был создан список и почему он
-                    называется именно так.
-                  </p>
-                </div>
-              </div>
-
-              <a class="main-button _red" href="#">Сохранить список</a>
-
-              <div class="form-item">
-                <h5>Студент:</h5>
-
-                <div class="form-item__content">
-                  <div class="autocomplete-input" data-script="./data/test.txt">
-                    <input
-                      class="main-input"
-                      name="list-name"
-                      type="text"
-                      autocomplete="off"
-                      placeholder="Начните вводить фамилию..."
-                    />
-                    <div class="autocomplete-input__popup"></div>
+                    <p>
+                      Для того, чтобы добавить студента в список, начните
+                      набирать его фамилию. Появится выпадающее поле, в котором
+                      требуется указать студента.
+                    </p>
                   </div>
-
-                  <p>
-                    Для того, чтобы добавить студента в список, начните набирать
-                    его фамилию. Появится выпадающее поле, в котором требуется
-                    указать студента.
-                  </p>
                 </div>
                 <a class="main-button _red" href="#"
                   >Добавить студента в список</a
@@ -3366,6 +3367,59 @@
             </div>
           </div>
         </section>
+        <div class="mobile-table-control">
+          <div class="mobile-table-control__inner">
+            <a class="_link" href="#">
+              <svg
+                width="16"
+                height="15"
+                viewBox="0 0 16 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 13.7519C1.08241 13.5047 1.16483 13.175 1.24724 12.9278C1.41206 12.1861 1.65927 11.362 1.82409 10.6204C1.82409 10.538 1.90651 10.4556 1.98892 10.3731C4.37879 7.98328 6.76864 5.5934 9.15851 3.20353L9.24092 3.12109C10.1474 4.02759 11.1363 5.01653 12.0428 5.92303L11.9604 6.00542C9.57057 8.39528 7.26311 10.7028 4.87324 13.0926C4.79083 13.175 4.70841 13.2575 4.626 13.2575C3.63709 13.5047 2.56578 13.7519 1.57687 13.9991H1.49446C1.41205 13.9991 1.41204 13.9991 1.32963 13.9991C1.24722 13.9167 1.16482 13.8343 1.08241 13.7519C1.00001 13.8343 1 13.8343 1 13.7519Z"
+                  stroke="black"
+                  stroke-width="1.7"
+                />
+                <path
+                  d="M14.1872 3.36926C14.1872 3.45167 14.1872 3.53407 14.1048 3.61648C14.0224 3.7813 13.94 4.02851 13.8576 4.11092C13.528 4.44055 13.1159 4.85259 12.7863 5.18223C11.8798 4.27573 10.8909 3.28685 9.98438 2.38034C10.314 2.05071 10.6437 1.63867 11.0557 1.30903C11.5502 0.896989 12.3742 0.896989 12.8687 1.30903C13.1983 1.63867 13.528 1.96827 13.8576 2.2979C14.0224 2.46272 14.1048 2.79238 14.1872 3.03961C14.1872 3.12202 14.1872 3.28686 14.1872 3.36926Z"
+                  stroke="black"
+                  stroke-width="1.7"
+                />
+              </svg>
+              Редактировать
+            </a>
+            <a
+              class="_remove"
+              href="#"
+              data-btn="confirm"
+              data-confirm="Вы действительно хотите удалить объявление?"
+            >
+              <svg
+                width="15"
+                height="14"
+                viewBox="0 0 15 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.44929 13.4233L13.8745 1.99812C14.2418 1.63076 14.2418 1.04172 13.8745 0.674354C13.5071 0.306986 12.9181 0.306986 12.5507 0.674354L1.12553 12.0995C0.758158 12.4669 0.758158 13.0559 1.12553 13.4233C1.49289 13.7907 2.08192 13.7907 2.44929 13.4233Z"
+                  fill="black"
+                  stroke="black"
+                  stroke-width="0.3"
+                />
+                <path
+                  d="M1.11502 1.98576L1.12021 1.99225L1.12608 1.99812L12.5513 13.4233C12.9186 13.7907 13.5077 13.7907 13.875 13.4233C14.2424 13.0559 14.2424 12.4669 13.875 12.0995L2.44985 0.674354C2.08248 0.306986 1.49345 0.306986 1.12608 0.674354L1.12021 0.680228L1.11502 0.686715C0.824161 1.05029 0.824161 1.62219 1.11502 1.98576Z"
+                  fill="black"
+                  stroke="black"
+                  stroke-width="0.3"
+                />
+              </svg>
+              Удалить объявление
+            </a>
+          </div>
+        </div>
       </main>
       @include('partials/home-footer.html', {state: '_lk'})
     </div>
