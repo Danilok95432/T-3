@@ -1,0 +1,144 @@
+.lkp-edit-ad-page {
+
+  .main-input {
+    min-width: 660px;
+    width: 660px;
+
+    @media (max-width: 1280px) {
+      min-width: 400px;
+      width: 400px;
+    }
+
+  }
+
+  .main-textarea {
+    max-width: 660px;
+    height: 180px;
+    border-radius: 0;
+    @media (max-width: 1280px) {
+      max-width: 400px;
+    }
+    @media (max-width: 768px) {
+      height: 150px;
+      max-width: 100%;
+    }
+  }
+
+  .lk-content {
+    padding: 46px 0 165px;
+
+    @media (max-width: 768px) {
+      padding: 36px 0 120px;
+    }
+
+    h2 {
+      margin-bottom: 45px;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 29px;
+      }
+    }
+
+  }
+
+  .fix-row {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    align-items: center;
+    @media (max-width: 768px) {
+      align-items: flex-start;
+      &:not(:last-child) {
+        margin-bottom: 23px;
+      }
+    }
+
+    &__desc {
+      &._sm {
+        max-width: 175px;
+        @media (max-width: 768px) {
+          max-width: 100%;
+        }
+        .main-input {
+          min-width: 175px;
+          width: 175px;
+          @media (max-width: 768px) {
+            width: 100%;
+            min-width: 100%;
+          }
+        }
+      }
+    }
+
+    &._textarea {
+      align-items: flex-start;
+      margin-bottom: 30px;
+      @media (max-width: 768px) {
+        margin-bottom: 22px;
+      }
+    }
+
+    &__title {
+      min-width: 165px;
+      width: 165px;
+      margin-right: 15px;
+      @media (max-width: 768px) {
+        min-width: 100%;
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+
+    &__date-desc-inputs {
+      display: flex;
+      gap: 10px;
+      min-width: 660px;
+      @media (max-width: 1280px) {
+        min-width: 400px;
+      }
+      @media (max-width: 768px) {
+        justify-content: space-between;
+        min-width: 100%;
+      }
+    }
+
+    &._controllers {
+      margin-top: 60px;
+      @media (max-width: 768px) {
+        margin-top: 30px;
+      }
+    }
+
+  }
+
+  &__sample-block {
+    margin-top: 35px;
+    @media (max-width: 768px) {
+      margin-top: 25px;
+    }
+
+    h4 {
+      @include montserrat-semibold;
+      font-size: 18px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      @media (max-width: 768px) {
+        margin-bottom: 7px;
+      }
+    }
+
+    p {
+      line-height: 1.4;
+      margin-bottom: 30px;
+      max-width: 800px;
+      @media (max-width: 768px) {
+        font-size: 12px;
+        line-height: 1.2;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+}

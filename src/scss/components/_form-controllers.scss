@@ -27,6 +27,7 @@
       gap: 5px;
 
       @media (max-width: 768px) {
+        text-transform: capitalize;
         span {
           display: none;
         }
