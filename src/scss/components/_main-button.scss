@@ -1,0 +1,31 @@
+.main-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include montserrat-medium;
+  font-size: 15px;
+  line-height: 22px;
+  padding: 11px 25px;
+  transition: all .3s;
+  color: $white;
+  border: none;
+
+  &._red {
+    background: #B7212E;
+    height: auto;
+    padding: 13px 50px;
+  }
+  &._gray {
+    background: #D9D8E0;
+    height: auto;
+    padding: 13px 50px;
+    color: #000000;
+  }
+
+  &._outline {
+    color: #B7212E;
+    background-color: #fff;
+    border: 1px solid #B7212E;
+  }
+
+}

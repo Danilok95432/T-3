@@ -175,33 +175,6 @@ main {
 }
 
 
-.main-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @include montserrat-medium;
-  font-size: 15px;
-  line-height: 22px;
-  padding: 11px 25px;
-  transition: all .3s;
-  color: $white;
-  border: none;
-
-  &._red {
-    background: #B7212E;
-    height: auto;
-    padding: 13px 50px;
-  }
-
-  &._outline {
-    color: #B7212E;
-    background-color: #fff;
-    border: 1px solid #B7212E;
-  }
-
-}
-
-
 .modal {
   position: fixed;
   overflow-y: auto;

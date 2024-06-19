@@ -1,0 +1,113 @@
+.estimate-report-form__container {
+  @media (max-width: 768px) {
+    background: #F5F5F5;
+  }
+}
+
+.estimate-report-form {
+  padding: 28px 75px 37px 27px;
+  background: #F5F5F5;
+  border-radius: 10px;
+  max-width: 750px;
+  @media (max-width: 768px) {
+    border-radius: 0;
+    padding: 23px 0 37px 0;
+  }
+
+  h6 {
+    font-size: 18px;
+    @include montserrat-semibold;
+    margin-bottom: 15px;
+  }
+
+  label {
+    margin-bottom: 2px;
+    display: block;
+    @media (max-width: 768px) {
+      font-size: 12px;
+      @include montserrat-medium;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+      margin-bottom: 16px;
+    }
+
+    .input-column-wrapper {
+      width: 160px;
+      @media (max-width: 768px) {
+        width: 105px;
+        input {
+          padding: 8px 11px;
+        }
+        select.main-input._main-mark {
+          background-position: right 4px top 14px, 0 0;
+          padding: 8px 17px 8px 11px;
+        }
+      }
+
+      .main-input {
+        border-radius: 0;
+        background-color: #FFFFFF;
+      }
+
+    }
+
+    p {
+      max-width: 180px;
+      font-size: 12px;
+      line-height: 1.2;
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .main-textarea {
+    font-size: 15px;
+    border-radius: 0;
+    height: 209px;
+    @media (max-width: 768px) {
+      height: 270px;
+      padding: 7px 11px;
+    }
+  }
+
+  .estimate-report-controllers {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    @media (max-width: 768px) {
+      margin-top: 13px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .main-button {
+      padding: 11px 32px;
+      display: inline-block;
+      @media (max-width: 768px) {
+        padding: 9px 22px;
+      }
+    }
+    .estimate-report-controllers__cancel {
+      margin-left: auto;
+      @media (max-width: 768px) {
+        margin-top: 21px;
+        margin-left: 0;
+        padding: 9px 46px;
+      }
+    }
+
+  }
+}

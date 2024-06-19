@@ -46,6 +46,23 @@ const initAllMasks = () => {
   }
 
   initDateInputMasks()
+  const initRegexInputMasks = () => {
+    const regexInputMasks = document.querySelectorAll('.regex-mask')
+
+    if (regexInputMasks) {
+      regexInputMasks.forEach((el) => {
+        const currentRegex = el.dataset.regex
+        Inputmask({
+          clearIncomplete: true,
+          showMaskOnHover: false,
+          showMaskOnFocus: false,
+          regex: currentRegex,
+        }).mask(el)
+      })
+    }
+  }
+
+  initRegexInputMasks()
 }
 
 initAllMasks()
