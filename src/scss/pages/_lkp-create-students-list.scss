@@ -251,6 +251,8 @@
             flex: 1;
             min-height: 150px;
             max-width: 765px;
+            border-radius: 0;
+            border-color: #A9AEBA;
 
             @media (max-width: 500px) {
                 max-height: 120px;
