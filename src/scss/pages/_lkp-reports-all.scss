@@ -1,0 +1,151 @@
+.lkp-reports-all-page {
+
+  &__desc {
+    @include montserrat-light;
+    max-width: 760px;
+    margin-bottom: 30px;
+    line-height: 1.25;
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
+  }
+
+  .lk-content {
+    padding: 46px 0 500px;
+
+    @media (max-width: 768px) {
+      padding: 36px 0 120px;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+    }
+
+    .flex-table {
+      @media (max-width: 768px) {
+        overflow: auto;
+      }
+      &__row {
+        padding: 7px 0;
+        @media (max-width: 1024px) {
+          min-width: 1050px;
+        }
+
+        @media (max-width: 768px) {
+          flex-direction: row;
+        }
+      }
+
+      &__title-row {
+        padding: 10px 0;
+
+        @media (max-width: 768px) {
+          display: flex;
+        }
+
+        .flex-table__cell {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &__cell {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 1024px) {
+          font-size: 14px;
+
+          &:not(:last-child) {
+            margin-bottom: 0;
+          }
+        }
+
+        &:nth-child(1) {
+          width: 3%;
+          text-align: center;
+          justify-content: center;
+          display: flex;
+        }
+        &:nth-child(2) {
+          width: 10%;
+        }
+
+        &:nth-child(3) {
+          width: 21%;
+          justify-content: flex-start;
+          @media (max-width: 1280px) {
+            width: 18%;
+          }
+
+          .main-input {
+            max-width: 230px;
+          }
+        }
+
+
+        &:nth-child(4) {
+          width: 18%;
+          justify-content: flex-start;
+
+          .main-input {
+            max-width: 200px;
+          }
+        }
+
+        &:nth-child(5) {
+          width: 12%;
+          justify-content: flex-start;
+          @media (max-width: 1280px) {
+            width: 15%;
+          }
+          @media (max-width: 1024px) {
+            width: 12%;
+          }
+          .main-input {
+            max-width: 125px;
+          }
+        }
+        &:nth-child(6) {
+          width: 8%;
+          justify-content: flex-start;
+          .main-input {
+            max-width: 70px;
+          }
+        }
+
+        &:nth-child(7) {
+          width: 18%;
+          justify-content: flex-start;
+          @media (max-width: 1024px) {
+            width: 21%;
+          }
+          .main-input {
+            max-width: 200px;
+          }
+
+        }
+
+        &:nth-child(8) {
+          width: 10%;
+          justify-content: flex-start;
+
+          .main-input {
+            max-width: 124px;
+          }
+
+        }
+      }
+
+      a.flex-table__cell {
+        color: #B7212E;
+      }
+
+    }
+  }
+}

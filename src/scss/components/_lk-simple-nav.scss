@@ -1,0 +1,26 @@
+.lk-simple-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  @media (max-width: 1024px) {
+    margin-bottom: 25px;
+  }
+  li {
+    a {
+      padding: 7.5px 10px;
+      background-color: #F2F2F2;
+      color: #000000;
+      @include montserrat-medium;
+      font-size: 15px;
+      display: inline-block;
+    }
+    &._active {
+      a {
+        background-color: #B7212E;
+        color: #ffffff;
+      }
+    }
+
+  }
+}

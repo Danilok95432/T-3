@@ -60,6 +60,9 @@
 @import "pages/lkp-ads";
 @import "pages/lkp-edit-ad";
 @import "pages/lkp-task";
+@import "pages/lkp-reports-all";
+@import "pages/lkp-reports-waiting";
+@import "pages/lkp-reports-verified";
 
 
 
@@ -124,6 +127,7 @@
 @import "./components/lk-task-status";
 @import "./components/estimate-report-form";
 @import "./components/main-button";
+@import "./components/lk-simple-nav";
 
 
 

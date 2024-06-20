@@ -1,6 +1,6 @@
 const tableControls = document.querySelectorAll('.table-control-submenu')
 
-if (tableControls && window.screen.width <= 850) {
+if (tableControls.length && window.screen.width <= 850) {
   const mobileTableControl = document.querySelector('.mobile-table-control')
 
   const mobileControlLink = mobileTableControl?.querySelector('a._link')
