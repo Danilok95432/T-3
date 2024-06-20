@@ -291,28 +291,16 @@
   }
 
   .gallery {
-    padding: 51px 0 0;
+    padding: 51px 0 36px;
     background-color: #E8E8E8;
-    box-shadow: 0px -50px 0px 0px rgba(183, 33, 46, 1) inset;
 
-    &__title-block {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-bottom: 25px;
-
-      a {
-        @include montserrat-medium;
-        font-size: 14px;
-        color: #000000;
-      }
+    h2 {
+      margin-bottom: 34px;
     }
 
     .home-gallery-swiper {
       .swiper-slide {
-        height: 193px;
+        height: 105px;
 
         img {
           width: 100%;
@@ -326,18 +314,16 @@
 
   .courses {
     background-color: #B7212E;
-    padding: 93px 0 80px;
+    padding: 44px 0 80px;
 
     .courses-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 48px 13px;
 
       li {
+
         width: 398px;
-        height: 298px;
-        position: relative;
-        z-index: 0;
 
         @media (max-width: 550px) {
           width: 100%;
@@ -352,55 +338,35 @@
           }
         }
 
-        &::before {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-          background-color: rgba(#000000, 0.35);
-        }
-
         a {
-          padding: 23px;
           display: block;
           width: 100%;
           height: 100%;
         }
 
-        h5,
-        h4 {
+        h5, h4 {
           color: #ffffff;
           font-size: 20px;
           @include montserrat-semibold;
-          margin-bottom: 20px;
           line-height: 1.25;
+          max-width: 345px;
         }
 
         h4 {
           font-size: 22px;
-          max-width: 350px;
-
-        }
-
-        p {
-          @include montserrat-medium;
-          font-size: 15px;
-          color: #ffffff;
-          line-height: 1.45;
         }
 
       }
 
-      &__course-bg {
-        position: absolute;
-        z-index: -2;
-        left: 0;
-        top: 0;
+      &__img-wrapper {
         width: 100%;
-        height: 100%;
+        height: 298px;
+        margin-bottom: 15px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
 
     }
