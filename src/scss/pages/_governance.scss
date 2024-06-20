@@ -1,0 +1,102 @@
+.governance-page {
+    h1 {
+        font-size: 30px;
+    }
+
+    .governance-container {
+        padding: 75px 0 120px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        align-items: center;
+
+        &__top {
+            h4 {
+                margin-bottom: 30px;
+                font-size: 26px;
+            }
+
+            .person.main-person {
+                img {
+                    margin-bottom: 20px;
+                }
+
+                .person__name {
+                    min-width: max-content;
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                    color: #B7212E;
+                    font-weight: 600;
+                }
+
+                .person__state {
+                    min-width: max-content;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1.2;
+                    text-align: center;
+                }
+            }
+        }
+
+        &__middle {
+            margin-bottom: 10px;
+
+            h5 {
+                margin-bottom: 45px;
+                text-align: center;
+                font-size: 26px;
+            }
+        }
+
+        &__bottom {
+            position: relative;
+            padding-top: 80px;
+
+            &::before {
+                position: absolute;
+                content: '';
+                height: 1px;
+                background-color: #DEDEDE;
+                width: 600px;
+                top: 0;
+                left: calc((100% - 600px) / 2);
+
+            }
+        }
+
+        .governance-row {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .person {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                margin-bottom: 9px;
+            }
+
+            &__name {
+                margin-bottom: 15px;
+                max-width: 215px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 1.3;
+                text-align: center;
+
+            }
+
+            &__state {
+                max-width: 215px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                text-align: center;
+            }
+        }
+    }
+}
