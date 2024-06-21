@@ -775,7 +775,7 @@
         <section class="section feedback">
           <div class="container">
             <h2 class="home-page__subtitle">Обратная связь</h2>
-            <form class="feedback__form" action="#">
+            <form class="feedback__form" action="./data/test.txt">
               <div class="feedback__form-wrapper">
                 <div class="feedback__form-left">
                   <input
@@ -813,6 +813,7 @@
             </form>
           </div>
         </section>
+        @include('partials/info-modal.html')
       </main>
       @include('partials/home-footer.html', { 'state': '_portal' })
     </div>
