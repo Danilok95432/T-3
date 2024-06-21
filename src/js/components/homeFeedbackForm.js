@@ -23,6 +23,7 @@ if (feedbackForm) {
       const { status, errortext, message } = finishedResponse
 
       if (status === 'ok') {
+        feedbackForm.reset()
         showInfoModal(message)
       } else {
         showInfoModal(errortext)
