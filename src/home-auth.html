@@ -1,58 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru" class="page">
+  @include('partials/head.html', { 'title': 'Авторизация' })
 
-@include('partials/head.html', {
-'title': 'Авторизация'
-})
-
-<body class="page__body home-auth-page">
-
-<div class="site-container">
-  <header class="header home-header">
-    <div class="home-header__top">
-      @include('partials/home-menu.html')
-      <div class="home-header__title-wrapper">
-        <div class="container">
-          <h2 class="home-header__title">
-            Университет имени С.Г. Строганова
-          </h2>
-        </div>
-      </div>
-    </div>
-  </header>
-  <main class="main">
-    <section class="section">
-      <div class="main-auth-form">
-        <form class="validation-form" action="#" novalidate="novalidate">
-          <div class="container">
-            <h2>
-              Авторизация
-            </h2>
-            <p class="main-auth-form__desc">Пожалуйста, вводите данные
-              правильно</p>
-            <div class="main-auth-form__input">
-              <label>Ваш логин<span>*</span></label>
-              <input type="text" placeholder="yourname@domain.com" name="login"
-                     required>
+  <body class="page__body home-auth-page">
+    <div class="site-container">
+      <header class="header home-header">
+        <div class="home-header__top">
+          @include('partials/home-menu.html')
+          <div class="swiper header-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/home-header-bg.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/home-header-bg-2.jpg" alt="" />
+              </div>
             </div>
-            <div class="main-auth-form__input">
-              <label>Ваш пароль<span>*</span></label>
-              <input type="password" placeholder="****************"
-                     name="password" required>
-            </div>
-            <button class="main-auth-form__btn" type="submit">Войти в систему
-            </button>
-
-            <a class="main-auth-form__page-link" href="home-pass-recovery.html">Восстановить
-              пароль</a>
           </div>
-        </form>
-      </div>
-    </section>
-  </main>
-  @include('partials/home-footer.html', { 'state': '_portal' })
-</div>
+          <div class="home-header__title-wrapper">
+            <div class="container">
+              <h2 class="home-header__title">
+                Университет имени С.Г. Строганова
+              </h2>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="section">
+          <div class="main-auth-form">
+            <form class="validation-form" action="#" novalidate="novalidate">
+              <div class="container">
+                <h2>Авторизация</h2>
+                <p class="main-auth-form__desc">
+                  Пожалуйста, вводите данные правильно
+                </p>
+                <div class="main-auth-form__input">
+                  <label>Ваш логин<span>*</span></label>
+                  <input
+                    type="text"
+                    placeholder="yourname@domain.com"
+                    name="login"
+                    required
+                  />
+                </div>
+                <div class="main-auth-form__input">
+                  <label>Ваш пароль<span>*</span></label>
+                  <input
+                    type="password"
+                    placeholder="****************"
+                    name="password"
+                    required
+                  />
+                </div>
+                <button class="main-auth-form__btn" type="submit">
+                  Войти в систему
+                </button>
 
-</body>
-
+                <a
+                  class="main-auth-form__page-link"
+                  href="home-pass-recovery.html"
+                  >Восстановить пароль</a
+                >
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+      @include('partials/home-footer.html', { 'state': '_portal' })
+    </div>
+  </body>
 </html>

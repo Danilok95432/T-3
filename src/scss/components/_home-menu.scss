@@ -1,5 +1,6 @@
 .home-menu {
   background: rgba(#000000, 0.4);
+  z-index: 10;
 
   &__container-lg {
     display: flex;
