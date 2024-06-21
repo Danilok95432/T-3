@@ -2,6 +2,15 @@ import { Swiper } from 'swiper/bundle'
 
 // Инициализация слайдеров
 
+new Swiper('.header-swiper', {
+  loop: true,
+  spaceBetween: 0,
+  slidesPerView: 1,
+  grabCursor: true,
+  autoplay: {
+    delay: 20000,
+  },
+})
 new Swiper('.support-swiper', {
   loop: true,
   spaceBetween: 20,
