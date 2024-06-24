@@ -63,31 +63,6 @@
       background-color: #ffffff;
     }
 
-    .burger-menu {
-      background: #B7212E;
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-      padding: 92px 28px 10px 28px;
-      transition: all .15s;
-
-    }
-
-    .burger-container {
-      &._burger-active {
-        position: absolute;
-        left: 28px;
-        top: 20px;
-
-        a {
-          svg path {
-            fill: #FFFFFF;
-          }
-
-          color: #ffffff;
-        }
-      }
-    }
 
     a {
       @include montserrat-medium;

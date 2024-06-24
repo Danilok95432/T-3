@@ -1,13 +1,18 @@
 import { body } from '../_vars'
 
-const burgerContainer = document.querySelector('.burger-container')
+const burgerMenu = document.querySelector('.burger-menu')
 
-if (burgerContainer) {
-  const burgerBtn = burgerContainer.querySelector('.burger-btn')
+if (burgerMenu) {
+  const burgerOpenBtn = document.querySelector('.burger-btn._open')
+  const burgerCloseBtn = document.querySelector('.burger-btn._close')
 
-  burgerBtn.addEventListener('click', () => {
+  burgerOpenBtn.addEventListener('click', () => {
     window.scrollTo(0, 0)
-    burgerContainer.classList.toggle('_burger-active')
-    body.classList.toggle('_block')
+    burgerMenu.classList.add('_active')
+    body.classList.add('_block')
+  })
+  burgerCloseBtn.addEventListener('click', () => {
+    burgerMenu.classList.remove('_active')
+    body.classList.remove('_block')
   })
 }
