@@ -1,7 +1,5 @@
 .home-header {
   &__top {
-    //background: url("../img/home-header-bg-2.jpg") no-repeat;
-    //background-size: cover;
     min-height: 410px;
     display: flex;
     flex-direction: column;
@@ -93,13 +91,17 @@
       position: relative;
       transition: all .3s;
 
-      svg {
-        margin-top: 5px;
-        min-width: 12px;
-        width: 12px;
-        height: 8px;
-        transition: all .3s;
+      & > {
+        svg {
+          margin-top: 5px;
+          min-width: 12px;
+          width: 12px;
+          height: 8px;
+          transition: all .3s;
+        }
       }
+
+
 
       @media (max-width: 1280px) {
         padding-right: 0;
@@ -115,8 +117,10 @@
       }
 
       &:hover {
-        svg {
-          transform: rotate(180deg);
+        & > {
+          svg {
+            transform: rotate(180deg);
+          }
         }
 
         .home-header__nav-dropdown {
@@ -143,7 +147,7 @@
 
     .home-header__nav-dropdown {
       background: #F2F2F2;
-      padding: 26px 35px 26px 39px;
+      padding: 10px 0 0;
       position: absolute;
       top: 40px;
       left: -38px;
@@ -154,27 +158,67 @@
       visibility: hidden;
       transition: all .3s;
 
-      a {
-        font-size: 15px;
-        max-width: 100%;
-        @include montserrat-medium;
-        color: #000000;
-        transition: all .3s;
-        display: block;
+      & > {
+        a {
+          font-size: 15px;
+          max-width: 100%;
+          @include montserrat-medium;
+          color: #000000;
+          transition: all .3s;
+          display: block;
+          padding: 14px 37px 14px 37px;
 
-        &._active {
-          color: #B7212E;
-          pointer-events: none;
-        }
+          &._active {
+            color: #B7212E;
+            pointer-events: none;
+          }
 
-        &:not(:last-child) {
-          margin-bottom: 27px;
-        }
-
-        &:hover {
-          color: #B7212E;
+          &:hover {
+            color: #B7212E;
+            background: #FFFFFF;
+          }
         }
       }
+      .dropdown-submenu {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 15px;
+        gap: 4px;
+        align-items: center;
+        position: relative;
+        & > svg {
+          min-width: 9px;
+          width: 9px;
+          height: 12px;
+        }
+        &__list {
+          display: none;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 300px;
+          height: 300px;
+          padding: 24px 37px;
+          background: #FFFFFF;
+          a {
+            color: #000000;
+            @include montserrat-medium;
+            font-size: 15px;
+            &:not(:last-child) {
+              margin-bottom: 20px;
+            }
+            &:hover {
+              color: #B7212E;
+            }
+          }
+        }
+        &:hover {
+          .dropdown-submenu__list {
+            display: block;
+          }
+        }
+      }
+
     }
 
 
