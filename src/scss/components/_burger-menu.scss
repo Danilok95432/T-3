@@ -96,6 +96,12 @@
       width: 100%;
       & > li {
         padding: 13px 30px;
+        font-size: 20px;
+        @include montserrat-semibold;
+        & > a {
+          color: #ffffff;
+
+        }
       }
     }
 
