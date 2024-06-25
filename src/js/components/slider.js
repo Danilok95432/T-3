@@ -117,3 +117,22 @@ new Swiper('.home-gallery-swiper', {
     },
   },
 })
+
+new Swiper('.timetable-swiper', {
+  loop: true,
+  spaceBetween: 15,
+  slidesPerView: 1,
+  grabCursor: true,
+  autoHeight: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+    1280: {
+      slidesPerView: 6,
+    },
+  },
+})
