@@ -63,8 +63,19 @@
   }
 
   &._active {
-    .toggle-link__content {
+    & > .toggle-link__content {
       display: flex;
+    }
+  }
+
+  .toggle-link {
+    .toggle-link__next-btn {
+      font-size: 15px;
+    }
+    .toggle-link__content {
+      li:nth-child(2) a {
+        font-size: 15px;
+      }
     }
   }
 

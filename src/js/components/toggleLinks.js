@@ -1,15 +1,12 @@
-const toggleLinks = document.querySelectorAll('.toggle-link')
+const burgerMenuList = document.querySelector('.burger-menu__list')
 
-if (toggleLinks) {
-  toggleLinks.forEach((link) => {
-    const nextBtn = link.querySelector('.toggle-link__next-btn')
-    const backBtn = link.querySelector('.toggle-link__back-btn')
-
-    nextBtn.addEventListener('click', () => {
-      link.classList.add('_active')
-    })
-    backBtn.addEventListener('click', () => {
-      link.classList.remove('_active')
-    })
+if (burgerMenuList) {
+  burgerMenuList.addEventListener('click', (e) => {
+    if (e.target.classList.contains('toggle-link__next-btn')) {
+      e.target.parentElement.classList.add('_active')
+    }
+    if (e.target.classList.contains('toggle-link__back-btn')) {
+      e.target.closest('.toggle-link').classList.remove('_active')
+    }
   })
 }
