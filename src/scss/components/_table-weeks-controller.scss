@@ -1,0 +1,66 @@
+.table-weeks-controller {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    p {
+      color: #91969A;
+      font-size: 12px;
+      @include montserrat-medium;
+      line-height: 1.1;
+    }
+    span {
+      font-size: 15px;
+      @include montserrat-semibold;
+    }
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 43px;
+    @media (max-width: 1024px) {
+      gap: 15px;
+    }
+
+    @media (max-width: 768px) {
+      border-radius: 3px;
+      border: 1px solid #000000;
+      gap: 0;
+    }
+    a {
+      font-size: 14px;
+      color: #B7212E;
+      @include montserrat-semibold;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      @media (max-width: 768px) {
+        padding: 5px 0;
+        width: 155px;
+        gap: 13px;
+        justify-content: center;
+        @include montserrat-medium;
+        color: #000000;
+        &:first-child {
+          border-right: 1px solid #000000;
+        }
+        svg {
+          path {
+            stroke: #000000;
+          }
+        }
+      }
+      span {
+        font-weight: 400;
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

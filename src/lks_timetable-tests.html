@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ru" class="page">
-  @include('partials/head.html', { 'title': 'Расписание занятий' })
+  @include('partials/head.html', { 'title': 'Расписание испытаний' })
 
-  <body class="page__body lks-timetable-page _lk">
+  <body class="page__body lks-timetable-page lks-timetable-test-page _lk">
     <div class="site-container">
       <header class="lk-header">
         <div class="lk-header__top">
@@ -3054,16 +3054,16 @@
           <div class="container">
             <div class="lks-timetable-page__title">
               <div>
-                <h2>Расписание занятий</h2>
+                <h2>Расписание испытаний</h2>
                 <p class="lks-timetable-page__desc">
-                  В этом разделе представлено расписание занятий.
+                  В этом разделе представлено расписание учебных испытаний.
                 </p>
               </div>
               <ul class="lk-simple-nav">
-                <li class="_active">
+                <li>
                   <a href="lks_timetable.html">Занятия</a>
                 </li>
-                <li>
+                <li class="_active">
                   <a href="lks_timetable-tests.html">Испытания</a>
                 </li>
               </ul>
