@@ -11,6 +11,9 @@
     margin-bottom: 13px;
     max-width: 690px;
     line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   &__date {
