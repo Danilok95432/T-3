@@ -311,3 +311,10 @@ main {
   }
 
 }
+._adaptive-video {
+  @media (max-width: 1280px) {
+    iframe {
+      width: 100% !important;
+    }
+  }
+}
