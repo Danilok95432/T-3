@@ -108,13 +108,13 @@ const homeAuthForm = document.querySelector('.home-auth-page .validation-form')
 if (homeAuthForm) {
   const validator = new JustValidate(homeAuthForm)
   validator
-    .addField('input[name="login"]', [
+    .addField('._login-input', [
       {
         rule: 'required',
         errorMessage: 'Это поле нужно заполнить',
       },
     ])
-    .addField('input[name="password"]', [
+    .addField('._pass-input', [
       {
         rule: 'required',
         errorMessage: 'Это поле нужно заполнить',
