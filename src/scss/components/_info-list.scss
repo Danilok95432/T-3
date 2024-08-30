@@ -3,8 +3,9 @@
   gap: 12px;
   flex-wrap: wrap;
 
-  @media (max-width: 768px) {
-    justify-content: center;
+
+  @media (max-width: 1024px) {
+    justify-content: space-around;
   }
 
   li {
@@ -13,9 +14,11 @@
     padding: 23px;
     background-color: #ffffff;
 
-    @media (max-width: 550px) {
+    @media (max-width: 768px) {
       width: 100%;
+      min-height: auto;
     }
+
   }
 
   p {
@@ -29,6 +32,10 @@
     padding-bottom: 30px;
     border-bottom: 1px solid #4a4a4a;
     margin-bottom: 17px;
+
+    @media (max-width: 768px) {
+      height: auto;
+    }
 
     p {
       font-size: 15px;
