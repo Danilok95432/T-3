@@ -3092,16 +3092,12 @@
               <div class="fix-row _input">
                 <h5 class="fix-row__title">Тема объявления:</h5>
                 <div class="fix-row__desc">
-                  <div class="autocomplete-input" data-script="./data/test.txt">
-                    <input
-                      class="main-input"
-                      name="ad_subject"
-                      type="text"
-                      autocomplete="off"
-                      placeholder="Начните вводить название темы..."
-                    />
-                    <div class="autocomplete-input__popup"></div>
-                  </div>
+                  <input
+                    class="main-input"
+                    name="ad_subject"
+                    type="text"
+                    autocomplete="off"
+                  />
                   <p>
                     Тема должна быть не очень длинной, ёмкой и отражающей суть и
                     смысл.
@@ -3156,7 +3152,11 @@
                 <div class="fix-row _input">
                   <h5 class="fix-row__title">Факультет:</h5>
                   <div class="fix-row__desc">
-                    <select class="main-input _main-mark" name="faculty">
+                    <select
+                      class="main-input _main-mark context-select"
+                      name="faculty"
+                      data-context-id="faculty"
+                    >
                       <option value="0">Факультет не выбран</option>
                       <option value="1">Факультет 1</option>
                       <option value="2">Факультет 2</option>
@@ -3167,21 +3167,42 @@
                 <div class="fix-row _input">
                   <h5 class="fix-row__title">Кафедра:</h5>
                   <div class="fix-row__desc">
-                    <select class="main-input _main-mark" name="department">
-                      <option value="0">Кафедра не выбрана</option>
-                      <option value="1">Кафедра 1</option>
-                      <option value="2">Кафедра 2</option>
-                      <option value="3">Кафедра 3</option>
+                    <select
+                      class="main-input _main-mark context-content context-select"
+                      name="department"
+                      data-content-id="faculty"
+                      data-context-id="department"
+                    >
+                      <option value="0" data-context="0">
+                        Кафедра не выбрана
+                      </option>
+                      <option value="1" data-context="1">Кафедра 1</option>
+                      <option value="2" data-context="1">Кафедра 2</option>
+                      <option value="3" data-context="2">Кафедра 3</option>
+                      <option value="4" data-context="3">Кафедра 4</option>
+                      <option value="5" data-context="3">Кафедра 5</option>
                     </select>
                   </div>
                 </div>
                 <div class="fix-row _input">
                   <h5 class="fix-row__title">Учебная группа:</h5>
                   <div class="fix-row__desc _sm">
-                    <select class="main-input _main-mark" name="study_group">
-                      <option value="1">ТИИ (2021)</option>
-                      <option value="2">Группа 2</option>
-                      <option value="3">Группа 3</option>
+                    <select
+                      class="main-input _main-mark context-content"
+                      name="study_group"
+                      data-content-id="department"
+                    >
+                      <option value="0" data-context="0">Не выбрана</option>
+                      <option value="1" data-context="1">ТИИ (2021)</option>
+                      <option value="2" data-context="1">Группа 2</option>
+                      <option value="3" data-context="2">Группа 3</option>
+                      <option value="4" data-context="2">Группа 4</option>
+                      <option value="5" data-context="2">Группа 5</option>
+                      <option value="6" data-context="3">Группа 6</option>
+                      <option value="7" data-context="4">Группа 7</option>
+                      <option value="8" data-context="4">Группа 8</option>
+                      <option value="9" data-context="5">Группа 9</option>
+                      <option value="10" data-context="5">Группа 10</option>
                     </select>
                   </div>
                 </div>

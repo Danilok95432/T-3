@@ -12,7 +12,7 @@
     display: flex;
     width: max-content;
 
-    button {
+    button, a {
       display: flex;
       align-items: center;
       gap: 15px;
@@ -28,6 +28,7 @@
         color: #91969A;
         background: #EFEFEF;
         border: 1px solid #959595;
+        pointer-events: none;
         svg {
           path {
             stroke: #91969A;

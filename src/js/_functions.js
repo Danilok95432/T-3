@@ -126,3 +126,13 @@ if (scrollBtn) {
     })
   })
 }
+// функция установки определенных option в контекстные селекты
+export const setContextOptions = (value, contentSelect, stateOptions) => {
+  const filteredOptions = stateOptions.filter(
+    (optEl) => optEl.dataset.context === value,
+  )
+  contentSelect.innerHTML = ''
+  filteredOptions?.forEach((filEl) => {
+    contentSelect.append(filEl)
+  })
+}
