@@ -3585,7 +3585,7 @@
             </div>
             <div class="table-footer">
               <div class="table-navigation">
-                <button class="table-navigation__prev _blocked">
+                <a href="#" class="table-navigation__prev _blocked">
                   <svg
                     width="9"
                     height="16"
@@ -3601,8 +3601,8 @@
                     />
                   </svg>
                   Назад
-                </button>
-                <button class="table-navigation__next">
+                </a>
+                <a href="#" class="table-navigation__next">
                   Далее
                   <svg
                     width="9"
@@ -3618,20 +3618,27 @@
                       stroke-linejoin="round"
                     />
                   </svg>
-                </button>
+                </a>
               </div>
 
-              <div class="content-count">
+              <form
+                action="#"
+                class="auto-submit-form content-count"
+                method="get"
+              >
                 <span>Элементов на странице</span>
                 <div class="input-column-wrapper">
-                  <select class="main-input" name="content-count">
+                  <select
+                    class="main-input auto-submit-form__trigger"
+                    name="rooms_types_page_count"
+                  >
                     <option value="1">10</option>
-                    <option value="2">25</option>
+                    <option selected value="2">25</option>
                     <option value="3">50</option>
                     <option value="3">100</option>
                   </select>
                 </div>
-              </div>
+              </form>
             </div>
 
             <form action="#" class="add-portfoio-item-form">

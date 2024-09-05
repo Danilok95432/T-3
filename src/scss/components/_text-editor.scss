@@ -1,0 +1,20 @@
+input,
+.ql-editor {
+  padding: 13px 14px;
+  font-size: 15px;
+  @include montserrat-regular;
+}
+
+.text-editor__wrapper {
+  width: 100%;
+}
+.text-editor {
+  height: 180px;
+}
+.ql-container.ql-snow {
+  border: 1px solid #A9AEBA;
+}
+
+.ql-toolbar.ql-snow {
+  border: 1px solid #A9AEBA;
+}
