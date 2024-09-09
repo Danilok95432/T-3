@@ -2,14 +2,15 @@ import { sendData, showInfoModal } from '../_functions'
 
 const autocompleteInputs = document.querySelectorAll('.autocomplete-input')
 
-const renderSuggestions = (suggestions, input, popup) => {
+const renderSuggestions = (suggestions, inputTxt, inputVal, popup) => {
   if (suggestions.length > 0) {
     suggestions.forEach((item) => {
       const div = document.createElement('div')
-      div.textContent = item
+      div.textContent = item.text
       div.className = 'autocomplete-input__popup-item'
       div.addEventListener('click', () => {
-        input.value = item
+        inputVal.value = item.value
+        inputTxt.value = item.text
         popup.style.display = 'none'
       })
       popup.appendChild(div)
@@ -22,11 +23,14 @@ const renderSuggestions = (suggestions, input, popup) => {
 
 if (autocompleteInputs) {
   autocompleteInputs.forEach((inputEl) => {
-    const autoField = inputEl.querySelector('input')
+    const autoFieldTxt = inputEl.querySelector('input.autocomplete-input__text')
+    const autoFieldVal = inputEl.querySelector(
+      'input.autocomplete-input__value',
+    )
     const autoPopup = inputEl.querySelector('.autocomplete-input__popup')
     const autoScript = inputEl.dataset.script
 
-    autoField.addEventListener('input', async (e) => {
+    autoFieldTxt?.addEventListener('input', async (e) => {
       const query = e.currentTarget.value
       if (query.length < 3) {
         autoPopup.style.display = 'none'
@@ -39,7 +43,7 @@ if (autocompleteInputs) {
         const finishedResponse = await response.json()
         const { status, errortext, suggestions } = finishedResponse
         if (status === 'ok') {
-          renderSuggestions(suggestions, autoField, autoPopup)
+          renderSuggestions(suggestions, autoFieldTxt, autoFieldVal, autoPopup)
         } else {
           showInfoModal(errortext)
         }

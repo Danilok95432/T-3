@@ -3090,9 +3090,8 @@
             <div class="lkp-students-list-page__title">
               <h2>Создать / редактировать список</h2>
             </div>
-
-            <form class="create-students-form" action="#">
-              <div class="form-block">
+            <div class="lkp-create-students-list-page__forms">
+              <form class="form-block" action="#">
                 <div class="form-item">
                   <h5>Название списка:</h5>
                   <div class="form-item__content">
@@ -3101,8 +3100,13 @@
                       data-script="./data/test.txt"
                     >
                       <input
-                        class="main-input"
-                        name="list-name"
+                        class="autocomplete-input__value"
+                        name="list_name"
+                        type="hidden"
+                      />
+                      <input
+                        class="main-input autocomplete-input__text"
+                        name=""
                         type="text"
                         autocomplete="off"
                         placeholder="Начните вводить название списка..."
@@ -3127,10 +3131,11 @@
                     </p>
                   </div>
                 </div>
-                <a class="main-button _red" href="#">Сохранить список</a>
-              </div>
-
-              <div class="form-block">
+                <button class="main-button _red" type="submit">
+                  Сохранить список
+                </button>
+              </form>
+              <form class="form-block" action="#">
                 <div class="form-item">
                   <h5>Студент:</h5>
                   <div class="form-item__content">
@@ -3139,8 +3144,13 @@
                       data-script="./data/test.txt"
                     >
                       <input
-                        class="main-input"
-                        name="list-name"
+                        class="autocomplete-input__value"
+                        name="student_name"
+                        type="hidden"
+                      />
+                      <input
+                        class="main-input autocomplete-input__text"
+                        name=""
                         type="text"
                         autocomplete="off"
                         placeholder="Начните вводить фамилию..."
@@ -3155,26 +3165,28 @@
                     </p>
                   </div>
                 </div>
-                <a class="main-button _red" href="#"
-                  >Добавить студента в список</a
-                >
-              </div>
-            </form>
+                <button class="main-button _red" type="submit">
+                  Добавить студента в список
+                </button>
+              </form>
+            </div>
 
             <div class="flex-table">
               <div class="flex-table__row flex-table__title-row">
                 <p class="flex-table__cell">№</p>
-                <p class="flex-table__cell">Название <span>списка</span></p>
-                <p class="flex-table__cell">Список создан</p>
-                <p class="flex-table__cell">Комментарий</p>
+                <p class="flex-table__cell">Фамилия, имя, отчество</p>
+                <p class="flex-table__cell">Учебная группа</p>
+                <p class="flex-table__cell">Год обучения</p>
                 <p class="flex-table__cell"></p>
               </div>
 
               <div class="flex-table__row">
                 <p class="flex-table__cell">1</p>
-                <p class="flex-table__cell">Дипломники</p>
-                <p class="flex-table__cell">22.05.2024, 12:25:00</p>
-                <p class="flex-table__cell">Мои дипломники в 2024 году</p>
+                <p class="flex-table__cell">
+                  Колобкова-Крупчатникова Екатерина Константиновна
+                </p>
+                <p class="flex-table__cell">ТИИ-20/2023-БАК</p>
+                <p class="flex-table__cell">2024</p>
                 <div class="flex-table__cell">
                   <div class="table-control-submenu">
                     <button class="table-control-submenu__btn" type="button">
@@ -3255,11 +3267,11 @@
 
               <div class="flex-table__row">
                 <p class="flex-table__cell">2</p>
-                <p class="flex-table__cell">Отстающие (скульпторы)</p>
-                <p class="flex-table__cell">22.05.2024, 12:25:00</p>
                 <p class="flex-table__cell">
-                  Отстающие из группы скульпторов 2021 года поступления
+                  Триждыорденакрасногознамени Константин Константинович
                 </p>
+                <p class="flex-table__cell">ТИИ-20/2023-БАК</p>
+                <p class="flex-table__cell">2024</p>
                 <div class="flex-table__cell">
                   <div class="table-control-submenu">
                     <button class="table-control-submenu__btn" type="button">
@@ -3340,7 +3352,7 @@
             </div>
             <div class="table-footer">
               <div class="table-navigation">
-                <button class="table-navigation__prev _blocked">
+                <a href="#" class="table-navigation__prev _blocked">
                   <svg
                     width="9"
                     height="16"
@@ -3356,8 +3368,8 @@
                     />
                   </svg>
                   Назад
-                </button>
-                <button class="table-navigation__next">
+                </a>
+                <a href="#" class="table-navigation__next">
                   Далее
                   <svg
                     width="9"
@@ -3373,20 +3385,27 @@
                       stroke-linejoin="round"
                     />
                   </svg>
-                </button>
+                </a>
               </div>
 
-              <div class="content-count">
+              <form
+                action="#"
+                class="auto-submit-form content-count"
+                method="get"
+              >
                 <span>Элементов на странице</span>
                 <div class="input-column-wrapper">
-                  <select class="main-input" name="content-count">
+                  <select
+                    class="main-input auto-submit-form__trigger"
+                    name="rooms_types_page_count"
+                  >
                     <option value="1">10</option>
                     <option selected value="2">25</option>
                     <option value="3">50</option>
                     <option value="3">100</option>
                   </select>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </section>
