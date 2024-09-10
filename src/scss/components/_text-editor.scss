@@ -18,3 +18,11 @@ input,
 .ql-toolbar.ql-snow {
   border: 1px solid #A9AEBA;
 }
+
+.ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+  content: "Сохранить";
+}
+
+.ql-snow .ql-tooltip[data-mode=link]::before {
+  content: "Введите ссылку:";
+}
