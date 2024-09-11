@@ -200,20 +200,20 @@
         }
 
         &:nth-child(4) {
-          width: 33%;
+          width: 31%;
           justify-content: flex-start;
           padding: 0;
         }
 
         &:nth-child(5) {
-          width: 2%;
+          width: 4%;
           padding-left: 5px;
           justify-content: flex-start;
         }
       }
 
       &__row {
-        @media (max-width: 768px) {
+        @media (max-width: 850px) {
           flex-direction: row;
           min-width: 730px;
         }

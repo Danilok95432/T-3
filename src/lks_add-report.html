@@ -3061,12 +3061,21 @@
             <form action="#">
               <div class="fix-row">
                 <h5 class="fix-row__title">Дисциплина:</h5>
-                <input
-                  class="main-input"
-                  value="Длинное название учебной дисциплины"
-                  type="text"
-                  name="subject"
-                />
+                <div class="autocomplete-input" data-script="./data/test.txt">
+                  <input
+                    class="autocomplete-input__value"
+                    name="subject"
+                    type="hidden"
+                  />
+                  <input
+                    class="main-input autocomplete-input__text"
+                    name=""
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Начните вводить название дисциплины..."
+                  />
+                  <div class="autocomplete-input__popup"></div>
+                </div>
               </div>
 
               <div class="fix-row">
