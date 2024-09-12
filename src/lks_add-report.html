@@ -3061,20 +3061,22 @@
             <form action="#">
               <div class="fix-row">
                 <h5 class="fix-row__title">Дисциплина:</h5>
-                <div class="autocomplete-input" data-script="./data/test.txt">
-                  <input
-                    class="autocomplete-input__value"
-                    name="subject"
-                    type="hidden"
-                  />
-                  <input
-                    class="main-input autocomplete-input__text"
-                    name=""
-                    type="text"
-                    autocomplete="off"
-                    placeholder="Начните вводить название дисциплины..."
-                  />
-                  <div class="autocomplete-input__popup"></div>
+                <div class="fix-row__desc">
+                  <div class="autocomplete-input" data-script="./data/test.txt">
+                    <input
+                      class="autocomplete-input__value"
+                      name="subject"
+                      type="hidden"
+                    />
+                    <input
+                      class="main-input autocomplete-input__text"
+                      name=""
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Начните вводить название дисциплины..."
+                    />
+                    <div class="autocomplete-input__popup"></div>
+                  </div>
                 </div>
               </div>
 
@@ -3160,11 +3162,10 @@
 
               <div class="fix-row">
                 <h5 class="fix-row__title">Описание:</h5>
-                <textarea
-                  class="main-input textarea"
-                  name="desc"
-                  id="desc"
-                ></textarea>
+                <div class="text-editor__wrapper">
+                  <input type="hidden" name="ad_text" />
+                  <div class="text-editor"></div>
+                </div>
               </div>
 
               <div class="fix-row">

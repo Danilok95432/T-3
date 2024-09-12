@@ -1,5 +1,8 @@
 import { sendData, showInfoModal } from '../_functions'
 
+const autocompleteInvalidWarning =
+  '<span class="autocomplete-input__invalid">Необходимо сделать выбор!</span>'
+
 const autocompleteInputs = document.querySelectorAll('.autocomplete-input')
 
 const renderSuggestions = (suggestions, inputTxt, inputVal, popup) => {
@@ -12,6 +15,12 @@ const renderSuggestions = (suggestions, inputTxt, inputVal, popup) => {
         inputVal.value = item.value
         inputTxt.value = item.text
         popup.style.display = 'none'
+        const invalidMsg = inputTxt
+          ?.closest('.autocomplete-input')
+          ?.querySelector('.autocomplete-input__invalid')
+        if (invalidMsg) {
+          invalidMsg.remove()
+        }
       })
       popup.appendChild(div)
     })
@@ -21,7 +30,7 @@ const renderSuggestions = (suggestions, inputTxt, inputVal, popup) => {
   }
 }
 
-if (autocompleteInputs) {
+if (autocompleteInputs?.length) {
   autocompleteInputs.forEach((inputEl) => {
     const autoFieldTxt = inputEl.querySelector('input.autocomplete-input__text')
     const autoFieldVal = inputEl.querySelector(
@@ -32,6 +41,7 @@ if (autocompleteInputs) {
 
     autoFieldTxt?.addEventListener('input', async (e) => {
       const query = e.currentTarget.value
+      autoFieldVal.value = ''
       if (query.length < 3) {
         autoPopup.style.display = 'none'
         return
@@ -56,6 +66,24 @@ if (autocompleteInputs) {
     document.addEventListener('click', (event) => {
       if (!inputEl.contains(event.target)) {
         autoPopup.style.display = 'none'
+      }
+    })
+  })
+
+  // проверка заполнения скрытого инпута
+
+  const autocompleteForm = autocompleteInputs[0].closest('form')
+  autocompleteForm.addEventListener('submit', (e) => {
+    autocompleteInputs.forEach((inputEl) => {
+      const autoFieldVal = inputEl.querySelector(
+        'input.autocomplete-input__value',
+      )
+
+      if (!autoFieldVal.value) {
+        e.preventDefault()
+        if (!inputEl.querySelector('.autocomplete-input__invalid')) {
+          inputEl.insertAdjacentHTML('beforeend', autocompleteInvalidWarning)
+        }
       }
     })
   })

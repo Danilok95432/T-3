@@ -28,3 +28,11 @@
     }
   }
 }
+
+.autocomplete-input span.autocomplete-input__invalid {
+  font-size: 12px;
+  @include montserrat-semibold;
+  color: #B7212E;
+  margin-top: 2px;
+  display: block;
+}
